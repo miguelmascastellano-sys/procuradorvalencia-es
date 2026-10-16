@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "Mas Castellano Procuradores",
+  name: "Mas Castellano Procurador",
   professional: "Miguel Mas Castellano",
   role: "Procurador de los Tribunales",
   phone: "644 20 61 06",
   phoneHref: "tel:+34644206106",
-  email: "miguel.mas@icopal.org",
+  email: "mmc.procurador@outlook.es",
   url: "https://mascastellanoprocuradores.com",
 } as const;
 

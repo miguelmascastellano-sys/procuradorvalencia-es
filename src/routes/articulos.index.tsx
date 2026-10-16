@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/articulos/")({
   head: () => seo({
-    title: "Artículos sobre procura | Mas Castellano Procuradores",
+    title: "Artículos sobre procura | Mas Castellano Procurador",
     description: "Artículos prácticos para abogados y despachos sobre la función del procurador, la colaboración procesal y la coordinación de procedimientos.",
     path: "/articulos",
   }),

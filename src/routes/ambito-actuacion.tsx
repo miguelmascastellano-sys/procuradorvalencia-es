@@ -4,7 +4,7 @@ import { ContactBand, PageHeader, Section } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/ambito-actuacion")({
   head: () => seo({
-    title: "Ámbito de actuación: Valencia y nacional | Mas Castellano Procuradores",
+    title: "Ámbito de actuación: Valencia y nacional | Mas Castellano Procurador",
     description: "Actividad centrada en Valencia y la Comunidad Valenciana, con coordinación de procedimientos en otros territorios mediante procuradores colaboradores.",
     path: "/ambito-actuacion",
   }),
@@ -15,7 +15,7 @@ function Page() {
   return (
     <>
       <PageHeader eyebrow="Ámbito de actuación" title="Valencia como prioridad. Cobertura nacional." intro={<>
-        <p>Mas Castellano Procuradores orienta su actividad principalmente a Valencia y la Comunidad Valenciana, con capacidad para coordinar procedimientos en otros territorios mediante una red de procuradores colaboradores.</p>
+        <p>Mas Castellano Procurador orienta su actividad principalmente a Valencia y la Comunidad Valenciana, con capacidad para coordinar procedimientos en otros territorios mediante una red de procuradores colaboradores.</p>
         <p className="mt-4">Una estructura de colaboración que permite atender las necesidades procesales de los despachos más allá de un único ámbito territorial.</p>
       </>} />
       <Section label="Nivel 1 · Prioritario" title="Comunidad Valenciana">

@@ -8,7 +8,7 @@ import { ContactBand, JsonLd, Numbered, Section } from "@/components/site/blocks
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Procuradores en Valencia | Mas Castellano Procuradores",
+      title: "Procurador en Valencia | Mas Castellano Procurador",
       description:
         "Procurador de los Tribunales en Valencia y la Comunidad Valenciana. Representación procesal y colaboración con despachos de abogados, con proyección nacional.",
       path: "/",
@@ -22,9 +22,9 @@ function Index() {
       <JsonLd data={organizationJsonLd} />
       <section className="container-site grid gap-12 pt-16 pb-20 md:grid-cols-12 md:pt-24 md:pb-28">
         <div className="md:col-span-7 md:pr-6">
-          <p className="eyebrow">Procuradores de los Tribunales</p>
+          <p className="eyebrow">Procurador de los Tribunales</p>
           <h1 className="mt-8 text-[2.75rem] leading-[1.02] md:text-[4.6rem]">
-            Procuradores en Valencia y la Comunidad Valenciana. <em className="text-muted-foreground">Proyección nacional.</em>
+            Procurador en Valencia y la Comunidad Valenciana. <em className="text-muted-foreground">Proyección nacional.</em>
           </h1>
           <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
             Representación procesal y colaboración con despachos de abogados, con una gestión rigurosa, comunicación directa y coordinación de procedimientos en distintos territorios.
@@ -45,7 +45,7 @@ function Index() {
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
           <p>La actividad procesal exige organización, atención al detalle y una coordinación constante entre los profesionales que intervienen en cada procedimiento.</p>
           <div className="space-y-5 text-muted-foreground">
-            <p>Mas Castellano Procuradores desarrolla su actividad con una orientación clara: ofrecer a abogados y despachos una colaboración procesal rigurosa, con interlocución directa, seguimiento de las actuaciones y una gestión adaptada a las necesidades de cada asunto.</p>
+            <p>Mas Castellano Procurador desarrolla su actividad con una orientación clara: ofrecer a abogados y despachos una colaboración procesal rigurosa, con interlocución directa, seguimiento de las actuaciones y una gestión adaptada a las necesidades de cada asunto.</p>
             <p>Con base en la experiencia práctica en la tramitación de procedimientos, el despacho apuesta por una forma de trabajar organizada, profesional y cercana.</p>
           </div>
         </div>
@@ -75,7 +75,7 @@ function Index() {
             <h2 className="mt-6 text-4xl leading-tight text-ink-foreground md:text-5xl">Valencia como prioridad. Cobertura nacional.</h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed opacity-85 md:col-span-7">
-            <p>Mas Castellano Procuradores orienta su actividad principalmente a Valencia y la Comunidad Valenciana, con capacidad para coordinar procedimientos en otros territorios mediante una red de procuradores colaboradores.</p>
+            <p>Mas Castellano Procurador orienta su actividad principalmente a Valencia y la Comunidad Valenciana, con capacidad para coordinar procedimientos en otros territorios mediante una red de procuradores colaboradores.</p>
             <p>Una estructura de colaboración que permite atender las necesidades procesales de los despachos más allá de un único ámbito territorial.</p>
           </div>
           <div className="grid gap-px bg-ink-foreground/15 md:col-span-12 md:grid-cols-2">
@@ -105,7 +105,7 @@ function Index() {
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>Mi trayectoria profesional incluye experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal, así como experiencia en la coordinación de asuntos en distintos territorios.</p>
             <p>Esta experiencia me ha permitido conocer de primera mano las necesidades operativas de los despachos y la importancia de una gestión procesal organizada, una comunicación clara y una coordinación eficaz entre profesionales.</p>
-            <p>Desde Mas Castellano Procuradores, mi objetivo es ofrecer una colaboración profesional rigurosa y adaptada a las necesidades de cada procedimiento.</p>
+            <p>Desde Mas Castellano Procurador, mi objetivo es ofrecer una colaboración profesional rigurosa y adaptada a las necesidades de cada procedimiento.</p>
           </div>
         </div>
       </section>

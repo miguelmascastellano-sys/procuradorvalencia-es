@@ -12,7 +12,7 @@ const FAQ = [
 
 export const Route = createFileRoute("/procurador-valencia")({
   head: () => seo({
-    title: "Procurador en Valencia | Mas Castellano Procuradores",
+    title: "Procurador en Valencia | Mas Castellano Procurador",
     description: "Procurador de los Tribunales en Valencia: representación procesal, procedimientos civiles, ejecuciones y bancarios, y colaboración con despachos de abogados.",
     path: "/procurador-valencia",
   }),
@@ -26,7 +26,7 @@ function Page() {
       <PageHeader eyebrow="Valencia" title="Procurador en Valencia." intro={<p>Servicios de procura para abogados, despachos y departamentos jurídicos con asuntos ante los juzgados y tribunales de Valencia. Representación procesal rigurosa, seguimiento de actuaciones e interlocución directa.</p>} />
       <Section label="Servicios en Valencia" title="Procura en Valencia, con criterio de despacho.">
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
-          <p>Valencia es el ámbito prioritario de Mas Castellano Procuradores. La actividad se centra en la representación procesal en los procedimientos encomendados y en la colaboración estable con los despachos que trabajan en la ciudad.</p>
+          <p>Valencia es el ámbito prioritario de Mas Castellano Procurador. La actividad se centra en la representación procesal en los procedimientos encomendados y en la colaboración estable con los despachos que trabajan en la ciudad.</p>
           <p className="text-muted-foreground">El objetivo es que el abogado disponga en todo momento de información clara sobre el estado de sus asuntos, con notificaciones trasladadas de forma ordenada y un interlocutor accesible.</p>
         </div>
       </Section>

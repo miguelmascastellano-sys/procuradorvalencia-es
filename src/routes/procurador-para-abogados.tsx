@@ -10,7 +10,7 @@ const FAQ = [
 
 export const Route = createFileRoute("/procurador-para-abogados")({
   head: () => seo({
-    title: "Procurador para abogados y despachos | Mas Castellano Procuradores",
+    title: "Procurador para abogados y despachos | Mas Castellano Procurador",
     description: "Colaboración procesal para abogados independientes, despachos y departamentos jurídicos: interlocución directa y adaptación a vuestro sistema de trabajo.",
     path: "/procurador-para-abogados",
   }),
