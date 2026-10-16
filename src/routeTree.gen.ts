@@ -10,33 +10,89 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AmbitoActuacionRouteImport } from './routes/ambito-actuacion'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as ElDespachoRouteImport } from './routes/el-despacho'
+import { Route as ServiciosProcuradorRouteImport } from './routes/servicios-procurador'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AmbitoActuacionRoute = AmbitoActuacionRouteImport.update({
+  id: '/ambito-actuacion',
+  path: '/ambito-actuacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElDespachoRoute = ElDespachoRouteImport.update({
+  id: '/el-despacho',
+  path: '/el-despacho',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiciosProcuradorRoute = ServiciosProcuradorRouteImport.update({
+  id: '/servicios-procurador',
+  path: '/servicios-procurador',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/contacto': typeof ContactoRoute
+  '/el-despacho': typeof ElDespachoRoute
+  '/servicios-procurador': typeof ServiciosProcuradorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/contacto': typeof ContactoRoute
+  '/el-despacho': typeof ElDespachoRoute
+  '/servicios-procurador': typeof ServiciosProcuradorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/contacto': typeof ContactoRoute
+  '/el-despacho': typeof ElDespachoRoute
+  '/servicios-procurador': typeof ServiciosProcuradorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ambito-actuacion'
+    | '/contacto'
+    | '/el-despacho'
+    | '/servicios-procurador'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ambito-actuacion'
+    | '/contacto'
+    | '/el-despacho'
+    | '/servicios-procurador'
+  id:
+    | '__root__'
+    | '/'
+    | '/ambito-actuacion'
+    | '/contacto'
+    | '/el-despacho'
+    | '/servicios-procurador'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AmbitoActuacionRoute: typeof AmbitoActuacionRoute
+  ContactoRoute: typeof ContactoRoute
+  ElDespachoRoute: typeof ElDespachoRoute
+  ServiciosProcuradorRoute: typeof ServiciosProcuradorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +104,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ambito-actuacion': {
+      id: '/ambito-actuacion'
+      path: '/ambito-actuacion'
+      fullPath: '/ambito-actuacion'
+      preLoaderRoute: typeof AmbitoActuacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/el-despacho': {
+      id: '/el-despacho'
+      path: '/el-despacho'
+      fullPath: '/el-despacho'
+      preLoaderRoute: typeof ElDespachoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicios-procurador': {
+      id: '/servicios-procurador'
+      path: '/servicios-procurador'
+      fullPath: '/servicios-procurador'
+      preLoaderRoute: typeof ServiciosProcuradorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AmbitoActuacionRoute: AmbitoActuacionRoute,
+  ContactoRoute: ContactoRoute,
+  ElDespachoRoute: ElDespachoRoute,
+  ServiciosProcuradorRoute: ServiciosProcuradorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
