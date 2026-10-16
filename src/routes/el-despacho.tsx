@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import detalle from "@/assets/despacho-detalle.jpg";
 import { seo } from "@/lib/site";
-import { PRINCIPLES } from "@/lib/services";
+import { ATTRIBUTES } from "@/lib/services";
 import { ContactBand, Numbered, PageHeader, Section } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/el-despacho")({
@@ -16,27 +15,26 @@ export const Route = createFileRoute("/el-despacho")({
 function Page() {
   return (
     <>
-      <PageHeader eyebrow="El despacho" title="La procura, entendida como una colaboración profesional." intro={<p>Una firma de procura con base en Valencia, orientada a abogados, despachos y departamentos jurídicos que valoran la organización y la comunicación directa.</p>} />
-      <Section label="Enfoque">
-        <div className="grid gap-12 md:grid-cols-9">
-          <div className="space-y-5 text-lg leading-relaxed md:col-span-5">
-            <p>La actividad procesal exige organización, atención al detalle y una coordinación constante entre los profesionales que intervienen en cada procedimiento.</p>
-            <p className="text-muted-foreground">Mas Castellano Procurador desarrolla su actividad con una orientación clara: ofrecer a abogados y despachos una colaboración procesal rigurosa, con interlocución directa, seguimiento de las actuaciones y una gestión adaptada a las necesidades de cada asunto.</p>
-            <p className="text-muted-foreground">Con base en la experiencia práctica en la tramitación de procedimientos, el despacho apuesta por una forma de trabajar organizada, profesional y cercana.</p>
+      <PageHeader eyebrow="Mi forma de trabajar" title="La procura forma parte del funcionamiento diario del despacho." intro={<p>Una manera de trabajar construida desde dentro: primero en la gestión diaria de procedimientos, ahora como procurador al servicio de abogados y despachos.</p>} />
+      <Section label="Punto de partida">
+        <div className="grid gap-12 md:grid-cols-12">
+          <p className="font-serif text-3xl leading-snug md:col-span-6 md:text-4xl">Quien ha trabajado dentro de un despacho sabe qué ocurre cuando una notificación llega tarde o un asunto pierde seguimiento.</p>
+          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8">
+            <p>El abogado necesita saber qué ha entrado, qué se ha presentado y qué está pendiente, sin tener que preguntarlo.</p>
+            <p>Esa es la base de la forma de trabajar de Mas Castellano Procurador: organización de la información, seguimiento de cada actuación y un interlocutor directo durante toda la tramitación.</p>
           </div>
-          <img src={detalle} alt="Mesa de trabajo con expedientes ordenados" width={1200} height={1408} loading="lazy" className="aspect-[4/5] w-full object-cover md:col-span-4" />
         </div>
       </Section>
-      <Section label="Forma de trabajo" title="Rigor procesal. Comunicación directa. Coordinación.">
-        <Numbered items={PRINCIPLES} />
+      <Section label="Atributos" title="Criterio, organización e interlocución directa.">
+        <Numbered items={ATTRIBUTES} />
       </Section>
       <Section label="El profesional" title="Miguel Mas Castellano. Procurador de los Tribunales.">
         <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-          <p>Mi trayectoria profesional incluye experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal, así como experiencia en la coordinación de asuntos en distintos territorios.</p>
-          <p>Esta experiencia me ha permitido conocer de primera mano las necesidades operativas de los despachos y la importancia de una gestión procesal organizada, una comunicación clara y una coordinación eficaz entre profesionales.</p>
-          <p>Desde Mas Castellano Procurador, mi objetivo es ofrecer una colaboración profesional rigurosa y adaptada a las necesidades de cada procedimiento.</p>
+          <p className="text-foreground">Mi experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal me ha permitido conocer de cerca el funcionamiento diario de un despacho y las necesidades que surgen durante la tramitación de los asuntos.</p>
+          <p>Desde Mas Castellano Procurador, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
+          <p>Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
-        <Link to="/procurador-para-abogados" className="link-quiet mt-10 inline-block text-sm">Cómo colaboramos con despachos →</Link>
+        <Link to="/procurador-para-abogados" className="link-quiet mt-10 inline-block text-sm">Cómo colaboro con despachos →</Link>
       </Section>
       <ContactBand />
     </>

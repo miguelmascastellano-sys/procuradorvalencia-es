@@ -23,7 +23,7 @@ function Page() {
   return (
     <>
       <JsonLd data={faqJsonLd(FAQ)} />
-      <PageHeader eyebrow="Valencia" title="Procurador en Valencia." intro={<p>Servicios de procura para abogados, despachos y departamentos jurídicos con asuntos ante los juzgados y tribunales de Valencia. Representación procesal rigurosa, seguimiento de actuaciones e interlocución directa.</p>} />
+      <PageHeader eyebrow="Valencia" title="Procurador en Valencia para abogados y despachos." intro={<p>Representación procesal ante los juzgados y tribunales de Valencia para abogados, despachos y departamentos jurídicos que necesitan un procurador con quien trabajar de forma estable.</p>} />
       <Section label="Servicios en Valencia" title="Procura en Valencia, con criterio de despacho.">
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
           <p>Valencia es el ámbito prioritario de Mas Castellano Procurador. La actividad se centra en la representación procesal en los procedimientos encomendados y en la colaboración estable con los despachos que trabajan en la ciudad.</p>
@@ -38,6 +38,12 @@ function Page() {
           { title: "Colaboración con despachos", text: "Apoyo procesal estable para abogados independientes, despachos y departamentos jurídicos." },
         ]} />
         <Link to="/servicios-procurador" className="link-quiet mt-10 inline-block text-sm">Todos los servicios de procura →</Link>
+      </Section>
+      <Section label="Coordinación" title="Coordinación de asuntos y comunicación profesional.">
+        <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
+          <p>Cada despacho reporta de una manera: por correo, por asunto, por cliente o mediante su propio sistema de seguimiento. La procura se adapta a ese esquema, no al revés.</p>
+          <p className="text-muted-foreground">Notificaciones trasladadas de forma ordenada, avisos sobre actuaciones pendientes y un único interlocutor que conoce el estado de cada procedimiento en Valencia.</p>
+        </div>
       </Section>
       <Section label="Colaboración" title="Cómo iniciar una colaboración.">
         <ol className="max-w-3xl space-y-6 text-lg leading-relaxed">

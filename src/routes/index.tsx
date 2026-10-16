@@ -1,16 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import hero from "@/assets/hero-arquitectura.jpg";
-import detalle from "@/assets/despacho-detalle.jpg";
 import { seo, organizationJsonLd } from "@/lib/site";
-import { SERVICES, PRINCIPLES } from "@/lib/services";
-import { ContactBand, JsonLd, Numbered, Section } from "@/components/site/blocks";
+import { SERVICES, ATTRIBUTES } from "@/lib/services";
+import { ContactBand, JsonLd, Section } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Procurador en Valencia | Mas Castellano Procurador",
+      title: "Mas Castellano Procurador | Procurador de los Tribunales en Valencia",
       description:
-        "Procurador de los Tribunales en Valencia y la Comunidad Valenciana. Representación procesal y colaboración con despachos de abogados, con proyección nacional.",
+        "La procura, desde dentro del procedimiento. Representación procesal y colaboración con despachos de abogados en Valencia, la Comunidad Valenciana y el ámbito nacional.",
       path: "/",
     }),
   component: Index,
@@ -20,36 +18,51 @@ function Index() {
   return (
     <>
       <JsonLd data={organizationJsonLd} />
-      <section className="container-site grid gap-12 pt-16 pb-20 md:grid-cols-12 md:pt-24 md:pb-28">
-        <div className="md:col-span-7 md:pr-6">
-          <p className="eyebrow">Procurador de los Tribunales</p>
-          <h1 className="mt-8 text-[2.75rem] leading-[1.02] md:text-[4.6rem]">
-            Procurador en Valencia y la Comunidad Valenciana. <em className="text-muted-foreground">Proyección nacional.</em>
-          </h1>
-          <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Representación procesal y colaboración con despachos de abogados, con una gestión rigurosa, comunicación directa y coordinación de procedimientos en distintos territorios.
+
+      {/* Hero */}
+      <section className="container-site pt-20 pb-24 md:pt-32 md:pb-36">
+        <p className="eyebrow">Mas Castellano Procurador</p>
+        <h1 className="mt-10 max-w-5xl text-[3rem] leading-[1] md:text-[6rem]">
+          La procura, desde dentro <em className="text-muted-foreground">del procedimiento.</em>
+        </h1>
+        <div className="mt-14 grid gap-10 border-t border-rule pt-10 md:grid-cols-12">
+          <p className="text-lg leading-relaxed md:col-span-6 md:text-xl">
+            Representación procesal y colaboración con despachos de abogados en Valencia, la Comunidad Valenciana y el ámbito nacional.
           </p>
-          <div className="mt-12 flex flex-wrap items-center gap-6">
-            <Link to="/el-despacho" className="bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
-              Conocer el despacho
-            </Link>
-            <Link to="/contacto" className="link-quiet text-sm">Contacto profesional →</Link>
+          <div className="md:col-span-5 md:col-start-8">
+            <p className="text-sm text-muted-foreground">Miguel Mas Castellano · Procurador de los Tribunales</p>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
+              <Link to="/el-despacho" className="bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
+                Conocer mi forma de trabajar
+              </Link>
+              <Link to="/contacto" className="link-quiet text-sm">Contacto profesional →</Link>
+            </div>
           </div>
-        </div>
-        <div className="md:col-span-5">
-          <img src={hero} alt="Fachada de piedra clara de un edificio contemporáneo en Valencia bajo luz de mañana" width={1600} height={1104} fetchPriority="high" className="aspect-[4/5] w-full object-cover" />
         </div>
       </section>
 
-      <Section label="El despacho" title="La procura, entendida como una colaboración profesional.">
-        <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
-          <p>La actividad procesal exige organización, atención al detalle y una coordinación constante entre los profesionales que intervienen en cada procedimiento.</p>
-          <div className="space-y-5 text-muted-foreground">
-            <p>Mas Castellano Procurador desarrolla su actividad con una orientación clara: ofrecer a abogados y despachos una colaboración procesal rigurosa, con interlocución directa, seguimiento de las actuaciones y una gestión adaptada a las necesidades de cada asunto.</p>
-            <p>Con base en la experiencia práctica en la tramitación de procedimientos, el despacho apuesta por una forma de trabajar organizada, profesional y cercana.</p>
+      {/* Diferenciación */}
+      <section className="bg-ink text-ink-foreground">
+        <div className="container-site grid gap-12 py-24 md:grid-cols-12 md:py-32">
+          <p className="text-[0.72rem] tracking-[0.18em] uppercase opacity-60 md:col-span-12">Una forma de entender la procura</p>
+          <h2 className="text-4xl leading-[1.08] text-ink-foreground md:col-span-7 md:text-[3.4rem]">
+            No basta con conocer el procedimiento. <em className="opacity-70">Hay que entender cómo trabaja el despacho.</em>
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed opacity-85 md:col-span-4 md:col-start-9 md:pt-3">
+            <p>La experiencia en la gestión diaria de procedimientos permite comprender algo importante: la procura no funciona de manera aislada.</p>
+            <p>Cada asunto requiere coordinación, información y una comunicación profesional que encaje con la dinámica del abogado.</p>
+            <p>Mi forma de entender la profesión parte de esa realidad. Conocer las necesidades operativas del despacho, mantener el seguimiento de los asuntos encomendados y facilitar una interlocución directa durante la tramitación.</p>
           </div>
+          <dl className="grid gap-10 border-t border-ink-foreground/20 pt-10 md:col-span-12 md:grid-cols-3">
+            {ATTRIBUTES.map((a) => (
+              <div key={a.title}>
+                <dt className="font-serif text-2xl text-ink-foreground">{a.title}</dt>
+                <dd className="mt-3 leading-relaxed opacity-75">{a.text}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-      </Section>
+      </section>
 
       <Section label="Servicios" title="Áreas de actuación procesal.">
         <ul className="border-b border-border">
@@ -64,51 +77,30 @@ function Index() {
         <Link to="/servicios-procurador" className="link-quiet mt-8 inline-block text-sm">Ver los servicios de procura en detalle →</Link>
       </Section>
 
-      <Section label="Forma de trabajo" title="Rigor procesal. Comunicación directa. Coordinación.">
-        <Numbered items={PRINCIPLES} />
+      <Section label="Ámbito" title="Valencia como prioridad. Coordinación nacional.">
+        <div className="grid gap-px border-y border-border bg-border md:grid-cols-2">
+          <Link to="/procurador-comunidad-valenciana" className="bg-background py-10 md:pr-10">
+            <p className="eyebrow">Ámbito prioritario</p>
+            <h3 className="mt-4 text-3xl">Valencia y Comunidad Valenciana</h3>
+            <p className="mt-3 leading-relaxed text-muted-foreground">Donde se desarrolla la actividad y se construyen las colaboraciones estables con despachos.</p>
+            <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
+          </Link>
+          <Link to="/procurador-nacional" className="bg-background py-10 md:pl-10">
+            <p className="eyebrow">Ámbito complementario</p>
+            <h3 className="mt-4 text-3xl">Ámbito nacional</h3>
+            <p className="mt-3 leading-relaxed text-muted-foreground">Coordinación de procedimientos en otros territorios mediante procuradores colaboradores, con un único interlocutor.</p>
+            <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
+          </Link>
+        </div>
       </Section>
 
-      <section className="bg-ink text-ink-foreground">
-        <div className="container-site grid gap-12 py-20 md:grid-cols-12 md:py-28">
-          <div className="md:col-span-5">
-            <p className="text-[0.72rem] tracking-[0.18em] uppercase opacity-60">Ámbito de actuación</p>
-            <h2 className="mt-6 text-4xl leading-tight text-ink-foreground md:text-5xl">Valencia como prioridad. Cobertura nacional.</h2>
-          </div>
-          <div className="space-y-6 text-lg leading-relaxed opacity-85 md:col-span-7">
-            <p>Mas Castellano Procurador orienta su actividad principalmente a Valencia y la Comunidad Valenciana, con capacidad para coordinar procedimientos en otros territorios mediante una red de procuradores colaboradores.</p>
-            <p>Una estructura de colaboración que permite atender las necesidades procesales de los despachos más allá de un único ámbito territorial.</p>
-          </div>
-          <div className="grid gap-px bg-ink-foreground/15 md:col-span-12 md:grid-cols-2">
-            <Link to="/procurador-comunidad-valenciana" className="group bg-ink p-8 md:p-10">
-              <p className="text-[0.72rem] tracking-[0.18em] uppercase opacity-60">Nivel 1 · Prioritario</p>
-              <h3 className="mt-4 text-3xl text-ink-foreground">Comunidad Valenciana</h3>
-              <p className="mt-3 opacity-75">Prioridad comercial y territorial, con especial atención a Valencia.</p>
-              <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
-            </Link>
-            <Link to="/procurador-nacional" className="group bg-ink p-8 md:p-10">
-              <p className="text-[0.72rem] tracking-[0.18em] uppercase opacity-60">Nivel 2 · Coordinación</p>
-              <h3 className="mt-4 text-3xl text-ink-foreground">Ámbito nacional</h3>
-              <p className="mt-3 opacity-75">Coordinación de procedimientos en otros territorios a través de colaboradores profesionales.</p>
-              <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
-            </Link>
-          </div>
+      <Section label="El profesional" title="Miguel Mas Castellano. Procurador de los Tribunales.">
+        <div className="max-w-3xl space-y-5 text-lg leading-relaxed">
+          <p>Mi experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal me ha permitido conocer de cerca el funcionamiento diario de un despacho y las necesidades que surgen durante la tramitación de los asuntos.</p>
+          <p className="text-muted-foreground">Desde Mas Castellano Procurador, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
+          <p className="text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
-      </section>
-
-      <section className="container-site grid gap-12 py-20 md:grid-cols-12 md:py-28">
-        <div className="md:col-span-5">
-          <img src={detalle} alt="Carpetas de expedientes ordenadas sobre una mesa de roble junto a una ventana" width={1200} height={1408} loading="lazy" className="aspect-[4/5] w-full object-cover" />
-        </div>
-        <div className="md:col-span-6 md:col-start-7 md:pt-10">
-          <p className="eyebrow">El profesional</p>
-          <h2 className="mt-6 text-4xl leading-tight md:text-5xl">Miguel Mas Castellano. Procurador de los Tribunales.</h2>
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>Mi trayectoria profesional incluye experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal, así como experiencia en la coordinación de asuntos en distintos territorios.</p>
-            <p>Esta experiencia me ha permitido conocer de primera mano las necesidades operativas de los despachos y la importancia de una gestión procesal organizada, una comunicación clara y una coordinación eficaz entre profesionales.</p>
-            <p>Desde Mas Castellano Procurador, mi objetivo es ofrecer una colaboración profesional rigurosa y adaptada a las necesidades de cada procedimiento.</p>
-          </div>
-        </div>
-      </section>
+      </Section>
 
       <ContactBand />
     </>
