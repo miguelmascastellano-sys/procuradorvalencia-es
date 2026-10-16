@@ -11,13 +11,18 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AmbitoActuacionRouteImport } from './routes/ambito-actuacion'
+import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as ElDespachoRouteImport } from './routes/el-despacho'
+import { Route as PoliticaCookiesRouteImport } from './routes/politica-cookies'
+import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privacidad'
 import { Route as ProcuradorComunidadValencianaRouteImport } from './routes/procurador-comunidad-valenciana'
 import { Route as ProcuradorNacionalRouteImport } from './routes/procurador-nacional'
 import { Route as ProcuradorParaAbogadosRouteImport } from './routes/procurador-para-abogados'
 import { Route as ProcuradorValenciaRouteImport } from './routes/procurador-valencia'
 import { Route as ServiciosProcuradorRouteImport } from './routes/servicios-procurador'
+import { Route as ArticulosIndexRouteImport } from './routes/articulos.index'
+import { Route as ArticulosSlugRouteImport } from './routes/articulos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,6 +34,11 @@ const AmbitoActuacionRoute = AmbitoActuacionRouteImport.update({
   path: '/ambito-actuacion',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AvisoLegalRoute = AvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactoRoute = ContactoRouteImport.update({
   id: '/contacto',
   path: '/contacto',
@@ -37,6 +47,16 @@ const ContactoRoute = ContactoRouteImport.update({
 const ElDespachoRoute = ElDespachoRouteImport.update({
   id: '/el-despacho',
   path: '/el-despacho',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaCookiesRoute = PoliticaCookiesRouteImport.update({
+  id: '/politica-cookies',
+  path: '/politica-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaPrivacidadRoute = PoliticaPrivacidadRouteImport.update({
+  id: '/politica-privacidad',
+  path: '/politica-privacidad',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcuradorComunidadValencianaRoute =
@@ -65,87 +85,132 @@ const ServiciosProcuradorRoute = ServiciosProcuradorRouteImport.update({
   path: '/servicios-procurador',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticulosIndexRoute = ArticulosIndexRouteImport.update({
+  id: '/articulos/',
+  path: '/articulos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticulosSlugRoute = ArticulosSlugRouteImport.update({
+  id: '/articulos/$slug',
+  path: '/articulos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
+  '/politica-cookies': typeof PoliticaCookiesRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
+  '/articulos/': typeof ArticulosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
+  '/politica-cookies': typeof PoliticaCookiesRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
+  '/articulos': typeof ArticulosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
+  '/politica-cookies': typeof PoliticaCookiesRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
+  '/articulos/': typeof ArticulosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/ambito-actuacion'
+    | '/aviso-legal'
     | '/contacto'
     | '/el-despacho'
+    | '/politica-cookies'
+    | '/politica-privacidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
     | '/procurador-valencia'
     | '/servicios-procurador'
+    | '/articulos/$slug'
+    | '/articulos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/ambito-actuacion'
+    | '/aviso-legal'
     | '/contacto'
     | '/el-despacho'
+    | '/politica-cookies'
+    | '/politica-privacidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
     | '/procurador-valencia'
     | '/servicios-procurador'
+    | '/articulos/$slug'
+    | '/articulos'
   id:
     | '__root__'
     | '/'
     | '/ambito-actuacion'
+    | '/aviso-legal'
     | '/contacto'
     | '/el-despacho'
+    | '/politica-cookies'
+    | '/politica-privacidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
     | '/procurador-valencia'
     | '/servicios-procurador'
+    | '/articulos/$slug'
+    | '/articulos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AmbitoActuacionRoute: typeof AmbitoActuacionRoute
+  AvisoLegalRoute: typeof AvisoLegalRoute
   ContactoRoute: typeof ContactoRoute
   ElDespachoRoute: typeof ElDespachoRoute
+  PoliticaCookiesRoute: typeof PoliticaCookiesRoute
+  PoliticaPrivacidadRoute: typeof PoliticaPrivacidadRoute
   ProcuradorComunidadValencianaRoute: typeof ProcuradorComunidadValencianaRoute
   ProcuradorNacionalRoute: typeof ProcuradorNacionalRoute
   ProcuradorParaAbogadosRoute: typeof ProcuradorParaAbogadosRoute
   ProcuradorValenciaRoute: typeof ProcuradorValenciaRoute
   ServiciosProcuradorRoute: typeof ServiciosProcuradorRoute
+  ArticulosSlugRoute: typeof ArticulosSlugRoute
+  ArticulosIndexRoute: typeof ArticulosIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -164,6 +229,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AmbitoActuacionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aviso-legal': {
+      id: '/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/aviso-legal'
+      preLoaderRoute: typeof AvisoLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contacto': {
       id: '/contacto'
       path: '/contacto'
@@ -176,6 +248,20 @@ declare module '@tanstack/react-router' {
       path: '/el-despacho'
       fullPath: '/el-despacho'
       preLoaderRoute: typeof ElDespachoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-cookies': {
+      id: '/politica-cookies'
+      path: '/politica-cookies'
+      fullPath: '/politica-cookies'
+      preLoaderRoute: typeof PoliticaCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-privacidad': {
+      id: '/politica-privacidad'
+      path: '/politica-privacidad'
+      fullPath: '/politica-privacidad'
+      preLoaderRoute: typeof PoliticaPrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/procurador-comunidad-valenciana': {
@@ -213,19 +299,38 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosProcuradorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articulos/': {
+      id: '/articulos/'
+      path: '/articulos'
+      fullPath: '/articulos/'
+      preLoaderRoute: typeof ArticulosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articulos/$slug': {
+      id: '/articulos/$slug'
+      path: '/articulos/$slug'
+      fullPath: '/articulos/$slug'
+      preLoaderRoute: typeof ArticulosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AmbitoActuacionRoute: AmbitoActuacionRoute,
+  AvisoLegalRoute: AvisoLegalRoute,
   ContactoRoute: ContactoRoute,
   ElDespachoRoute: ElDespachoRoute,
+  PoliticaCookiesRoute: PoliticaCookiesRoute,
+  PoliticaPrivacidadRoute: PoliticaPrivacidadRoute,
   ProcuradorComunidadValencianaRoute: ProcuradorComunidadValencianaRoute,
   ProcuradorNacionalRoute: ProcuradorNacionalRoute,
   ProcuradorParaAbogadosRoute: ProcuradorParaAbogadosRoute,
   ProcuradorValenciaRoute: ProcuradorValenciaRoute,
   ServiciosProcuradorRoute: ServiciosProcuradorRoute,
+  ArticulosSlugRoute: ArticulosSlugRoute,
+  ArticulosIndexRoute: ArticulosIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
