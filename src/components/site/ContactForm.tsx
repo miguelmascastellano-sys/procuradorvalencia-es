@@ -56,7 +56,7 @@ export function ContactForm() {
       <div role="status" className="border-t border-rule pt-8">
         <p className="font-serif text-3xl">Consulta recibida.</p>
         <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
-          Gracias por contactar con Mas Castellano Procuradores. Revisaremos tu mensaje y responderemos a la mayor brevedad.
+          Gracias por contactar con Mas Castellano Procurador. Revisaremos tu mensaje y responderemos a la mayor brevedad.
         </p>
         <button type="button" onClick={() => { startedAt.current = Date.now(); setStatus("idle"); }} className="link-quiet mt-6 text-sm">
           Enviar otra consulta

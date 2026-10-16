@@ -4,7 +4,7 @@ import { ContactBand, Numbered, PageHeader, Section } from "@/components/site/bl
 
 export const Route = createFileRoute("/procurador-nacional")({
   head: () => seo({
-    title: "Procurador de ámbito nacional | Mas Castellano Procuradores",
+    title: "Procurador de ámbito nacional | Mas Castellano Procurador",
     description: "Coordinación de procedimientos judiciales en distintos territorios de España a través de una red de procuradores colaboradores, con un único interlocutor.",
     path: "/procurador-nacional",
   }),
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/procurador-nacional")({
 function Page() {
   return (
     <>
-      <PageHeader eyebrow="Ámbito nacional" title="Coordinación de procedimientos en distintos territorios." intro={<p>Desde Valencia, Mas Castellano Procuradores coordina asuntos en otros territorios a través de procuradores colaboradores, para que el despacho mantenga un único interlocutor.</p>} />
+      <PageHeader eyebrow="Ámbito nacional" title="Coordinación de procedimientos en distintos territorios." intro={<p>Desde Valencia, Mas Castellano Procurador coordina asuntos en otros territorios a través de procuradores colaboradores, para que el despacho mantenga un único interlocutor.</p>} />
       <Section label="Planteamiento" title="Un punto de referencia para asuntos dispersos.">
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
           <p>Cuando un despacho tramita procedimientos en distintos partidos judiciales, la multiplicidad de interlocutores dificulta el control y la comunicación.</p>
