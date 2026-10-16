@@ -54,11 +54,21 @@ export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
-export function ContactBand({ title = "Una colaboración profesional empieza con una buena conversación." }: { title?: string }) {
+export function ContactBand({
+  title = "Hablemos de vuestra forma de trabajar.",
+  text = "Cada despacho tiene su dinámica de trabajo. Conocerla es el primer paso para valorar una colaboración procesal adecuada.",
+}: { title?: string; text?: string }) {
   return (
     <section className="container-site border-t border-rule py-20 md:py-28">
       <div className="grid gap-10 md:grid-cols-12 md:items-end">
-        <h2 className="text-3xl leading-tight md:col-span-8 md:text-5xl">{title}</h2>
+        <div className="md:col-span-8">
+          <h2 className="text-3xl leading-tight md:text-5xl">{title}</h2>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{text}</p>
+          <p className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+            <a href="tel:+34644206106" className="link-quiet">644 20 61 06</a>
+            <a href="mailto:mmc.procurador@outlook.es" className="link-quiet">mmc.procurador@outlook.es</a>
+          </p>
+        </div>
         <div className="md:col-span-4 md:text-right">
           <Link to="/contacto" className="inline-block bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
             Contacto profesional
