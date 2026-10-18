@@ -14,6 +14,6 @@
 - Contact validation is shared in a browser-safe schema module; rejected spam never returns a successful receipt, and new inquiries record the displayed privacy notice rather than generic consent.
 - Typography is self-hosted through Fontsource packages to avoid third-party font requests.
 - Cookie controls share a versioned local preference record and expose only actual installed optional services; platform-injected scripts require provider verification, not claims of application-side blocking.
-- Shared site blocks and semantic CSS tokens style the public content routes, keeping each route's own content and head metadata.
+- Shared editorial PageHeader, Section, Numbered and LegalPage compositions plus semantic CSS tokens style all public pages; preserve each route’s content and metadata so redesigns remain consistent without duplicating layouts.
 - Canonical and Open Graph URLs target the current published origin until a custom domain is connected; the professional domain remains a separate identity fact.
 - public/sitemap.xml is static: add new public routes to it.

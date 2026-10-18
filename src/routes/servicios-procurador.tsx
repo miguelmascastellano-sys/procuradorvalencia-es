@@ -25,21 +25,21 @@ function Page() {
         </Section>
       ))}
       <Section label="Áreas en detalle">
-        <ul className="grid gap-px border-y border-border bg-border md:grid-cols-3">
-          <li className="bg-background py-8 md:pr-8">
-            <h3 className="text-xl">Civil y ejecuciones</h3>
+        <ul className="divide-y divide-border border-y border-border">
+          <li className="grid gap-x-10 gap-y-3 py-8 md:grid-cols-2">
+            <h3 className="font-serif text-3xl">Civil y ejecuciones</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Declarativos, monitorios y ejecución de títulos, con impulso de las actuaciones.</p>
-            <Link to="/procedimientos-civiles-ejecuciones" className="link-quiet mt-4 inline-block text-sm">Ver el área →</Link>
+            <Link to="/procedimientos-civiles-ejecuciones" className="link-quiet w-fit text-sm text-bronze md:col-start-2">Ver el área →</Link>
           </li>
-          <li className="bg-background py-8 md:px-8">
-            <h3 className="text-xl">Familia</h3>
+          <li className="grid gap-x-10 gap-y-3 py-8 md:grid-cols-2">
+            <h3 className="font-serif text-3xl">Familia</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Divorcios, modificaciones de medidas y ejecución de resoluciones de familia.</p>
-            <Link to="/procedimientos-familia" className="link-quiet mt-4 inline-block text-sm">Ver el área →</Link>
+            <Link to="/procedimientos-familia" className="link-quiet w-fit text-sm text-bronze md:col-start-2">Ver el área →</Link>
           </li>
-          <li className="bg-background py-8 md:pl-8">
-            <h3 className="text-xl">Bancarios y reclamaciones</h3>
+          <li className="grid gap-x-10 gap-y-3 py-8 md:grid-cols-2">
+            <h3 className="font-serif text-3xl">Bancarios y reclamaciones</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Reclamaciones y recuperación de deuda, también en carteras con volumen.</p>
-            <Link to="/procedimientos-bancarios" className="link-quiet mt-4 inline-block text-sm">Ver el área →</Link>
+            <Link to="/procedimientos-bancarios" className="link-quiet w-fit text-sm text-bronze md:col-start-2">Ver el área →</Link>
           </li>
         </ul>
       </Section>

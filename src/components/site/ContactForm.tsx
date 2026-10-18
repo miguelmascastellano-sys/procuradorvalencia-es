@@ -7,7 +7,7 @@ import { contactSchema, COLLABORATION_TYPES } from "@/lib/contact-schema";
 import { Button } from "@/components/ui/button";
 
 type Status = "idle" | "sending" | "sent" | "error";
-const field = "mt-2 min-h-12 w-full rounded-sm border border-input bg-background px-3 py-3 text-base transition-colors focus:border-primary";
+const field = "mt-2 min-h-12 w-full rounded-none border-0 border-b border-input bg-transparent px-0 py-3 text-base transition-colors focus:border-primary";
 const label = "text-sm font-medium text-foreground";
 export function ContactForm() {
   const send = useServerFn(submitContact);
