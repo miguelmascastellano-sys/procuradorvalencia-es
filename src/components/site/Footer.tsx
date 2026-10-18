@@ -28,6 +28,8 @@ export function Footer() {
             <a href={SITE.phoneHref} className="link-quiet block w-fit">Tel. {SITE.phone}</a>
             <a href={SITE.whatsappHref} className="link-quiet block w-fit">WhatsApp</a>
             <a href={SITE.contactHref} className="link-quiet block w-fit break-all">{SITE.email}</a>
+            <p>{SITE.address}</p>
+            <p>Colegiado n.º {SITE.collegeNumber} · ICOPAL</p>
           </div>
         </div>
         <nav aria-label="Pie de página" className="md:col-span-3">
