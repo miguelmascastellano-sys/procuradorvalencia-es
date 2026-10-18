@@ -19,6 +19,7 @@ import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privac
 import { Route as ProcedimientosBancariosRouteImport } from './routes/procedimientos-bancarios'
 import { Route as ProcedimientosCivilesEjecucionesRouteImport } from './routes/procedimientos-civiles-ejecuciones'
 import { Route as ProcedimientosFamiliaRouteImport } from './routes/procedimientos-familia'
+import { Route as ProcedimientosSegundaOportunidadRouteImport } from './routes/procedimientos-segunda-oportunidad'
 import { Route as ProcuradorComunidadValencianaRouteImport } from './routes/procurador-comunidad-valenciana'
 import { Route as ProcuradorNacionalRouteImport } from './routes/procurador-nacional'
 import { Route as ProcuradorParaAbogadosRouteImport } from './routes/procurador-para-abogados'
@@ -78,6 +79,12 @@ const ProcedimientosFamiliaRoute = ProcedimientosFamiliaRouteImport.update({
   path: '/procedimientos-familia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcedimientosSegundaOportunidadRoute =
+  ProcedimientosSegundaOportunidadRouteImport.update({
+    id: '/procedimientos-segunda-oportunidad',
+    path: '/procedimientos-segunda-oportunidad',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProcuradorComunidadValencianaRoute =
   ProcuradorComunidadValencianaRouteImport.update({
     id: '/procurador-comunidad-valenciana',
@@ -126,6 +133,7 @@ export interface FileRoutesByFullPath {
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
+  '/procedimientos-segunda-oportunidad': typeof ProcedimientosSegundaOportunidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -145,6 +153,7 @@ export interface FileRoutesByTo {
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
+  '/procedimientos-segunda-oportunidad': typeof ProcedimientosSegundaOportunidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -165,6 +174,7 @@ export interface FileRoutesById {
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
+  '/procedimientos-segunda-oportunidad': typeof ProcedimientosSegundaOportunidadRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
+    | '/procedimientos-segunda-oportunidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
+    | '/procedimientos-segunda-oportunidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -224,6 +236,7 @@ export interface FileRouteTypes {
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
+    | '/procedimientos-segunda-oportunidad'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -244,6 +257,7 @@ export interface RootRouteChildren {
   ProcedimientosBancariosRoute: typeof ProcedimientosBancariosRoute
   ProcedimientosCivilesEjecucionesRoute: typeof ProcedimientosCivilesEjecucionesRoute
   ProcedimientosFamiliaRoute: typeof ProcedimientosFamiliaRoute
+  ProcedimientosSegundaOportunidadRoute: typeof ProcedimientosSegundaOportunidadRoute
   ProcuradorComunidadValencianaRoute: typeof ProcuradorComunidadValencianaRoute
   ProcuradorNacionalRoute: typeof ProcuradorNacionalRoute
   ProcuradorParaAbogadosRoute: typeof ProcuradorParaAbogadosRoute
@@ -325,6 +339,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProcedimientosFamiliaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procedimientos-segunda-oportunidad': {
+      id: '/procedimientos-segunda-oportunidad'
+      path: '/procedimientos-segunda-oportunidad'
+      fullPath: '/procedimientos-segunda-oportunidad'
+      preLoaderRoute: typeof ProcedimientosSegundaOportunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/procurador-comunidad-valenciana': {
       id: '/procurador-comunidad-valenciana'
       path: '/procurador-comunidad-valenciana'
@@ -388,6 +409,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProcedimientosBancariosRoute: ProcedimientosBancariosRoute,
   ProcedimientosCivilesEjecucionesRoute: ProcedimientosCivilesEjecucionesRoute,
   ProcedimientosFamiliaRoute: ProcedimientosFamiliaRoute,
+  ProcedimientosSegundaOportunidadRoute: ProcedimientosSegundaOportunidadRoute,
   ProcuradorComunidadValencianaRoute: ProcuradorComunidadValencianaRoute,
   ProcuradorNacionalRoute: ProcuradorNacionalRoute,
   ProcuradorParaAbogadosRoute: ProcuradorParaAbogadosRoute,
