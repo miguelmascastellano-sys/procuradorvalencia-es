@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, organizationJsonLd, websiteJsonLd, SITE } from "@/lib/site";
 import { SERVICES, ATTRIBUTES } from "@/lib/services";
-import { ContactBand, Faq, faqJsonLd, JsonLd, Section } from "@/components/site/blocks";
-import heroJuzgado from "@/assets/hero-juzgado.webp";
+import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, Section } from "@/components/site/blocks";
+import architecture from "@/assets/editorial-arquitectura.jpg";
+import desk from "@/assets/despacho-trabajo.webp";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Check, MessageSquare, ListChecks } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const FAQ = [
   { q: "¿Qué hace un procurador en Valencia en un procedimiento judicial?", a: "Ostenta la representación procesal de la parte ante los juzgados y tribunales: presenta escritos, recibe y traslada notificaciones al abogado, atiende requerimientos y sigue el estado de las actuaciones." },
@@ -33,106 +34,49 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return (
-    <>
-      <JsonLd data={organizationJsonLd} />
-      <JsonLd data={websiteJsonLd} />
-      <JsonLd data={faqJsonLd(FAQ)} />
-
-      <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
-        <img src={heroJuzgado} alt="Arquitectura de inspiración judicial con columnas de piedra y luz natural" width={1600} height={1008} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
-        <div className="absolute inset-0 -z-10 bg-ink/70" />
-        <div className="container-site py-10 md:py-20 lg:py-24">
-          <p className="flex items-center gap-3 text-xs uppercase"><span className="h-px w-10 bg-bronze" />MMC Procuradores · Valencia</p>
-          <h1 className="mt-6 max-w-3xl text-[2.25rem] leading-[1.05] text-ink-foreground md:text-[4.25rem] lg:text-[4.75rem]">Servicios de procura para abogados y despachos</h1>
-          <p className="mt-6 max-w-2xl text-[0.9375rem] leading-relaxed text-ink-foreground/90 md:text-lg">Representación procesal, seguimiento de actuaciones y coordinación profesional con especial atención a Valencia y la Comunidad Valenciana, con colaboración en otros territorios según las necesidades de cada procedimiento.</p>
-          <div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg" variant="inverse"><Link to="/contacto">Solicitar colaboración<ArrowUpRight /></Link></Button><Button asChild size="lg" variant="inverseOutline"><Link to="/servicios-procurador">Conocer los servicios</Link></Button></div>
-          <p className="mt-6 border-t border-ink-foreground/25 pt-4 font-serif text-lg italic text-ink-foreground/85 md:mt-10 md:text-xl">{SITE.tagline}</p>
+  return <>
+    <JsonLd data={organizationJsonLd} /><JsonLd data={websiteJsonLd} /><JsonLd data={faqJsonLd(FAQ)} />
+    <section className="editorial-hero bg-ink text-ink-foreground">
+      <img src={architecture} alt="Composición arquitectónica ilustrativa de columnas de piedra y escalinata" width={1920} height={1088} fetchPriority="high" className="editorial-hero-image" />
+      <div className="container-site grid gap-6 py-12 md:grid-cols-12 md:py-16">
+        <p className="editorial-kicker text-ink-foreground/75 md:col-span-12">MMC Procuradores</p>
+        <h1 className="max-w-3xl text-[2.75rem] leading-[1.02] text-ink-foreground md:col-span-8 md:text-[4.5rem] lg:text-[5rem]">Servicios de procura <em className="font-normal text-ink-foreground/75">para abogados y despachos.</em></h1>
+        <div className="md:col-span-6">
+          <p className="max-w-lg text-base leading-relaxed text-ink-foreground/85">Representación procesal y seguimiento de actuaciones en <strong className="font-medium text-ink-foreground">Valencia y la Comunidad Valenciana.</strong></p>
+          <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-foreground/75">Colaboración profesional a nivel nacional, según el procedimiento y el ámbito de actuación, mediante procuradores colaboradores.</p>
+          <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3"><Button asChild variant="inverse"><Link to="/contacto">Solicitar colaboración<ArrowUpRight /></Link></Button><Button asChild variant="editorialInverse"><Link to="/servicios-procurador">Conocer los servicios<ArrowUpRight /></Link></Button></div>
         </div>
-      </section>
-      <section aria-label="Compromisos profesionales" className="border-b border-border bg-background"><div className="container-site grid gap-6 py-8 md:grid-cols-3">
-        {[{ icon: Check, title: "Rigor procesal", text: "Atención a cada actuación." }, { icon: MessageSquare, title: "Comunicación directa", text: "Un interlocutor para el despacho." }, { icon: ListChecks, title: "Seguimiento organizado", text: "Información clara durante la tramitación." }].map(item => <div key={item.title} className="flex items-start gap-4"><item.icon className="mt-1 h-5 w-5 shrink-0 text-bronze" /><div><h2 className="text-xl">{item.title}</h2><p className="mt-1 text-sm text-muted-foreground">{item.text}</p></div></div>)}
-      </div></section>
+        <p className="mt-2 border-t border-ink-foreground/25 pt-5 font-serif text-lg italic text-ink-foreground/70 md:col-span-12">{SITE.tagline}</p>
+      </div>
+    </section>
 
-      {/* Diferenciación */}
-      <section className="bg-ink text-ink-foreground">
-        <div className="container-site grid gap-10 py-16 md:grid-cols-12 md:py-24">
-          <p className="text-[0.72rem] uppercase opacity-60 md:col-span-12">Una forma de entender la procura</p>
-          <h2 className="text-4xl leading-[1.08] text-ink-foreground md:col-span-7 md:text-[3.4rem]">
-            No basta con conocer el procedimiento. <em className="opacity-70">Hay que entender cómo trabaja el despacho.</em>
-          </h2>
-          <div className="space-y-6 text-lg leading-relaxed opacity-85 md:col-span-4 md:col-start-9 md:pt-3">
-            <p>La experiencia en la gestión diaria de procedimientos permite comprender algo importante: la procura no funciona de manera aislada.</p>
-            <p>Cada asunto requiere coordinación, información y una comunicación profesional que encaje con la dinámica del abogado.</p>
-            <p>Mi forma de entender la profesión parte de esa realidad. Conocer las necesidades operativas del despacho, mantener el seguimiento de los asuntos encomendados y facilitar una interlocución directa durante la tramitación.</p>
-          </div>
-          <dl className="grid gap-10 border-t border-ink-foreground/20 pt-10 md:col-span-12 md:grid-cols-3">
-            {ATTRIBUTES.map((a) => (
-              <div key={a.title}>
-                <dt className="font-serif text-2xl text-ink-foreground">{a.title}</dt>
-                <dd className="mt-3 leading-relaxed opacity-75">{a.text}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+    <section className="container-site grid gap-8 py-16 md:grid-cols-12 md:py-24">
+      <p className="editorial-kicker text-bronze md:col-span-3 md:items-start md:pt-3">Una forma de trabajar</p>
+      <h2 className="text-4xl leading-[1.08] md:col-span-8 md:text-[3.75rem]">Dentro del procedimiento.<br /><em className="text-muted-foreground">Al lado del despacho.</em></h2>
+      <div className="space-y-5 leading-relaxed text-muted-foreground md:col-span-5 md:col-start-4"><p>La procura no funciona de manera aislada. Cada asunto requiere coordinación, información y una comunicación profesional que encaje con la dinámica del abogado.</p><p>Conocer las necesidades operativas del despacho, mantener el seguimiento de los asuntos encomendados y facilitar una interlocución directa durante la tramitación.</p></div>
+      <dl className="space-y-5 md:col-span-3 md:col-start-10">{ATTRIBUTES.map(a => <div key={a.title} className="border-t border-bronze/40 pt-4"><dt className="font-serif text-2xl">{a.title}</dt><dd className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.text}</dd></div>)}</dl>
+    </section>
 
-      <Section label="Servicios" title="Áreas de actuación procesal.">
-        <ul className="border-b border-border">
-          {SERVICES.map((s, i) => (
-            <li key={s.id} className="grid gap-4 border-t border-border py-8 md:grid-cols-12">
-              <span className="font-serif text-sm text-muted-foreground md:col-span-1">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="text-2xl md:col-span-4">{s.title}</h3>
-              <p className="leading-relaxed text-muted-foreground md:col-span-7">{s.text}</p>
-            </li>
-          ))}
-        </ul>
-        <Link to="/servicios-procurador" className="link-quiet mt-8 inline-block text-sm">Ver los servicios de procura en detalle →</Link>
-      </Section>
+    <Section label="Servicios" title="La atención que cada asunto necesita.">
+      <ul>{SERVICES.map((s,i) => <li key={s.id} className="editorial-service"><span className="font-serif text-xl text-bronze">{String(i+1).padStart(2,"0")}</span><h3 className="text-2xl leading-tight md:text-3xl">{s.title}</h3><p className="leading-relaxed text-muted-foreground">{s.text}</p></li>)}</ul>
+      <Button asChild variant="editorial" className="mt-8"><Link to="/servicios-procurador">Servicios de procura en detalle<ArrowUpRight /></Link></Button>
+    </Section>
 
-      <Section label="Colaboración" title="Cómo se inicia una colaboración.">
-        <ol className="grid gap-x-12 gap-y-12 md:grid-cols-2">
-          {PASOS.map((p, i) => (
-            <li key={p.title} className="border-t border-border pt-6">
-              <span className="font-serif text-sm text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-3 text-2xl">{p.title}</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">{p.text}</p>
-            </li>
-          ))}
-        </ol>
-      </Section>
+    <section className="bg-primary text-primary-foreground">
+      <div className="container-site grid gap-10 py-16 md:grid-cols-12 md:py-24">
+        <p className="editorial-kicker text-primary-foreground/60 md:col-span-12">Ámbito de actuación</p>
+        <div className="md:col-span-7"><h2 className="text-4xl leading-tight text-primary-foreground md:text-[3.75rem]">Valencia y<br /><em>Comunidad Valenciana.</em></h2><p className="mt-6 max-w-lg leading-relaxed text-primary-foreground/70">Ámbito prioritario de la actividad y de la colaboración con abogados y despachos.</p><Button asChild variant="editorialInverse" className="mt-6"><Link to="/procurador-comunidad-valenciana">Conocer el ámbito territorial<ArrowUpRight /></Link></Button></div>
+        <div className="border-t border-primary-foreground/25 pt-8 md:col-span-4 md:col-start-9 md:border-t-0 md:border-l md:pl-10"><p className="text-xs uppercase text-primary-foreground/60">Colaboración nacional</p><h3 className="mt-4 text-3xl text-primary-foreground">Otros territorios.<br />El mismo criterio.</h3><p className="mt-5 leading-relaxed text-primary-foreground/70">Coordinación mediante procuradores colaboradores, previa valoración del procedimiento y del ámbito de actuación real.</p><Button asChild variant="editorialInverse" className="mt-6"><Link to="/procurador-nacional">Valorar una colaboración<ArrowUpRight /></Link></Button></div>
+      </div>
+    </section>
 
-      <Section label="Ámbito" title="Valencia como prioridad. Coordinación nacional.">
-        <div className="grid gap-px border-y border-border bg-border md:grid-cols-2">
-          <Link to="/procurador-comunidad-valenciana" className="bg-background py-10 md:pr-10">
-            <p className="eyebrow">Ámbito prioritario</p>
-            <h3 className="mt-4 text-3xl">Valencia y Comunidad Valenciana</h3>
-            <p className="mt-3 leading-relaxed text-muted-foreground">Donde se desarrolla la actividad y se construyen las colaboraciones estables con despachos.</p>
-            <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
-          </Link>
-          <Link to="/procurador-nacional" className="bg-background py-10 md:pl-10">
-            <p className="eyebrow">Ámbito complementario</p>
-            <h3 className="mt-4 text-3xl">Ámbito nacional</h3>
-            <p className="mt-3 leading-relaxed text-muted-foreground">Coordinación de procedimientos en otros territorios mediante procuradores colaboradores, con un único interlocutor.</p>
-            <span className="link-quiet mt-6 inline-block text-sm">Más información →</span>
-          </Link>
-        </div>
-      </Section>
+    <section className="container-site grid gap-10 py-16 md:grid-cols-12 md:items-center md:py-24">
+      <figure className="md:col-span-5"><img src={desk} alt="Imagen ilustrativa de expedientes organizados sobre un escritorio jurídico" width={1200} height={1408} loading="lazy" className="editorial-photo" /></figure>
+      <div className="md:col-span-6 md:col-start-7"><p className="editorial-kicker text-bronze">El despacho</p><h2 className="mt-8 text-4xl leading-tight md:text-[3.5rem]">MMC Procuradores.<br /><em>Una colaboración cercana al procedimiento.</em></h2><p className="mt-7 leading-relaxed text-muted-foreground">La representación procesal se acompaña de información organizada y una comunicación profesional adaptada a cada asunto.</p><p className="mt-4 leading-relaxed text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del despacho.</p><Button asChild variant="editorial" className="mt-7"><Link to="/el-despacho">Conocer la forma de trabajar<ArrowUpRight /></Link></Button></div>
+    </section>
 
-      <Section label="El despacho" title="MMC Procuradores. Una colaboración cercana al procedimiento.">
-        <div className="max-w-3xl space-y-5 text-lg leading-relaxed">
-          <p>La procura forma parte del trabajo diario de cada despacho. En MMC Procuradores, la representación procesal se acompaña de información organizada y una comunicación profesional adaptada a cada asunto.</p>
-          <p className="text-muted-foreground">Desde MMC Procuradores, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
-          <p className="text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
-        </div>
-        <Link to="/el-despacho" className="link-quiet mt-10 inline-block text-sm">Conocer mi forma de trabajar →</Link>
-      </Section>
-
-      <Section label="Preguntas frecuentes" title="Dudas habituales de los despachos.">
-        <Faq items={FAQ} />
-      </Section>
-
-      <ContactBand />
-    </>
-  );
+    <Section label="Colaboración" title="Una conversación. Una forma de trabajar."><Numbered items={PASOS} /></Section>
+    <Section label="Preguntas frecuentes" title="Antes de empezar."><Faq items={FAQ} /></Section>
+    <ContactBand />
+  </>;
 }
