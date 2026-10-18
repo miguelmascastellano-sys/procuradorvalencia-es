@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, breadcrumbJsonLd } from "@/lib/site";
-import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
+import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Related, Section } from "@/components/site/blocks";
 
 const FAQ = [
   { q: "¿Qué hace el procurador en un procedimiento de segunda oportunidad?", a: "Representa a la persona deudora ante el juzgado: presenta los escritos que prepara el abogado, recibe y traslada las notificaciones, controla los plazos y realiza el seguimiento de cada actuación del concurso y de la solicitud de exoneración." },
@@ -48,6 +48,11 @@ function Page() {
       <Section label="Preguntas frecuentes">
         <Faq items={FAQ} />
       </Section>
+      <Section label="Páginas relacionadas"><Related links={[
+      { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
+      { to: "/precio-procurador-valencia", label: "Cuánto cobra un procurador" },
+      { to: "/procurador-valencia", label: "Procurador en Valencia capital" },
+      ]} /></Section>
       <ContactBand title="¿Tramitáis asuntos de segunda oportunidad en Valencia?" />
     </>
   );
