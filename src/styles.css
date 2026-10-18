@@ -141,6 +141,8 @@
   .legal-body h2 { border-top: 1px solid var(--border); padding-top: 1.5rem; }
   @media (max-width: 767px) {
     .editorial-hero { min-height: auto; }
+    .editorial-hero > .container-site { padding-block: 2rem; gap: 1rem; }
+    .editorial-hero h1 { font-size: 2.5rem; }
     .editorial-hero-image { object-position: 60% center; }
     .editorial-hero::after { background: color-mix(in oklab, var(--ink) 82%, transparent); }
     .editorial-section { padding-block: 3.5rem; }
