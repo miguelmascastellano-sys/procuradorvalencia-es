@@ -1,12 +1,16 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/instrument-sans";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-serif: "Newsreader", Georgia, serif;
-  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, serif;
+  --font-sans: "Instrument Sans Variable", system-ui, sans-serif;
+  --color-bronze: var(--bronze);
+  --color-overlay: var(--overlay);
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
   --radius-lg: var(--radius);
@@ -36,15 +40,17 @@
 }
 
 :root {
-  --radius: 2px;
-  --background: oklch(0.995 0.002 90);
+  --radius: 4px;
+  --bronze: oklch(0.57 0.067 72);
+  --overlay: oklch(0.18 0.025 255 / 0.55);
+  --background: oklch(0.985 0.004 90);
   --foreground: oklch(0.24 0.02 260);
   --card: oklch(0.975 0.004 90);
   --card-foreground: oklch(0.24 0.02 260);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.24 0.02 260);
   /* Professional navy blue accent */
-  --primary: oklch(0.32 0.06 255);
+  --primary: oklch(0.26 0.045 255);
   --primary-foreground: oklch(0.98 0.004 90);
   --secondary: oklch(0.965 0.004 90);
   --secondary-foreground: oklch(0.24 0.02 260);
@@ -58,7 +64,7 @@
   --rule: oklch(0.24 0.02 260 / 0.85);
   --input: oklch(0.86 0.004 90);
   --ring: oklch(0.32 0.06 255);
-  --ink: oklch(0.24 0.045 255);
+  --ink: oklch(0.215 0.038 255);
   --ink-foreground: oklch(0.95 0.004 90);
 }
 
@@ -72,13 +78,13 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.015em; color: var(--color-foreground); }
+  h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: 0; text-wrap: balance; color: var(--color-foreground); }
   :focus-visible { outline: 2px solid var(--color-ring); outline-offset: 3px; }
 }
 
 @utility container-site {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1280px;
   margin-inline: auto;
   padding-inline: 1.5rem;
   @media (min-width: 768px) { padding-inline: 2.5rem; }
@@ -87,7 +93,7 @@
 @utility eyebrow {
   font-family: var(--font-sans);
   font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-muted-foreground);
 }
@@ -112,4 +118,9 @@
   background-repeat: no-repeat;
   transition: background-size 250ms ease;
   &:hover { background-size: 100% 1px; }
+}
+
+@layer base {
+ p { text-wrap: pretty; }
+ @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
 }
