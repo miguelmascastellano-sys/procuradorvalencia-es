@@ -6,7 +6,9 @@ export type Article = {
   body: { h?: string; p?: string[]; list?: string[] }[];
 };
 
-export const ARTICLES: Article[] = [
+import { ARTICLE_EXTENSIONS } from "./article-extensions";
+
+const BASE_ARTICLES: Article[] = [
   {
     slug: "procurador-ciudad-justicia-valencia",
     title: "Procurador en la Ciudad de la Justicia de Valencia: cómo funciona",
@@ -112,5 +114,7 @@ export const ARTICLES: Article[] = [
     ],
   },
 ];
+
+export const ARTICLES: Article[] = BASE_ARTICLES.map((a) => ({ ...a, body: [...a.body, ...(ARTICLE_EXTENSIONS[a.slug] ?? [])] }));
 
 export const getArticle = (slug: string) => ARTICLES.find((a) => a.slug === slug);
