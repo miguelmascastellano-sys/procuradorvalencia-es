@@ -23,7 +23,7 @@ function Page() {
       <PageHeader eyebrow="Mi forma de trabajar" title="La procura forma parte del funcionamiento diario del despacho." intro={<p>Una manera de trabajar construida desde dentro: primero en la gestión diaria de procedimientos, ahora como procurador al servicio de abogados y despachos.</p>} />
       <Section label="Punto de partida">
         <div className="grid gap-10 md:grid-cols-12 md:items-center">
-          <figure className="md:col-span-5"><img src={despachoTrabajo} alt="Arquitectura contemporánea, imagen ilustrativa que no representa una oficina propia" width={1600} height={1008} loading="lazy" className="editorial-photo" /></figure>
+          <figure className="md:col-span-5"><img src={despachoTrabajo} alt="Detalle de arquitectura contemporánea en piedra" width={1600} height={1008} loading="lazy" className="editorial-photo" /></figure>
           <div className="md:col-span-6 md:col-start-7"><p className="font-serif text-3xl leading-snug md:text-4xl">Quien ha trabajado dentro de un despacho sabe qué ocurre cuando una notificación llega tarde o un asunto pierde seguimiento.</p>
           <p className="mt-6 leading-relaxed text-muted-foreground">El abogado necesita saber qué ha entrado, qué se ha presentado y qué está pendiente, sin tener que preguntarlo.</p><p className="mt-4 leading-relaxed text-muted-foreground">Esa es la base de la forma de trabajar de MMC Procuradores: organización de la información, seguimiento de cada actuación y un interlocutor directo durante toda la tramitación.</p></div>
         </div>

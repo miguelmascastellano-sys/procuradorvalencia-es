@@ -39,6 +39,7 @@ function Page() {
         <div className="space-y-3 md:col-span-6 md:col-start-7 md:self-end">
           <a href={SITE.phoneHref} className="contact-address link-quiet block font-serif">{SITE.phone}</a>
           <a href={SITE.contactHref} className="link-quiet block break-all">{SITE.email}</a>
+          <p>{SITE.address} · Colegiado n.º {SITE.collegeNumber} ({SITE.college})</p>
           <div className="flex flex-wrap gap-4 pt-4"><Button asChild variant="inverse"><a href={SITE.phoneHref}>Llamar</a></Button><Button asChild variant="editorialInverse"><a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp<ArrowUpRight /></a></Button></div>
         </div>
       </div>

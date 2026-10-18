@@ -11,7 +11,7 @@ export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: 
         <p className="editorial-kicker text-bronze masthead-label">{eyebrow}</p>
         <h1 className="masthead-title">{title}</h1>
         {intro && <div className="masthead-intro text-muted-foreground">{intro}</div>}
-        {eyebrow !== "Información legal" && <figure className="masthead-photo"><img src={architecture} alt="Arquitectura contemporánea de piedra clara, imagen ilustrativa" width={1600} height={1008} loading="lazy" /></figure>}
+        {eyebrow !== "Información legal" && <figure className="masthead-photo"><img src={architecture} alt="Arquitectura contemporánea de piedra clara" width={1600} height={1008} loading="lazy" /></figure>}
       </div>
     </section>
   );
