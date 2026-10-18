@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AmbitoActuacionRouteImport } from './routes/ambito-actuacion'
 import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
+import { Route as CalculadoraArancelesRouteImport } from './routes/calculadora-aranceles'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as ElDespachoRouteImport } from './routes/el-despacho'
 import { Route as PoliticaCookiesRouteImport } from './routes/politica-cookies'
@@ -45,6 +46,11 @@ const AmbitoActuacionRoute = AmbitoActuacionRouteImport.update({
 const AvisoLegalRoute = AvisoLegalRouteImport.update({
   id: '/aviso-legal',
   path: '/aviso-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalculadoraArancelesRoute = CalculadoraArancelesRouteImport.update({
+  id: '/calculadora-aranceles',
+  path: '/calculadora-aranceles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -154,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/calculadora-aranceles': typeof CalculadoraArancelesRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
@@ -178,6 +185,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/calculadora-aranceles': typeof CalculadoraArancelesRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
@@ -203,6 +211,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ambito-actuacion': typeof AmbitoActuacionRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/calculadora-aranceles': typeof CalculadoraArancelesRoute
   '/contacto': typeof ContactoRoute
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
@@ -229,6 +238,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ambito-actuacion'
     | '/aviso-legal'
+    | '/calculadora-aranceles'
     | '/contacto'
     | '/el-despacho'
     | '/politica-cookies'
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ambito-actuacion'
     | '/aviso-legal'
+    | '/calculadora-aranceles'
     | '/contacto'
     | '/el-despacho'
     | '/politica-cookies'
@@ -277,6 +288,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ambito-actuacion'
     | '/aviso-legal'
+    | '/calculadora-aranceles'
     | '/contacto'
     | '/el-despacho'
     | '/politica-cookies'
@@ -302,6 +314,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AmbitoActuacionRoute: typeof AmbitoActuacionRoute
   AvisoLegalRoute: typeof AvisoLegalRoute
+  CalculadoraArancelesRoute: typeof CalculadoraArancelesRoute
   ContactoRoute: typeof ContactoRoute
   ElDespachoRoute: typeof ElDespachoRoute
   PoliticaCookiesRoute: typeof PoliticaCookiesRoute
@@ -344,6 +357,13 @@ declare module '@tanstack/react-router' {
       path: '/aviso-legal'
       fullPath: '/aviso-legal'
       preLoaderRoute: typeof AvisoLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculadora-aranceles': {
+      id: '/calculadora-aranceles'
+      path: '/calculadora-aranceles'
+      fullPath: '/calculadora-aranceles'
+      preLoaderRoute: typeof CalculadoraArancelesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -486,6 +506,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AmbitoActuacionRoute: AmbitoActuacionRoute,
   AvisoLegalRoute: AvisoLegalRoute,
+  CalculadoraArancelesRoute: CalculadoraArancelesRoute,
   ContactoRoute: ContactoRoute,
   ElDespachoRoute: ElDespachoRoute,
   PoliticaCookiesRoute: PoliticaCookiesRoute,
