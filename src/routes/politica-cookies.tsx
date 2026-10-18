@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { seo } from "@/lib/site";
 import { LegalPage } from "@/components/site/LegalPage";
-
+import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/politica-cookies")({
-  head: () => seo({ title: "Política de cookies | MMC Procuradores", description: "Información sobre el uso de cookies en el sitio web de MMC Procuradores.", path: "/politica-cookies" }),
-  component: () => (
-    <LegalPage title="Política de cookies">
-      <h2>Uso actual de cookies</h2>
-      <p>Este sitio web no utiliza cookies de análisis, publicidad ni seguimiento. Únicamente podrían emplearse elementos técnicos estrictamente necesarios para el funcionamiento del sitio, que no requieren consentimiento.</p>
-      <h2>Herramientas de medición</h2>
-      <p>Si en el futuro se incorporan herramientas de analítica, se solicitará previamente el consentimiento mediante un panel de configuración y se actualizará esta política con el detalle de cada cookie.</p>
-      <h2>Gestión desde el navegador</h2>
-      <p>Puedes configurar tu navegador para bloquear o eliminar cookies en cualquier momento desde sus opciones de privacidad.</p>
-    </LegalPage>
-  ),
+  head: () => seo({ title: "Política de cookies | MMC Procuradores", description: "Cookies observadas, almacenamiento de preferencias y controles de privacidad de MMC Procuradores.", path: "/politica-cookies" }),
+  component: () => <LegalPage title="Política de cookies">
+    <p>Versión: 18 de octubre de 2026. Las comprobaciones descritas distinguen el sitio y las tecnologías añadidas por el alojamiento.</p>
+    <h2>Cookies y tecnologías similares</h2><p>Las cookies son pequeños archivos que un sitio puede almacenar en el navegador. El almacenamiento local permite conservar información en ese navegador sin enviarla automáticamente en cada petición. Algunas tecnologías son necesarias para prestar un servicio solicitado; otras requieren consentimiento previo.</p>
+    <h2>Configuración de MMC Procuradores</h2><p>No se incorporan servicios opcionales de preferencias o personalización, analítica ni publicidad. No hay mapas, vídeos ni contenido de redes sociales incrustados. Las fuentes se alojan en el propio sitio. Por tanto, aceptar o rechazar no activa servicios de seguimiento.</p>
+    <h2>Almacenamiento de tu elección</h2><ul><li>Nombre: mmc-cookie-preferences.</li><li>Tecnología: localStorage, propio del sitio; no es una cookie.</li><li>Responsable: MMC Procuradores.</li><li>Finalidad: recordar la elección y evitar repetir el aviso en cada página. Categoría: almacenamiento técnico de preferencias de privacidad.</li><li>Contenido: fecha de guardado, versión de la política y categorías. Sin nombre, correo ni identificador publicitario.</li><li>Vigencia: máximo de 180 días. El sitio vuelve a solicitar la elección al vencer ese plazo o cambiar la versión. El registro anterior se reemplaza al guardar una nueva elección; también puedes eliminarlo desde tu navegador.</li><li>Base: almacenamiento necesario para recordar la decisión expresamente solicitada por el usuario, no autorización para seguimiento.</li></ul>
+    <h2>Tecnologías observadas en el alojamiento</h2><p>En una visita nueva a la versión publicada se observó la cookie <strong>__dpl</strong>, asociada al alojamiento de Lovable, con atributos Secure y SameSite=Lax. Su finalidad exacta, emisor efectivo, duración y clasificación jurídica están pendientes de confirmación documental. No se declara estrictamente necesaria sin verificarlo.</p><p>También se observaron scripts de plataforma <strong>/~flock.js</strong> y <strong>/__l5e/events…js</strong>. Su carga se produce en la capa de alojamiento. No se ha confirmado exhaustivamente qué datos transmiten ni si requieren consentimiento. El panel de este sitio no controla scripts que el proveedor inyecta fuera del código de la aplicación; esta limitación debe resolverse con el proveedor antes de afirmar bloqueo integral o cumplimiento.</p>
+    <h2>Aceptar, rechazar y configurar</h2><p>En una primera visita se muestran «Aceptar todas», «Rechazar todas» y «Configurar cookies». Aceptar y rechazar tienen la misma presentación. Como no existen categorías opcionales instaladas por MMC Procuradores, las dos decisiones mantienen todas las categorías opcionales desactivadas. La navegación no depende de aceptar.</p><p>Puedes reabrir el panel desde el pie de cualquier página, guardar otra elección o rechazar de nuevo. Si el navegador bloquea el almacenamiento, la decisión no podrá persistir y el sitio lo indicará. No se activará ningún servicio opcional.</p><Button variant="outline" onClick={() => window.dispatchEvent(new Event("mmc:cookie-settings"))}>Configurar cookies</Button>
+    <h2>Control desde el navegador</h2><p>En las opciones de privacidad de tu navegador puedes consultar, bloquear o borrar las cookies y los datos de sitios, incluido el almacenamiento local. El borrado elimina la elección guardada y el aviso volverá a aparecer. El bloqueo de tecnologías técnicas puede afectar al funcionamiento del alojamiento.</p>
+    <h2>Revisión pendiente</h2><p>Estas comprobaciones no constituyen una auditoría exhaustiva de todas las condiciones del alojamiento. Si se incorporan servicios opcionales, deberán identificarse, mantenerse bloqueados antes de una elección válida e incluirse en el panel con controles independientes y esta política actualizada. No se han añadido herramientas de seguimiento para dar contenido al banner.</p>
+  </LegalPage>,
 });

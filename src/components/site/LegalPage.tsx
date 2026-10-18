@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export function LegalPage({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <article className="container-site pt-20 md:pt-28">
+    <article className="container-site py-16 md:py-24">
       <div className="mx-auto max-w-3xl">
         <p className="eyebrow">Información legal</p>
         <h1 className="mt-6 text-4xl md:text-5xl">{title}</h1>
