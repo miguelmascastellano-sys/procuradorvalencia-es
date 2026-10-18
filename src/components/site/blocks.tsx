@@ -71,10 +71,11 @@ export function ContactBand({
         <h2 className="text-4xl leading-[1.08] text-ink-foreground md:col-span-7 md:text-[3.75rem]">{title}</h2>
         <div className="md:col-span-4 md:col-start-9">
           <p className="leading-relaxed text-ink-foreground/70">{text}</p>
-          <Button asChild variant="editorialInverse" className="mt-6"><a href={SITE.contactHref}>Contactar por correo electrónico<ArrowUpRight /></a></Button>
+          <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3"><Button asChild variant="editorialInverse"><a href={SITE.phoneHref}>Llamar al {SITE.phone}</a></Button><Button asChild variant="editorialInverse"><a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp<ArrowUpRight /></a></Button></div>
         </div>
         <div className="flex flex-wrap gap-x-12 gap-y-4 border-t border-ink-foreground/20 pt-8 md:col-span-12">
-          <a href={SITE.contactHref} className="contact-address link-quiet break-all font-serif">{SITE.email}</a>
+          <a href={SITE.phoneHref} className="contact-address link-quiet font-serif">{SITE.phone}</a>
+          <a href={SITE.contactHref} className="link-quiet self-end break-all">{SITE.email}</a>
         </div>
       </div>
     </section>
@@ -93,4 +94,13 @@ export function Numbered({ items }: { items: { title: string; text: string }[] }
       ))}
     </ol>
   );
+}
+
+/** Interior-page article blocks: prose sections, FAQ and related links with schema. */
+export function Prose({ blocks }: { blocks: { h: string; p: string[] }[] }) {
+  return <div className="max-w-3xl space-y-12">{blocks.map((b) => <div key={b.h}><h3 className="mb-4 text-2xl leading-tight md:text-3xl">{b.h}</h3>{b.p.map((t, i) => <p key={i} className="mt-4 text-[1.0625rem] leading-[1.75] text-foreground/80">{t}</p>)}</div>)}</div>;
+}
+
+export function Related({ links }: { links: { to: string; label: string }[] }) {
+  return <ul className="divide-y divide-border border-y border-border">{links.map((l) => <li key={l.to}><a href={l.to} className="link-quiet flex items-center justify-between py-5 font-serif text-xl">{l.label}<ArrowUpRight className="size-4 text-bronze" /></a></li>)}</ul>;
 }
