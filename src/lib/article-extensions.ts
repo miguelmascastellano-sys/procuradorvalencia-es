@@ -150,6 +150,9 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Acordar desde el principio los destinatarios, el formato de los traslados y el margen con que se envían los escritos elimina la mayoría de estas incidencias. También ayuda revisar periódicamente el estado de los asuntos abiertos, especialmente en ejecuciones largas, para confirmar qué actuaciones están pendientes y quién debe impulsarlas.",
       "Cuando el procurador conoce el asunto y el abogado sabe que puede contar con él, la colaboración se vuelve fluida: cada uno se ocupa de lo suyo y el cliente percibe un servicio coordinado. Esa es la base del trabajo diario con despachos en Valencia capital y en los partidos judiciales de la provincia.",
     ] },
+    { h: "Conclusión", p: [
+      "La colaboración entre abogado y procurador funciona mejor cuando se trata como una relación estable y no como un encargo aislado. Conocer las preferencias de cada despacho, sus plazos internos de revisión y la forma en que organiza sus asuntos permite adaptar los traslados y anticipar necesidades. Con el tiempo, esa confianza se traduce en menos correos, menos llamadas para aclarar dudas y más tiempo para lo importante: el fondo de cada asunto y la atención al cliente. Es el tipo de colaboración que buscamos con cada despacho que confía en nosotros sus asuntos en Valencia.",
+    ] },
     { p: ["Información general sobre la práctica profesional; no constituye asesoramiento jurídico."] },
   ],
   "procurador-procedimientos-ejecucion": [
@@ -181,6 +184,9 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "El seguimiento activo del procurador evita estas paradas. Revisar periódicamente el estado del procedimiento, solicitar nuevas medidas cuando las anteriores resultan negativas y trasladar al abogado información útil para decidir el siguiente paso son tareas sencillas, pero decisivas en el resultado.",
       "También es importante tener en cuenta los plazos de caducidad y prescripción, y la tasación de costas e intereses al final de la ejecución, para que el ejecutante recupere todo lo que le corresponde. Una liquidación bien preparada y una tasación de costas presentada a tiempo marcan la diferencia en el importe final.",
       "En Valencia capital y en los partidos judiciales de la provincia, la experiencia en la gestión de oficios y mandamientos ante cada juzgado permite anticipar los tiempos y avisar al abogado cuando una actuación se retrasa más de lo razonable.",
+    ] },
+    { h: "Conclusión", p: [
+      "En definitiva, una ejecución bien llevada combina la estrategia del abogado con la constancia del procurador. Elegir qué bienes investigar, cuándo pedir nuevas medidas o cuándo conviene una solución negociada son decisiones del abogado; asegurarse de que cada petición se presenta, se tramita y se comunica a tiempo es tarea del procurador. Cuando ambas funciones se coordinan, el ejecutante tiene más posibilidades de cobrar y en menos tiempo. Ese es el enfoque con el que trabajamos las ejecuciones ante los juzgados de Valencia capital y de los partidos judiciales de la provincia, informando al despacho en cada paso relevante.",
     ] },
     { p: ["Contenido informativo; cada ejecución debe ser valorada por el abogado que dirige el asunto."] },
   ],
@@ -217,6 +223,9 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Por último, es útil preguntar por el formato de los traslados. Un despacho con muchos asuntos agradece que cada comunicación incluya su referencia interna, el juzgado, el número de procedimiento, la fecha de notificación y la resolución adjunta. Ese pequeño detalle ahorra tiempo cada día y reduce el riesgo de errores al registrar los plazos.",
       "En Valencia, donde conviven la Ciudad de la Justicia de la capital y numerosos partidos judiciales en la provincia, estas cuestiones prácticas pesan tanto como el arancel. Un procurador que responde con claridad a ellas ofrece una base sólida para una colaboración duradera con el despacho. Y si el asunto exige actuar fuera de la provincia, conviene preguntar también cómo se organiza la coordinación con procuradores colaboradores, para que el despacho mantenga un único interlocutor y un mismo formato de información.",
     ] },
+    { h: "Conclusión", p: [
+      "Elegir bien al procurador no es una decisión menor, aunque a veces se tome deprisa. Es la persona que recibirá cada notificación, presentará cada escrito y estará presente en el juzgado cuando haga falta. Dedicar unos minutos a conocer cómo trabaja, qué experiencia tiene en el tipo de asunto y en el partido judicial, y cómo se comunicará con el despacho, ahorra problemas a lo largo de todo el procedimiento. En MMC Procuradores trabajamos con abogados y despachos en Valencia capital y provincia, con un trato directo y un sistema de traslados pensado para que el abogado disponga siempre del plazo completo.",
+    ] },
     { p: ["Información general; no constituye asesoramiento jurídico."] },
   ],
   "coordinar-procedimientos-distintos-territorios": [
@@ -249,6 +258,9 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Con un interlocutor en Valencia, el despacho envía la demanda, recibe cada notificación con el mismo formato y sabe en todo momento quién está actuando en cada sede. Si es necesario un procurador en otro partido judicial, la coordinación se realiza desde Valencia, sin que el abogado tenga que buscar y gestionar varios profesionales por su cuenta.",
       "Este modelo resulta especialmente útil en ejecuciones, en procedimientos con varios demandados domiciliados en lugares distintos y en asuntos bancarios repetitivos. La información llega ordenada y el despacho mantiene el control del asunto, aunque la tramitación se reparta entre territorios.",
       "La clave es definir desde el inicio el reparto de actuaciones, el canal de comunicación y el formato de los traslados. Con esas bases, la distancia geográfica deja de ser un problema y el despacho puede concentrarse en la dirección técnica del asunto.",
+    ] },
+    { h: "Conclusión", p: [
+      "Para los despachos que trabajan desde fuera de Valencia, contar con un procurador en la ciudad aporta además conocimiento del terreno: cómo funcionan los servicios comunes, qué tiempos maneja cada juzgado y cómo se gestionan las actuaciones presenciales. Esa información, transmitida al abogado de forma ordenada, ayuda a planificar el asunto y a explicar al cliente qué cabe esperar. Y cuando un procedimiento exige actuar en otros partidos judiciales, la coordinación con procuradores colaboradores se organiza desde Valencia para que el despacho siga teniendo un único interlocutor y una misma forma de recibir la información durante todo el procedimiento.",
     ] },
     { p: ["Contenido informativo; no constituye asesoramiento jurídico."] },
   ],
