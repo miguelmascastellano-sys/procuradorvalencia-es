@@ -1,6 +1,6 @@
 # Renovación MMC Procuradores
-- [ ] Segunda pasada editorial: nueva portada, navegación, interiores, servicios, presentación, contacto y pie.
-- [ ] Verificar la composición y enlaces de todas las páginas en escritorio y móvil; comprobar formulario y preferencias.
+- [x] Segunda pasada editorial: nueva portada, navegación, interiores, servicios, presentación, contacto y pie.
+- [x] Verificar la composición y enlaces de las 21 páginas en escritorio y móvil; comprobar formulario y preferencias.
 - [x] Inspeccionar diseño, SEO, almacenamiento y terceros.
 - [x] Renovar sistema visual, cabecera, portada e interiores conservando rutas.
 - [x] Mejorar formulario, validación y almacenamiento sin consentimiento genérico.
