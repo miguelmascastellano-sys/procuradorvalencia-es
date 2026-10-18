@@ -10,10 +10,11 @@
 <!-- LOVABLE:END -->
 
 - Site config/SEO helper lives in src/lib/site.ts (seo() per route gives canonical + OG); keep every route using it so metadata stays unique.
-- Contact uses the shared SITE mailto destination and subject; no web submission component or server function, so contact cannot silently collect visitor data.
+- Contact uses SITE phone/WhatsApp/mailto links; the /contacto form only composes a client-side message and has no server function, so it cannot silently collect visitor data.
 - Historical contact records are retained separately from the retired submission flow; do not recreate a public collection endpoint.
 - Typography is self-hosted through Fontsource packages to avoid third-party font requests.
 - Cookie controls share a versioned local preference record and expose only actual installed optional services; platform-injected scripts require provider verification, not claims of application-side blocking.
 - Shared editorial PageHeader, Section, Numbered and LegalPage compositions plus semantic CSS tokens style all public pages; preserve each route’s content and metadata so redesigns remain consistent without duplicating layouts.
-- Canonical and Open Graph URLs target the current published origin until a custom domain is connected; the professional domain remains a separate identity fact.
+- Canonical, og:url, sitemap and JSON-LD URLs derive from the single BASE_URL constant in src/lib/site.ts so the domain changes in one place.
 - public/sitemap.xml is static: add new public routes to it.
+- Retired URLs stay as tiny route files that throw a 301 redirect in beforeLoad, so old links keep working.
