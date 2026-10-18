@@ -42,12 +42,12 @@ function Index() {
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <img src={heroJuzgado} alt="Arquitectura de inspiración judicial con columnas de piedra y luz natural" width={1600} height={1008} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
         <div className="absolute inset-0 -z-10 bg-ink/70" />
-        <div className="container-site py-16 md:py-20 lg:py-24">
+        <div className="container-site py-10 md:py-20 lg:py-24">
           <p className="flex items-center gap-3 text-xs uppercase"><span className="h-px w-10 bg-bronze" />MMC Procuradores · Valencia</p>
-          <h1 className="mt-7 max-w-3xl text-[2.6rem] leading-[1.05] text-ink-foreground md:text-[4.25rem] lg:text-[4.75rem]">Servicios de procura para abogados y despachos</h1>
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-foreground/90 md:text-lg">Representación procesal, seguimiento de actuaciones y coordinación profesional con especial atención a Valencia y la Comunidad Valenciana, con colaboración en otros territorios según las necesidades de cada procedimiento.</p>
+          <h1 className="mt-6 max-w-3xl text-[2.25rem] leading-[1.05] text-ink-foreground md:text-[4.25rem] lg:text-[4.75rem]">Servicios de procura para abogados y despachos</h1>
+          <p className="mt-6 max-w-2xl text-[0.9375rem] leading-relaxed text-ink-foreground/90 md:text-lg">Representación procesal, seguimiento de actuaciones y coordinación profesional con especial atención a Valencia y la Comunidad Valenciana, con colaboración en otros territorios según las necesidades de cada procedimiento.</p>
           <div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg" variant="inverse"><Link to="/contacto">Solicitar colaboración<ArrowUpRight /></Link></Button><Button asChild size="lg" variant="inverseOutline"><Link to="/servicios-procurador">Conocer los servicios</Link></Button></div>
-          <p className="mt-10 border-t border-ink-foreground/25 pt-5 font-serif text-xl italic text-ink-foreground/85">{SITE.tagline}</p>
+          <p className="mt-6 border-t border-ink-foreground/25 pt-4 font-serif text-lg italic text-ink-foreground/85 md:mt-10 md:text-xl">{SITE.tagline}</p>
         </div>
       </section>
       <section aria-label="Compromisos profesionales" className="border-b border-border bg-background"><div className="container-site grid gap-6 py-8 md:grid-cols-3">

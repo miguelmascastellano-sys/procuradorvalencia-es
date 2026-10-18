@@ -1,8 +1,11 @@
 # Renovación MMC Procuradores
-- [ ] Inspeccionar diseño, SEO, almacenamiento y terceros.
-- [ ] Renovar sistema visual, cabecera, portada e interiores conservando rutas.
-- [ ] Mejorar formulario, validación y almacenamiento sin consentimiento genérico.
-- [ ] Revisar aviso legal y políticas sin inventar datos.
-- [ ] Implementar preferencias de cookies según tecnologías reales.
-- [ ] Probar envío real, cookies, navegación, escritorio y móvil.
-- [ ] Entregar informe de resultados y pendientes jurídicos y externos.
+- [x] Inspeccionar diseño, SEO, almacenamiento y terceros.
+- [x] Renovar sistema visual, cabecera, portada e interiores conservando rutas.
+- [x] Mejorar formulario, validación y almacenamiento sin consentimiento genérico.
+- [x] Revisar aviso legal y políticas sin inventar datos.
+- [x] Implementar preferencias de cookies según tecnologías reales.
+- [x] Probar envío real, cookies, navegación, escritorio y móvil.
+- [x] Entregar informe de resultados y pendientes jurídicos y externos.
+- [ ] Completar identificación legal: pendiente NIF, domicilio, colegio, número de colegiado y titulación confirmada por el titular.
+- [ ] Verificar o desactivar tecnologías inyectadas por el alojamiento: pendiente documentación/configuración del proveedor.
+- [ ] Confirmar contratos, región, transferencias, conservación y accesos internos: pendiente información y decisiones del titular/proveedores.
