@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { COOKIE_KEY, makeCookieChoice, readCookieChoice } from "@/lib/cookies";
@@ -21,9 +20,9 @@ export function CookiePreferences() {
     setBanner(false); setOpen(false);
   }
   return <>
-    {banner && <section aria-label="Preferencias de cookies" className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background shadow-lg">
+    {banner && <section aria-label="Preferencias de cookies" className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background">
       <div className="container-site flex flex-col gap-5 py-6 lg:flex-row lg:items-center lg:justify-between">
-        <div className="max-w-xl"><p className="flex items-center gap-2 font-medium"><ShieldCheck className="h-4 w-4 text-bronze" />Tu privacidad</p>
+        <div className="max-w-xl"><p className="flex items-center gap-2 font-medium">Tu privacidad</p>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">No incorporamos analítica ni publicidad. Guardamos únicamente tu elección en este navegador. <Link to="/politica-cookies" className="underline underline-offset-4">Política de cookies</Link>.</p></div>
         <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap"><Button variant="outline" onClick={save}>Aceptar todas</Button><Button variant="outline" onClick={save}>Rechazar todas</Button><Button variant="ghost" className="col-span-2" onClick={() => setOpen(true)}>Configurar cookies</Button></div>
       </div>
