@@ -6,6 +6,9 @@ const AREAS = [
   { to: "/procurador-comunidad-valenciana", label: "Procurador en la Comunidad Valenciana" },
   { to: "/procurador-para-abogados", label: "Procurador para abogados" },
   { to: "/procurador-nacional", label: "Procurador de ámbito nacional" },
+  { to: "/procedimientos-civiles-ejecuciones", label: "Procedimientos civiles y ejecuciones" },
+  { to: "/procedimientos-familia", label: "Procedimientos de familia" },
+  { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
   { to: "/articulos", label: "Artículos" },
 ] as const;
 
