@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, organizationJsonLd, websiteJsonLd, SITE } from "@/lib/site";
 import { SERVICES, ATTRIBUTES } from "@/lib/services";
 import { ContactBand, Faq, faqJsonLd, JsonLd, Section } from "@/components/site/blocks";
-import heroJuzgado from "@/assets/hero-juzgado.jpg";
+import heroJuzgado from "@/assets/hero-juzgado.webp";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Check, MessageSquare, ListChecks } from "lucide-react";
 
 const FAQ = [
   { q: "¿Qué hace un procurador en Valencia en un procedimiento judicial?", a: "Ostenta la representación procesal de la parte ante los juzgados y tribunales: presenta escritos, recibe y traslada notificaciones al abogado, atiende requerimientos y sigue el estado de las actuaciones." },
@@ -24,7 +26,7 @@ export const Route = createFileRoute("/")({
     seo({
       title: "Procurador en Valencia | MMC Procuradores",
       description:
-        "Servicios de procura y colaboración procesal para abogados y despachos en Valencia, la Comunidad Valenciana y otros territorios según el ámbito real de actuación.",
+        "Servicios de procura, representación procesal y colaboración profesional para abogados y despachos en Valencia y la Comunidad Valenciana",
       path: "/",
     }),
   component: Index,
@@ -37,45 +39,25 @@ function Index() {
       <JsonLd data={websiteJsonLd} />
       <JsonLd data={faqJsonLd(FAQ)} />
 
-      {/* Hero */}
-      <section className="container-site pt-20 pb-24 md:pt-28 md:pb-32">
-        <p className="eyebrow">{SITE.tagline}</p>
-        <h1 className="mt-10 max-w-5xl text-[3rem] leading-[1] md:text-[5.5rem]">
-          Servicios de procura <em className="text-muted-foreground">en Valencia.</em>
-        </h1>
-        <div className="mt-14 grid gap-10 border-t border-rule pt-10 md:grid-cols-12">
-          <p className="text-lg leading-relaxed md:col-span-6 md:text-xl">
-            Servicios de procura y colaboración procesal para abogados y despachos. Representación procesal, seguimiento de procedimientos y coordinación de actuaciones en Valencia y la Comunidad Valenciana, con posibilidad de colaboración en otros territorios según las necesidades del asunto.
-          </p>
-          <div className="md:col-span-5 md:col-start-8">
-            <p className="text-sm text-muted-foreground">Miguel Mas Castellano · Procurador de los Tribunales</p>
-            <p className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-              <a href={SITE.phoneHref} className="link-quiet">{SITE.phone}</a>
-              <a href={`mailto:${SITE.email}`} className="link-quiet">{SITE.email}</a>
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <Link to="/contacto" className="bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
-                Contactar con el procurador
-              </Link>
-              <Link to="/procurador-para-abogados" className="link-quiet text-sm">Servicios para abogados →</Link>
-            </div>
-          </div>
+      <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
+        <img src={heroJuzgado} alt="Arquitectura de inspiración judicial con columnas de piedra y luz natural" width={1600} height={1008} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 -z-10 bg-ink/70" />
+        <div className="container-site py-16 md:py-20 lg:py-24">
+          <p className="flex items-center gap-3 text-xs uppercase"><span className="h-px w-10 bg-bronze" />MMC Procuradores · Valencia</p>
+          <h1 className="mt-7 max-w-3xl text-[2.6rem] leading-[1.05] text-ink-foreground md:text-[4.25rem] lg:text-[4.75rem]">Servicios de procura para abogados y despachos</h1>
+          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-foreground/90 md:text-lg">Representación procesal, seguimiento de actuaciones y coordinación profesional con especial atención a Valencia y la Comunidad Valenciana, con colaboración en otros territorios según las necesidades de cada procedimiento.</p>
+          <div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg" variant="inverse"><Link to="/contacto">Solicitar colaboración<ArrowUpRight /></Link></Button><Button asChild size="lg" variant="inverseOutline"><Link to="/servicios-procurador">Conocer los servicios</Link></Button></div>
+          <p className="mt-10 border-t border-ink-foreground/25 pt-5 font-serif text-xl italic text-ink-foreground/85">{SITE.tagline}</p>
         </div>
-        <figure className="mt-16">
-          <img
-            src={heroJuzgado}
-            alt="Interior de un palacio de justicia: columnas de piedra y luz natural"
-            width={1600}
-            height={1008}
-            className="h-auto w-full object-cover"
-          />
-        </figure>
       </section>
+      <section aria-label="Compromisos profesionales" className="border-b border-border bg-background"><div className="container-site grid gap-6 py-8 md:grid-cols-3">
+        {[{ icon: Check, title: "Rigor procesal", text: "Atención a cada actuación." }, { icon: MessageSquare, title: "Comunicación directa", text: "Un interlocutor para el despacho." }, { icon: ListChecks, title: "Seguimiento organizado", text: "Información clara durante la tramitación." }].map(item => <div key={item.title} className="flex items-start gap-4"><item.icon className="mt-1 h-5 w-5 shrink-0 text-bronze" /><div><h2 className="text-xl">{item.title}</h2><p className="mt-1 text-sm text-muted-foreground">{item.text}</p></div></div>)}
+      </div></section>
 
       {/* Diferenciación */}
       <section className="bg-ink text-ink-foreground">
-        <div className="container-site grid gap-12 py-24 md:grid-cols-12 md:py-32">
-          <p className="text-[0.72rem] tracking-[0.18em] uppercase opacity-60 md:col-span-12">Una forma de entender la procura</p>
+        <div className="container-site grid gap-10 py-16 md:grid-cols-12 md:py-24">
+          <p className="text-[0.72rem] uppercase opacity-60 md:col-span-12">Una forma de entender la procura</p>
           <h2 className="text-4xl leading-[1.08] text-ink-foreground md:col-span-7 md:text-[3.4rem]">
             No basta con conocer el procedimiento. <em className="opacity-70">Hay que entender cómo trabaja el despacho.</em>
           </h2>
@@ -137,9 +119,9 @@ function Index() {
         </div>
       </Section>
 
-      <Section label="El profesional" title="Miguel Mas Castellano. Procurador de los Tribunales.">
+      <Section label="El despacho" title="MMC Procuradores. Una colaboración cercana al procedimiento.">
         <div className="max-w-3xl space-y-5 text-lg leading-relaxed">
-          <p>Mi experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal me ha permitido conocer de cerca el funcionamiento diario de un despacho y las necesidades que surgen durante la tramitación de los asuntos.</p>
+          <p>La procura forma parte del trabajo diario de cada despacho. En MMC Procuradores, la representación procesal se acompaña de información organizada y una comunicación profesional adaptada a cada asunto.</p>
           <p className="text-muted-foreground">Desde MMC Procuradores, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
           <p className="text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
