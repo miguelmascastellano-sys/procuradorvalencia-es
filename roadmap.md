@@ -1,4 +1,5 @@
 # Renovación MMC Procuradores
+- [ ] Incorporar calculadora profesional del RD 434/2024: reglas BOE, desglose, impresión y validación.
 - [x] Nueva revisión integral: composición editorial diferenciada en las 21 páginas y contacto exclusivo por correo.
 - [x] Retirar formulario y recepción web, actualizar privacidad, verificar correo, navegación y diseño móvil/tablet/escritorio.
 - [x] Segunda pasada editorial: nueva portada, navegación, interiores, servicios, presentación, contacto y pie.

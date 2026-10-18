@@ -1,0 +1,25 @@
+import { describe, it, expect } from 'vitest';
+import { calculate, scale, type CalculationInput } from '@/lib/arancel/calculate';
+import { RULES } from '@/lib/arancel/rules';
+const sample:CalculationInput={ids:['abreviado'],procedureDate:'2024-05-02',actDate:'2024-05-02',court:'Juzgado de lo Penal',amount:null,indeterminate:false,confirmed:true,legalAid:false,civilAction:false,vat:'21',suplidos:0,suplidosConfirmed:false,expenses:0,previousRights:0,agreed:null};
+describe('RD 434/2024',()=>{
+ it('art58 is exclusively 45.14 without automatic phases',()=>{const r=calculate(sample);expect(r.issues).toEqual([]);expect(r.lines).toHaveLength(1);expect(r.lines[0]?.rule.article).toBe('58');expect(r.maximum).toBe(45.14);});
+ it('21% IVA rounds to 9.48 and total54.62',()=>{const r=calculate(sample);expect(r.vat).toBe(9.48);expect(r.total).toBe(54.62);});
+ it('supplied justified payments remain outside VAT base',()=>{const r=calculate({...sample,suplidos:100,suplidosConfirmed:true,expenses:10});expect(r.taxBase).toBe(55.14);expect(r.vat).toBe(11.58);expect(r.total).toBe(166.72);});
+ it('requires justification before excluding suplidos from VAT',()=>expect(calculate({...sample,suplidos:100}).issues.length).toBeGreaterThan(0));
+ it('May1 acts are blocked and May2 acts allowed',()=>{expect(calculate({...sample,procedureDate:'2024-05-01',actDate:'2024-05-01'}).issues.length).toBeGreaterThan(0);expect(calculate(sample).issues).toEqual([]);});
+ it('old proceedings with post-effective acts use transitional warning',()=>{const r=calculate({...sample,procedureDate:'2023-01-01'});expect(r.issues).toEqual([]);expect(r.warnings.some(w=>w.includes('transitoria'))).toBe(true);});
+ it('missing date prevents result',()=>expect(calculate({...sample,actDate:''}).issues.length).toBeGreaterThan(0));
+ it('unconfirmed requirements prevent result',()=>expect(calculate({...sample,confirmed:false}).issues.length).toBeGreaterThan(0));
+ it('duplicate phases are blocked',()=>expect(calculate({...sample,ids:['abreviado','abreviado']}).issues.length).toBeGreaterThan(0));
+ it('unrelated full rapid procedure cannot be added to abbreviated phase',()=>expect(calculate({...sample,ids:['abreviado','rapido']}).issues.length).toBeGreaterThan(0));
+ it('explicitly selected abbreviated phases sum to135.42',()=>expect(calculate({...sample,ids:['instruccion','abreviado','oral']}).maximum).toBe(135.42));
+ it('civil action requires separate validation',()=>expect(calculate({...sample,civilAction:true}).issues.length).toBeGreaterThan(0));
+ it('legal aid is never marked payable',()=>{const r=calculate({...sample,legalAid:true});expect(r.legalAid).toBe(true);expect(r.warnings.some(w=>w.includes('baremos'))).toBe(true);});
+ it('scale exact rows and excess fractions match art2',()=>{expect(scale(6000)).toBe(223.11);expect(scale(600000)).toBe(2079.53);expect(scale(600001)).toBe(2094.70);expect(scale(606001)).toBe(2109.87);expect(scale(10000)).toBeNull();});
+ it('ordinary split adds10% then70/30',()=>{const r=calculate({...sample,ids:['ordinario-70','ordinario-30'],amount:6000});expect(r.maximum).toBe(245.42);expect(r.lines.map(l=>l.maximum)).toEqual([171.79,73.63]);});
+ it('monitorio payment replaces fixed47.25',()=>{expect(calculate({...sample,ids:['monitorio-cobro'],amount:6000}).maximum).toBe(55.78);expect(calculate({...sample,ids:['monitorio','monitorio-cobro'],amount:6000}).issues.length).toBeGreaterThan(0);});
+ it('global cap applies across prior rights',()=>expect(calculate({...sample,previousRights:74990}).maximum).toBe(10));
+ it('agreement may be lower but not higher',()=>{expect(calculate({...sample,agreed:40}).rights).toBe(40);expect(calculate({...sample,agreed:46}).issues.length).toBeGreaterThan(0);});
+ it('verified fixed concepts carry distinct article and amounts',()=>{for(const [id,article,value] of [['familia-acuerdo','22.1.a',70.21],['ca-juzgado','69.2.a',351.11],['social-derechos','79.2',60.18],['militar','82',175]] as const){const r=RULES.find(r=>r.id===id);expect(r?.article).toBe(article);expect(r?.fixed).toBe(value);}});
+});
