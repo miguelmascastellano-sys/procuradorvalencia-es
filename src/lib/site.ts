@@ -11,6 +11,9 @@ export const SITE = {
   phone: "644 206 106",
   phoneHref: "tel:+34644206106",
   whatsappHref: "https://wa.me/34644206106",
+  address: "C/ Bolivia, 14, Valencia",
+  college: "Ilustre Colegio de Procuradores de Valencia (ICOPAL)",
+  collegeNumber: "660",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
@@ -54,6 +57,7 @@ export const organizationJsonLd = {
   url: SITE.url,
   email: SITE.email,
   telephone: "+34644206106",
+  address: { "@type": "PostalAddress", streetAddress: "C/ Bolivia, 14", addressLocality: "Valencia", addressCountry: "ES" },
   areaServed: [
     { "@type": "City", name: "Valencia" },
     { "@type": "AdministrativeArea", name: "Provincia de Valencia" },

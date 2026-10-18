@@ -44,7 +44,7 @@ function Index() {
   return <>
     <JsonLd data={organizationJsonLd} /><JsonLd data={websiteJsonLd} /><JsonLd data={faqJsonLd(FAQ)} />
     <section className="editorial-hero bg-ink text-ink-foreground">
-      <img src={architecture} alt="Composición arquitectónica ilustrativa de columnas de piedra y escalinata" width={1920} height={1088} fetchPriority="high" className="editorial-hero-image" />
+      <img src={architecture} alt="Columnas de piedra y escalinata de un edificio institucional" width={1920} height={1088} fetchPriority="high" className="editorial-hero-image" />
       <div className="container-site hero-composition">
         <p className="hero-brand text-ink-foreground">MMC Procuradores</p>
         <h1 className="hero-title text-ink-foreground">Procurador en Valencia, capital y provincia</h1>
@@ -89,7 +89,7 @@ function Index() {
     </section>
 
     <section className="container-site grid gap-10 py-16 md:grid-cols-12 md:items-center md:py-24">
-      <figure className="md:col-span-5"><img src={contemporary} alt="Fachada de arquitectura contemporánea, imagen ilustrativa" width={1600} height={1008} loading="lazy" className="editorial-photo" /></figure>
+      <figure className="md:col-span-5"><img src={contemporary} alt="Fachada de arquitectura contemporánea en piedra clara" width={1600} height={1008} loading="lazy" className="editorial-photo" /></figure>
       <div className="md:col-span-6 md:col-start-7"><p className="editorial-kicker text-bronze">El despacho</p><h2 className="mt-8 text-4xl leading-tight md:text-[3.5rem]">MMC Procuradores.<br /><em>Una colaboración cercana al procedimiento.</em></h2><p className="mt-7 leading-relaxed text-muted-foreground">La representación procesal se acompaña de información organizada y una comunicación profesional adaptada a cada asunto.</p><p className="mt-4 leading-relaxed text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del despacho.</p><Button asChild variant="editorial" className="mt-7"><Link to="/el-despacho">Conocer la forma de trabajar<ArrowUpRight /></Link></Button></div>
     </section>
 
