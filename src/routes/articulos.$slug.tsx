@@ -10,7 +10,10 @@ export const Route = createFileRoute("/articulos/$slug")({
     return { article };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Artículo no encontrado" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) {
+      const metadata = seo({ title: "Artículo no encontrado | MMC Procuradores", description: "El artículo solicitado no está disponible. Consulta las notas de práctica procesal de MMC Procuradores.", path: `/articulos/${params.slug}` });
+      return { ...metadata, meta: [...metadata.meta, { name: "robots", content: "noindex" }] };
+    }
     const a = loaderData.article;
     return seo({ title: `${a.title} | ${SITE.name}`, description: a.description, path: `/articulos/${params.slug}`, type: "article" });
   },

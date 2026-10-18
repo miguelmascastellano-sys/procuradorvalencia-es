@@ -180,7 +180,7 @@
     .masthead-title,.page-masthead-legal .masthead-title { font-size: 2.75rem; }
     .masthead-photo { min-height: 0; height: 10rem; }
     .masthead-photo img { object-position: center 60%; }
-    .contact-address,.contact-band .contact-address { font-size: 1.75rem; }
+    .contact-address,.contact-band .contact-address { font-size: 1.3rem; overflow-wrap: anywhere; }
     .editorial-section { padding-block: 3rem; }
     .editorial-section h2 { margin-bottom: 2rem; }
     .editorial-service { grid-template-columns: 2rem minmax(0, 1fr); gap: 1rem; }
