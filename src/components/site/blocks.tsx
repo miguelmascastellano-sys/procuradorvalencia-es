@@ -1,16 +1,17 @@
-import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
+import architecture from "@/assets/arquitectura-contemporanea.jpg";
 
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: ReactNode }) {
   return (
-    <section className="border-b border-border bg-background">
-      <div className="container-site grid gap-8 pt-12 pb-16 md:grid-cols-12 md:pt-16 md:pb-24">
-        <p className="editorial-kicker text-bronze md:col-span-12">{eyebrow}</p>
-        <h1 className="text-[2.7rem] leading-[1.04] md:col-span-8 md:text-[4.5rem]">{title}</h1>
-        {intro && <div className="editorial-intro text-base leading-relaxed text-muted-foreground md:col-span-3 md:col-start-10 md:self-end">{intro}</div>}
+    <section className={`page-masthead ${eyebrow === "Información legal" ? "page-masthead-legal" : ""}`}>
+      <div className="container-site masthead-layout">
+        <p className="editorial-kicker text-bronze masthead-label">{eyebrow}</p>
+        <h1 className="masthead-title">{title}</h1>
+        {intro && <div className="masthead-intro text-muted-foreground">{intro}</div>}
+        {eyebrow !== "Información legal" && <figure className="masthead-photo"><img src={architecture} alt="Arquitectura contemporánea de piedra clara, imagen ilustrativa" width={1600} height={1008} loading="lazy" /></figure>}
       </div>
     </section>
   );
@@ -21,8 +22,8 @@ export function Section({ label, title, children, id }: { label: string; title?:
   return (
     <section id={id} className="editorial-section">
       <div className="container-site grid gap-8 md:grid-cols-12">
-        <p className="editorial-kicker text-bronze md:col-span-2 md:items-start md:pt-3">{label}</p>
-        <div className="min-w-0 md:col-span-9 md:col-start-4">
+        <p className="editorial-kicker text-bronze md:col-span-3 md:items-start md:pt-3">{label}</p>
+        <div className="min-w-0 md:col-span-8 md:col-start-5">
           {title && <h2 className="mb-10 max-w-3xl text-3xl leading-tight md:text-[3.25rem]">{title}</h2>}
           {children}
         </div>
@@ -64,17 +65,16 @@ export function ContactBand({
   text = "Cada despacho tiene su dinámica de trabajo. Conocerla es el primer paso para valorar una colaboración procesal adecuada.",
 }: { title?: string; text?: string }) {
   return (
-    <section className="bg-ink text-ink-foreground">
+    <section className="contact-band bg-ink text-ink-foreground">
       <div className="container-site grid gap-10 py-16 md:grid-cols-12 md:py-24">
         <p className="editorial-kicker text-ink-foreground/65 md:col-span-12">Contacto profesional</p>
         <h2 className="text-4xl leading-[1.08] text-ink-foreground md:col-span-7 md:text-[3.75rem]">{title}</h2>
         <div className="md:col-span-4 md:col-start-9">
           <p className="leading-relaxed text-ink-foreground/70">{text}</p>
-          <Button asChild variant="editorialInverse" className="mt-6"><Link to="/contacto">Solicitar colaboración<ArrowUpRight /></Link></Button>
+          <Button asChild variant="editorialInverse" className="mt-6"><a href={SITE.contactHref}>Contactar por correo electrónico<ArrowUpRight /></a></Button>
         </div>
         <div className="flex flex-wrap gap-x-12 gap-y-4 border-t border-ink-foreground/20 pt-8 md:col-span-12">
-          <a href={SITE.phoneHref} className="link-quiet font-serif text-3xl">{SITE.phone}</a>
-          <a href={`mailto:${SITE.email}`} className="link-quiet self-center break-all text-sm">{SITE.email}</a>
+          <a href={SITE.contactHref} className="contact-address link-quiet break-all font-serif">{SITE.email}</a>
         </div>
       </div>
     </section>
