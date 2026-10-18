@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Mas Castellano Procurador",
+  name: "MMC Procuradores",
   professional: "Miguel Mas Castellano",
   role: "Procurador de los Tribunales",
   phone: "644 20 61 06",

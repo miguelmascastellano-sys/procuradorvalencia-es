@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="container-site flex h-20 items-center justify-between gap-6">
-        <Link to="/" className="flex flex-col leading-none" onClick={() => setOpen(false)} aria-label="Mas Castellano Procurador, inicio">
+        <Link to="/" className="flex flex-col leading-none" onClick={() => setOpen(false)} aria-label="MMC Procuradores, inicio">
           <span className="font-serif text-[1.35rem] tracking-[0.02em] text-foreground">Mas Castellano</span>
           <span className="mt-1 text-[0.62rem] tracking-[0.32em] uppercase text-muted-foreground">Procurador</span>
         </Link>

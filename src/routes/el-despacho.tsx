@@ -6,8 +6,8 @@ import despachoTrabajo from "@/assets/despacho-trabajo.jpg";
 
 export const Route = createFileRoute("/el-despacho")({
   head: () => seo({
-    title: "El despacho | Mas Castellano Procurador",
-    description: "Mas Castellano Procurador: una firma de procura orientada a la colaboración con abogados y despachos, desde Valencia y con proyección nacional.",
+    title: "El despacho | MMC Procuradores",
+    description: "MMC Procuradores: una firma de procura orientada a la colaboración con abogados y despachos, desde Valencia y con proyección nacional.",
     path: "/el-despacho",
   }),
   component: Page,
@@ -34,7 +34,7 @@ function Page() {
           <p className="font-serif text-3xl leading-snug md:col-span-6 md:text-4xl">Quien ha trabajado dentro de un despacho sabe qué ocurre cuando una notificación llega tarde o un asunto pierde seguimiento.</p>
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-5 md:col-start-8">
             <p>El abogado necesita saber qué ha entrado, qué se ha presentado y qué está pendiente, sin tener que preguntarlo.</p>
-            <p>Esa es la base de la forma de trabajar de Mas Castellano Procurador: organización de la información, seguimiento de cada actuación y un interlocutor directo durante toda la tramitación.</p>
+            <p>Esa es la base de la forma de trabajar de MMC Procuradores: organización de la información, seguimiento de cada actuación y un interlocutor directo durante toda la tramitación.</p>
           </div>
         </div>
       </Section>
@@ -44,7 +44,7 @@ function Page() {
       <Section label="El profesional" title="Miguel Mas Castellano. Procurador de los Tribunales.">
         <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p className="text-foreground">Mi experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal me ha permitido conocer de cerca el funcionamiento diario de un despacho y las necesidades que surgen durante la tramitación de los asuntos.</p>
-          <p>Desde Mas Castellano Procurador, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
+          <p>Desde MMC Procuradores, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
           <p>Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
         <Link to="/procurador-para-abogados" className="link-quiet mt-10 inline-block text-sm">Cómo colaboro con despachos →</Link>

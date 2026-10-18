@@ -3,7 +3,7 @@ import { seo, SITE } from "@/lib/site";
 import { LegalPage } from "@/components/site/LegalPage";
 
 export const Route = createFileRoute("/aviso-legal")({
-  head: () => seo({ title: "Aviso legal | Mas Castellano Procurador", description: "Aviso legal e información del titular del sitio web de Mas Castellano Procurador.", path: "/aviso-legal" }),
+  head: () => seo({ title: "Aviso legal | MMC Procuradores", description: "Aviso legal e información del titular del sitio web de MMC Procuradores.", path: "/aviso-legal" }),
   component: () => (
     <LegalPage title="Aviso legal">
       <h2>Titular del sitio web</h2>

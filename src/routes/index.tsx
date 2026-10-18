@@ -22,7 +22,7 @@ const PASOS = [
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Procurador en Valencia | Mas Castellano Procurador",
+      title: "Procurador en Valencia | MMC Procuradores",
       description:
         "Procurador de los Tribunales en Valencia. Servicios de procura y colaboración procesal para abogados y despachos en Valencia, la Comunidad Valenciana y el ámbito nacional.",
       path: "/",
@@ -140,7 +140,7 @@ function Index() {
       <Section label="El profesional" title="Miguel Mas Castellano. Procurador de los Tribunales.">
         <div className="max-w-3xl space-y-5 text-lg leading-relaxed">
           <p>Mi experiencia como oficial habilitado en despachos con una importante carga de procedimientos bancarios, ejecuciones y gestión procesal me ha permitido conocer de cerca el funcionamiento diario de un despacho y las necesidades que surgen durante la tramitación de los asuntos.</p>
-          <p className="text-muted-foreground">Desde Mas Castellano Procurador, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
+          <p className="text-muted-foreground">Desde MMC Procuradores, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
           <p className="text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
         <Link to="/el-despacho" className="link-quiet mt-10 inline-block text-sm">Conocer mi forma de trabajar →</Link>

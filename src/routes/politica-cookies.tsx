@@ -3,7 +3,7 @@ import { seo } from "@/lib/site";
 import { LegalPage } from "@/components/site/LegalPage";
 
 export const Route = createFileRoute("/politica-cookies")({
-  head: () => seo({ title: "Política de cookies | Mas Castellano Procurador", description: "Información sobre el uso de cookies en el sitio web de Mas Castellano Procurador.", path: "/politica-cookies" }),
+  head: () => seo({ title: "Política de cookies | MMC Procuradores", description: "Información sobre el uso de cookies en el sitio web de MMC Procuradores.", path: "/politica-cookies" }),
   component: () => (
     <LegalPage title="Política de cookies">
       <h2>Uso actual de cookies</h2>
