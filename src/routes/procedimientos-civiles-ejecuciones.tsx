@@ -1,11 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, breadcrumbJsonLd } from "@/lib/site";
-import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
+import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Related, Section } from "@/components/site/blocks";
+
+const FAQ = [
+  { q: "¿Qué plazo tiene el deudor en un monitorio?", a: "Veinte días desde el requerimiento para pagar u oponerse, según el artículo 815 de la LEC. Sin oposición, se dicta decreto y se puede pedir la ejecución." },
+  { q: "¿Cuándo caduca la acción ejecutiva?", a: "La acción ejecutiva fundada en sentencia caduca a los cinco años desde su firmeza, conforme al artículo 518 de la LEC." },
+  { q: "¿Qué hace el procurador en la ejecución?", a: "Presenta la demanda ejecutiva y los escritos de impulso, sigue las averiguaciones patrimoniales y embargos, y traslada cada resultado al abogado." },
+];
 
 export const Route = createFileRoute("/procedimientos-civiles-ejecuciones")({
   head: () => seo({
-    title: "Procedimientos civiles y ejecuciones | MMC Procuradores",
-    description: "Representación procesal en procedimientos civiles y ejecuciones en Valencia: declarativos, monitorios y ejecución de títulos, con seguimiento e impulso de las actuaciones.",
+    title: "Procurador para ejecuciones en Valencia | Civil",
+    description: "Procurador para ejecuciones en Valencia: juicios ordinarios, verbales, monitorios y ejecución de títulos, con impulso y seguimiento de cada actuación.",
     path: "/procedimientos-civiles-ejecuciones",
   }),
   component: Page,
@@ -15,7 +21,7 @@ function Page() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: "Inicio", path: "/" }, { name: "Procedimientos civiles y ejecuciones", path: "/procedimientos-civiles-ejecuciones" }])} />
-      <PageHeader eyebrow="Área de actuación" title="Procedimientos civiles y ejecuciones." intro={<p>Representación procesal en procedimientos civiles ante los juzgados y tribunales de Valencia, con especial atención a la fase de ejecución, donde un asunto avanza o se detiene.</p>} />
+      <PageHeader eyebrow="Área de actuación" title="Procurador para ejecuciones y procedimientos civiles en Valencia." intro={<p>Representación procesal en procedimientos civiles ante los juzgados y tribunales de Valencia, con especial atención a la fase de ejecución, donde un asunto avanza o se detiene.</p>} />
       <Section label="Actuaciones" title="Qué abarca esta área.">
         <Numbered items={[
           { title: "Procedimientos declarativos", text: "Juicios ordinarios y verbales: presentación de escritos, traslado de notificaciones y seguimiento del estado de las actuaciones." },
@@ -31,6 +37,13 @@ function Page() {
         </div>
         <Link to="/servicios-procurador" className="link-quiet mt-10 inline-block text-sm">Todos los servicios de procura →</Link>
       </Section>
+      <Section label="Preguntas frecuentes" title="Preguntas frecuentes."><Faq items={FAQ} /></Section>
+      <Section label="Páginas relacionadas"><Related links={[
+      { to: "/subastas-judiciales-valencia", label: "Subastas judiciales en Valencia" },
+      { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
+      { to: "/precio-procurador-valencia", label: "Cuánto cobra un procurador" },
+      ]} /></Section>
+      <JsonLd data={faqJsonLd(FAQ)} />
       <ContactBand title="¿Ejecuciones o procedimientos civiles en Valencia? Hablemos." />
     </>
   );

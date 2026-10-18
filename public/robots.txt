@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://pixel-procurador-connect.lovable.app/sitemap.xml
+Sitemap: https://procuradorvalencia.es/sitemap.xml

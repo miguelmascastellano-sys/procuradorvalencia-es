@@ -27,7 +27,7 @@ export const SERVICES = [
     id: "colaboracion-despachos",
     title: "Colaboración procesal con despachos",
     text: "Para abogados y despachos que buscan un procurador estable: criterios de trabajo acordados al inicio, un único interlocutor y una forma de reportar adaptada a cómo trabaja cada equipo.",
-    detail: "Una colaboración continuada, también cuando los asuntos se tramitan fuera de la Comunidad Valenciana mediante procuradores colaboradores coordinados desde Valencia.",
+    detail: "Una colaboración continuada, también cuando los asuntos se tramitan fuera de la provincia de Valencia mediante procuradores colaboradores, según el procedimiento.",
   },
 ] as const;
 

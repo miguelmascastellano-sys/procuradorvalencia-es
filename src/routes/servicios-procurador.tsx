@@ -50,7 +50,7 @@ function Page() {
       </Section>
       <Section label="Ámbito">
         <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Estos servicios se prestan con prioridad en <Link to="/procurador-valencia" className="text-foreground underline underline-offset-4">Valencia</Link> y en la <Link to="/procurador-comunidad-valenciana" className="text-foreground underline underline-offset-4">Comunidad Valenciana</Link>, y se coordinan en otros territorios mediante <Link to="/procurador-nacional" className="text-foreground underline underline-offset-4">procuradores colaboradores</Link>.
+          Estos servicios se prestan con prioridad en <Link to="/procurador-valencia" className="text-foreground underline underline-offset-4">Valencia</Link> y en la <Link to="/procurador-provincia-valencia" className="text-foreground underline underline-offset-4">provincia de Valencia</Link>, y se coordinan en otros territorios mediante <Link to="/procurador-valencia-despachos-otras-provincias" className="text-foreground underline underline-offset-4">procuradores colaboradores</Link>.
         </p>
       </Section>
       <ContactBand />

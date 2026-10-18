@@ -8,6 +8,49 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "procurador-ciudad-justicia-valencia",
+    title: "Procurador en la Ciudad de la Justicia de Valencia: cómo funciona",
+    description: "Cómo trabaja un procurador en la Ciudad de la Justicia de Valencia: presentación telemática, notificaciones, plazos y actuaciones presenciales en los juzgados.",
+    date: "2026-10-18",
+    body: [
+      { p: ["La Ciudad de la Justicia concentra buena parte de los órganos judiciales de Valencia capital. Para el procurador es el entorno de trabajo diario, aunque gran parte de la actividad se realiza hoy de forma telemática."] },
+      { h: "Presentación de escritos", p: ["Los escritos se presentan por vía telemática a través de los sistemas de la Administración de Justicia, conforme a los artículos 135 y 273 de la Ley de Enjuiciamiento Civil. El procurador presenta los escritos que redacta el abogado y conserva el justificante con fecha y hora."] },
+      { h: "Recepción de notificaciones", p: ["El procurador recibe en nombre de su representado las notificaciones del juzgado (art. 153 LEC). Las recibidas en día u hora inhábil se entienden practicadas el primer día hábil siguiente, y los plazos se computan desde el día siguiente (art. 133 LEC). Trasladarlas al abogado el mismo día es la principal garantía de que no se pierde ningún plazo."] },
+      { h: "Actuaciones presenciales", p: ["Siguen existiendo actuaciones que requieren presencia: recogida de mandamientos y oficios, consultas en la oficina judicial, determinados actos de comunicación que el procurador puede practicar conforme al artículo 152 LEC, o la asistencia a vistas cuando procede."] },
+      { h: "Qué aporta un procurador local", p: ["Conocer la organización de los servicios comunes y de cada juzgado permite resolver incidencias con rapidez y anticipar los tiempos de tramitación, algo especialmente útil para despachos que no trabajan habitualmente en Valencia."] },
+    ],
+  },
+  {
+    slug: "ejecucion-hipotecaria-valencia",
+    title: "Ejecución hipotecaria en Valencia paso a paso",
+    description: "Fases de la ejecución hipotecaria en los juzgados de Valencia según la LEC: demanda, requerimiento, oposición, subasta electrónica, adjudicación y posesión.",
+    date: "2026-10-18",
+    body: [
+      { p: ["La ejecución hipotecaria sobre bienes inmuebles se regula en los artículos 681 a 698 de la Ley de Enjuiciamiento Civil. Se tramita ante el juzgado de primera instancia del lugar donde radica la finca."] },
+      { h: "1. Demanda ejecutiva", p: ["El acreedor presenta la demanda con la escritura de hipoteca y el certificado de saldo, previo requerimiento extrajudicial en su caso. En préstamos sujetos a la Ley 5/2019, deben concurrir los requisitos de vencimiento anticipado de su artículo 24."] },
+      { h: "2. Despacho de ejecución y requerimiento", p: ["El juzgado despacha ejecución, se requiere de pago al deudor y se solicita al Registro de la Propiedad la certificación de dominio y cargas (art. 688 LEC)."] },
+      { h: "3. Oposición", p: ["El deudor puede oponerse por las causas tasadas del artículo 695 LEC, incluido el carácter abusivo de alguna cláusula. La oposición se resuelve en un incidente."] },
+      { h: "4. Subasta electrónica", p: ["Sin pago ni oposición estimada, el bien sale a subasta en el Portal de Subastas del BOE, con un depósito general del 5 % del valor de subasta (art. 647 LEC)."] },
+      { h: "5. Adjudicación y posesión", p: ["Tras la subasta se aprueba el remate o la adjudicación al acreedor (art. 671 LEC), se expide el testimonio para inscribir el bien y se resuelve la toma de posesión (art. 675 LEC)."] },
+      { h: "El papel del procurador", p: ["El procurador presenta cada escrito, recibe las resoluciones y avisa de los plazos de cada fase, desde la demanda hasta la posesión."] },
+    ],
+  },
+  {
+    slug: "desahucio-impago-valencia",
+    title: "Desahucio por impago en Valencia: plazos y papel del procurador",
+    description: "Desahucio por falta de pago en Valencia: requerimiento, plazo de diez días, enervación, juicio verbal, lanzamiento y función del procurador.",
+    date: "2026-10-18",
+    body: [
+      { p: ["El desahucio por falta de pago de la renta se tramita como juicio verbal (art. 250.1.1.º LEC) ante el juzgado de primera instancia del lugar de la finca."] },
+      { h: "Demanda y requerimiento", p: ["Admitida la demanda, el letrado de la Administración de Justicia requiere al arrendatario para que, en diez días, desaloje, pague o se oponga (art. 440.3 LEC). La resolución fija ya la fecha de la vista y del lanzamiento para el caso de que no haya oposición."] },
+      { h: "Enervación", p: ["El arrendatario puede enervar el desahucio pagando lo adeudado, salvo que ya lo hubiera hecho antes o el arrendador le hubiera requerido de pago con la antelación prevista en el artículo 22.4 LEC."] },
+      { h: "Sin oposición", p: ["Si el demandado no atiende el requerimiento, se dicta decreto dando por terminado el juicio y se procede al lanzamiento en la fecha fijada."] },
+      { h: "Con oposición", p: ["Si se opone, se celebra la vista y se dicta sentencia. Contra ella cabe apelación ante la Audiencia Provincial de Valencia; el arrendatario debe acreditar el pago de las rentas vencidas para recurrir (art. 449 LEC)."] },
+      { h: "Situaciones de vulnerabilidad", p: ["La normativa vigente prevé trámites específicos cuando se aprecia vulnerabilidad del ocupante, que pueden suspender o aplazar el lanzamiento. Conviene que el abogado valore su aplicación en cada caso."] },
+      { h: "Qué hace el procurador", p: ["Presenta la demanda, sigue el requerimiento, traslada al abogado el resultado y la fecha de lanzamiento, y comunica cualquier incidencia del juzgado, especialmente en plazos tan breves como los de este procedimiento."] },
+    ],
+  },
+  {
     slug: "funciones-del-procurador",
     title: "Qué funciones desempeña un procurador en un procedimiento judicial",
     description: "La representación procesal, la comunicación con el órgano judicial y el seguimiento de actuaciones: el papel del procurador explicado con claridad.",

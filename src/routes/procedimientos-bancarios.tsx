@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, breadcrumbJsonLd } from "@/lib/site";
-import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
+import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Related, Section } from "@/components/site/blocks";
 
 const FAQ = [
   { q: "¿En qué procedimientos bancarios interviene el procurador?", a: "En los procedimientos judiciales que el abogado inicia o en los que defiende a su cliente: acciones de nulidad por cláusulas abusivas, reclamaciones de cantidad, monitorios y ejecuciones, incluidas las hipotecarias." },
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/procedimientos-bancarios")({
   head: () => {
     const h = seo({
       title: "Procurador para procedimientos bancarios en Valencia | MMC Procuradores",
-      description: "Representación procesal en litigios bancarios en Valencia: cláusulas abusivas, ejecuciones hipotecarias y reclamaciones, en coordinación con el abogado del asunto.",
+      description: "Procurador para procedimientos bancarios en Valencia: cláusulas abusivas, ejecuciones hipotecarias y reclamaciones, en coordinación con el abogado.",
       path: "/procedimientos-bancarios",
     });
     return { ...h, scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(FAQ)) }] };
@@ -46,6 +46,11 @@ function Page() {
       <Section label="Preguntas frecuentes">
         <Faq items={FAQ} />
       </Section>
+      <Section label="Páginas relacionadas"><Related links={[
+      { to: "/subastas-judiciales-valencia", label: "Subastas judiciales en Valencia" },
+      { to: "/procedimientos-civiles-ejecuciones", label: "Ejecuciones en Valencia" },
+      { to: "/procedimientos-segunda-oportunidad", label: "Segunda oportunidad" },
+      ]} /></Section>
       <ContactBand title="¿Litigios bancarios en Valencia? Hablemos." />
     </>
   );

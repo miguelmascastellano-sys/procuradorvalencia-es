@@ -1,3 +1,5 @@
+export const BASE_URL = "https://procuradorvalencia.es";
+
 export const SITE = {
   name: "MMC Procuradores",
   professional: "Miguel Mas Castellano",
@@ -5,7 +7,10 @@ export const SITE = {
   email: "mmc.procurador@outlook.es",
   contactSubject: "Colaboración profesional en procura",
   contactHref: "mailto:mmc.procurador@outlook.es?subject=Colaboraci%C3%B3n%20profesional%20en%20procura",
-  url: "https://pixel-procurador-connect.lovable.app",
+  url: BASE_URL,
+  phone: "644 206 106",
+  phoneHref: "tel:+34644206106",
+  whatsappHref: "https://wa.me/34644206106",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
@@ -13,7 +18,8 @@ export const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/el-despacho", label: "El despacho" },
   { to: "/servicios-procurador", label: "Servicios" },
-  { to: "/ambito-actuacion", label: "Ámbito de actuación" },
+  { to: "/procurador-provincia-valencia", label: "Provincia" },
+  { to: "/precio-procurador-valencia", label: "Precio" },
   { to: "/articulos", label: "Artículos" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
@@ -22,7 +28,7 @@ type SeoInput = { title: string; description: string; path: string; type?: "webs
 
 /** Per-route head(): unique title, description, canonical and Open Graph. */
 export function seo({ title, description, path, type = "website" }: SeoInput) {
-  const url = `https://pixel-procurador-connect.lovable.app${path === "/" ? "" : path}`;
+  const url = `${BASE_URL}${path === "/" ? "" : path}`;
   return {
     meta: [
       { title },
@@ -47,10 +53,10 @@ export const organizationJsonLd = {
   name: SITE.name,
   url: SITE.url,
   email: SITE.email,
+  telephone: "+34644206106",
   areaServed: [
     { "@type": "City", name: "Valencia" },
-    { "@type": "AdministrativeArea", name: "Comunidad Valenciana" },
-    { "@type": "Country", name: "España" },
+    { "@type": "AdministrativeArea", name: "Provincia de Valencia" },
   ],
   founder: { "@type": "Person", name: SITE.professional, jobTitle: SITE.role },
   knowsLanguage: ["es"],

@@ -16,6 +16,7 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as ElDespachoRouteImport } from './routes/el-despacho'
 import { Route as PoliticaCookiesRouteImport } from './routes/politica-cookies'
 import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privacidad'
+import { Route as PrecioProcuradorValenciaRouteImport } from './routes/precio-procurador-valencia'
 import { Route as ProcedimientosBancariosRouteImport } from './routes/procedimientos-bancarios'
 import { Route as ProcedimientosCivilesEjecucionesRouteImport } from './routes/procedimientos-civiles-ejecuciones'
 import { Route as ProcedimientosFamiliaRouteImport } from './routes/procedimientos-familia'
@@ -23,8 +24,11 @@ import { Route as ProcedimientosSegundaOportunidadRouteImport } from './routes/p
 import { Route as ProcuradorComunidadValencianaRouteImport } from './routes/procurador-comunidad-valenciana'
 import { Route as ProcuradorNacionalRouteImport } from './routes/procurador-nacional'
 import { Route as ProcuradorParaAbogadosRouteImport } from './routes/procurador-para-abogados'
+import { Route as ProcuradorProvinciaValenciaRouteImport } from './routes/procurador-provincia-valencia'
 import { Route as ProcuradorValenciaRouteImport } from './routes/procurador-valencia'
+import { Route as ProcuradorValenciaDespachosOtrasProvinciasRouteImport } from './routes/procurador-valencia-despachos-otras-provincias'
 import { Route as ServiciosProcuradorRouteImport } from './routes/servicios-procurador'
+import { Route as SubastasJudicialesValenciaRouteImport } from './routes/subastas-judiciales-valencia'
 import { Route as ArticulosIndexRouteImport } from './routes/articulos.index'
 import { Route as ArticulosSlugRouteImport } from './routes/articulos.$slug'
 
@@ -63,6 +67,12 @@ const PoliticaPrivacidadRoute = PoliticaPrivacidadRouteImport.update({
   path: '/politica-privacidad',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrecioProcuradorValenciaRoute =
+  PrecioProcuradorValenciaRouteImport.update({
+    id: '/precio-procurador-valencia',
+    path: '/precio-procurador-valencia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProcedimientosBancariosRoute = ProcedimientosBancariosRouteImport.update({
   id: '/procedimientos-bancarios',
   path: '/procedimientos-bancarios',
@@ -101,16 +111,34 @@ const ProcuradorParaAbogadosRoute = ProcuradorParaAbogadosRouteImport.update({
   path: '/procurador-para-abogados',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcuradorProvinciaValenciaRoute =
+  ProcuradorProvinciaValenciaRouteImport.update({
+    id: '/procurador-provincia-valencia',
+    path: '/procurador-provincia-valencia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProcuradorValenciaRoute = ProcuradorValenciaRouteImport.update({
   id: '/procurador-valencia',
   path: '/procurador-valencia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcuradorValenciaDespachosOtrasProvinciasRoute =
+  ProcuradorValenciaDespachosOtrasProvinciasRouteImport.update({
+    id: '/procurador-valencia-despachos-otras-provincias',
+    path: '/procurador-valencia-despachos-otras-provincias',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServiciosProcuradorRoute = ServiciosProcuradorRouteImport.update({
   id: '/servicios-procurador',
   path: '/servicios-procurador',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SubastasJudicialesValenciaRoute =
+  SubastasJudicialesValenciaRouteImport.update({
+    id: '/subastas-judiciales-valencia',
+    path: '/subastas-judiciales-valencia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ArticulosIndexRoute = ArticulosIndexRouteImport.update({
   id: '/articulos/',
   path: '/articulos/',
@@ -130,6 +158,7 @@ export interface FileRoutesByFullPath {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/precio-procurador-valencia': typeof PrecioProcuradorValenciaRoute
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
@@ -137,8 +166,11 @@ export interface FileRoutesByFullPath {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
+  '/procurador-valencia-despachos-otras-provincias': typeof ProcuradorValenciaDespachosOtrasProvinciasRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/subastas-judiciales-valencia': typeof SubastasJudicialesValenciaRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
 }
@@ -150,6 +182,7 @@ export interface FileRoutesByTo {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/precio-procurador-valencia': typeof PrecioProcuradorValenciaRoute
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
@@ -157,8 +190,11 @@ export interface FileRoutesByTo {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
+  '/procurador-valencia-despachos-otras-provincias': typeof ProcuradorValenciaDespachosOtrasProvinciasRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/subastas-judiciales-valencia': typeof SubastasJudicialesValenciaRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/articulos': typeof ArticulosIndexRoute
 }
@@ -171,6 +207,7 @@ export interface FileRoutesById {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/precio-procurador-valencia': typeof PrecioProcuradorValenciaRoute
   '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
   '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
   '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
@@ -178,8 +215,11 @@ export interface FileRoutesById {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
+  '/procurador-valencia-despachos-otras-provincias': typeof ProcuradorValenciaDespachosOtrasProvinciasRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
+  '/subastas-judiciales-valencia': typeof SubastasJudicialesValenciaRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
 }
@@ -193,6 +233,7 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/precio-procurador-valencia'
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
@@ -200,8 +241,11 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
+    | '/procurador-valencia-despachos-otras-provincias'
     | '/servicios-procurador'
+    | '/subastas-judiciales-valencia'
     | '/articulos/$slug'
     | '/articulos/'
   fileRoutesByTo: FileRoutesByTo
@@ -213,6 +257,7 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/precio-procurador-valencia'
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
@@ -220,8 +265,11 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
+    | '/procurador-valencia-despachos-otras-provincias'
     | '/servicios-procurador'
+    | '/subastas-judiciales-valencia'
     | '/articulos/$slug'
     | '/articulos'
   id:
@@ -233,6 +281,7 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/precio-procurador-valencia'
     | '/procedimientos-bancarios'
     | '/procedimientos-civiles-ejecuciones'
     | '/procedimientos-familia'
@@ -240,8 +289,11 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
+    | '/procurador-valencia-despachos-otras-provincias'
     | '/servicios-procurador'
+    | '/subastas-judiciales-valencia'
     | '/articulos/$slug'
     | '/articulos/'
   fileRoutesById: FileRoutesById
@@ -254,6 +306,7 @@ export interface RootRouteChildren {
   ElDespachoRoute: typeof ElDespachoRoute
   PoliticaCookiesRoute: typeof PoliticaCookiesRoute
   PoliticaPrivacidadRoute: typeof PoliticaPrivacidadRoute
+  PrecioProcuradorValenciaRoute: typeof PrecioProcuradorValenciaRoute
   ProcedimientosBancariosRoute: typeof ProcedimientosBancariosRoute
   ProcedimientosCivilesEjecucionesRoute: typeof ProcedimientosCivilesEjecucionesRoute
   ProcedimientosFamiliaRoute: typeof ProcedimientosFamiliaRoute
@@ -261,8 +314,11 @@ export interface RootRouteChildren {
   ProcuradorComunidadValencianaRoute: typeof ProcuradorComunidadValencianaRoute
   ProcuradorNacionalRoute: typeof ProcuradorNacionalRoute
   ProcuradorParaAbogadosRoute: typeof ProcuradorParaAbogadosRoute
+  ProcuradorProvinciaValenciaRoute: typeof ProcuradorProvinciaValenciaRoute
   ProcuradorValenciaRoute: typeof ProcuradorValenciaRoute
+  ProcuradorValenciaDespachosOtrasProvinciasRoute: typeof ProcuradorValenciaDespachosOtrasProvinciasRoute
   ServiciosProcuradorRoute: typeof ServiciosProcuradorRoute
+  SubastasJudicialesValenciaRoute: typeof SubastasJudicialesValenciaRoute
   ArticulosSlugRoute: typeof ArticulosSlugRoute
   ArticulosIndexRoute: typeof ArticulosIndexRoute
 }
@@ -318,6 +374,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliticaPrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/precio-procurador-valencia': {
+      id: '/precio-procurador-valencia'
+      path: '/precio-procurador-valencia'
+      fullPath: '/precio-procurador-valencia'
+      preLoaderRoute: typeof PrecioProcuradorValenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/procedimientos-bancarios': {
       id: '/procedimientos-bancarios'
       path: '/procedimientos-bancarios'
@@ -367,6 +430,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProcuradorParaAbogadosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procurador-provincia-valencia': {
+      id: '/procurador-provincia-valencia'
+      path: '/procurador-provincia-valencia'
+      fullPath: '/procurador-provincia-valencia'
+      preLoaderRoute: typeof ProcuradorProvinciaValenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/procurador-valencia': {
       id: '/procurador-valencia'
       path: '/procurador-valencia'
@@ -374,11 +444,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProcuradorValenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procurador-valencia-despachos-otras-provincias': {
+      id: '/procurador-valencia-despachos-otras-provincias'
+      path: '/procurador-valencia-despachos-otras-provincias'
+      fullPath: '/procurador-valencia-despachos-otras-provincias'
+      preLoaderRoute: typeof ProcuradorValenciaDespachosOtrasProvinciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicios-procurador': {
       id: '/servicios-procurador'
       path: '/servicios-procurador'
       fullPath: '/servicios-procurador'
       preLoaderRoute: typeof ServiciosProcuradorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/subastas-judiciales-valencia': {
+      id: '/subastas-judiciales-valencia'
+      path: '/subastas-judiciales-valencia'
+      fullPath: '/subastas-judiciales-valencia'
+      preLoaderRoute: typeof SubastasJudicialesValenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/articulos/': {
@@ -406,6 +490,7 @@ const rootRouteChildren: RootRouteChildren = {
   ElDespachoRoute: ElDespachoRoute,
   PoliticaCookiesRoute: PoliticaCookiesRoute,
   PoliticaPrivacidadRoute: PoliticaPrivacidadRoute,
+  PrecioProcuradorValenciaRoute: PrecioProcuradorValenciaRoute,
   ProcedimientosBancariosRoute: ProcedimientosBancariosRoute,
   ProcedimientosCivilesEjecucionesRoute: ProcedimientosCivilesEjecucionesRoute,
   ProcedimientosFamiliaRoute: ProcedimientosFamiliaRoute,
@@ -413,8 +498,12 @@ const rootRouteChildren: RootRouteChildren = {
   ProcuradorComunidadValencianaRoute: ProcuradorComunidadValencianaRoute,
   ProcuradorNacionalRoute: ProcuradorNacionalRoute,
   ProcuradorParaAbogadosRoute: ProcuradorParaAbogadosRoute,
+  ProcuradorProvinciaValenciaRoute: ProcuradorProvinciaValenciaRoute,
   ProcuradorValenciaRoute: ProcuradorValenciaRoute,
+  ProcuradorValenciaDespachosOtrasProvinciasRoute:
+    ProcuradorValenciaDespachosOtrasProvinciasRoute,
   ServiciosProcuradorRoute: ServiciosProcuradorRoute,
+  SubastasJudicialesValenciaRoute: SubastasJudicialesValenciaRoute,
   ArticulosSlugRoute: ArticulosSlugRoute,
   ArticulosIndexRoute: ArticulosIndexRoute,
 }
