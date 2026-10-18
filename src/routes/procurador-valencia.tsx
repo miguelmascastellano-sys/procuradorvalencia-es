@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo } from "@/lib/site";
+import { seo, breadcrumbJsonLd } from "@/lib/site";
 import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
 
 const FAQ = [
@@ -23,6 +23,7 @@ function Page() {
   return (
     <>
       <JsonLd data={faqJsonLd(FAQ)} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Inicio", path: "/" }, { name: "Procurador en Valencia", path: "/procurador-valencia" }])} />
       <PageHeader eyebrow="Valencia" title="Procurador en Valencia para abogados y despachos." intro={<p>Representación procesal ante los juzgados y tribunales de Valencia para abogados, despachos y departamentos jurídicos que necesitan un procurador con quien trabajar de forma estable.</p>} />
       <Section label="Servicios en Valencia" title="Procura en Valencia, con criterio de despacho.">
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
