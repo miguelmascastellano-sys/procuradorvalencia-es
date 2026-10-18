@@ -10,6 +10,7 @@ const AREAS = [
   { to: "/procedimientos-civiles-ejecuciones", label: "Procedimientos civiles y ejecuciones" },
   { to: "/procedimientos-familia", label: "Procedimientos de familia" },
   { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
+  { to: "/procedimientos-segunda-oportunidad", label: "Segunda oportunidad y concursal" },
   { to: "/articulos", label: "Artículos" },
 ] as const;
 

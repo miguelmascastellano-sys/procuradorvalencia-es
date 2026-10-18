@@ -41,6 +41,11 @@ function Page() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Reclamaciones y recuperación de deuda, también en carteras con volumen.</p>
             <Link to="/procedimientos-bancarios" className="link-quiet w-fit text-sm text-bronze md:col-start-2">Ver el área →</Link>
           </li>
+          <li className="grid gap-x-10 gap-y-3 py-8 md:grid-cols-2">
+            <h3 className="font-serif text-3xl">Segunda oportunidad y concursal</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Concurso de persona natural y exoneración del pasivo insatisfecho, en coordinación con el abogado.</p>
+            <Link to="/procedimientos-segunda-oportunidad" className="link-quiet w-fit text-sm text-bronze md:col-start-2">Ver el área →</Link>
+          </li>
         </ul>
       </Section>
       <Section label="Ámbito">
