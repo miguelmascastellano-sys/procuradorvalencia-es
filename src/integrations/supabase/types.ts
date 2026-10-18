@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       contact_messages: {
         Row: {
+          collaboration_type: string | null
           created_at: string
           email: string
           firm: string | null
@@ -24,8 +25,10 @@ export type Database = {
           name: string
           phone: string | null
           privacy_accepted: boolean
+          privacy_notice_version: string | null
         }
         Insert: {
+          collaboration_type?: string | null
           created_at?: string
           email: string
           firm?: string | null
@@ -34,8 +37,10 @@ export type Database = {
           name: string
           phone?: string | null
           privacy_accepted?: boolean
+          privacy_notice_version?: string | null
         }
         Update: {
+          collaboration_type?: string | null
           created_at?: string
           email?: string
           firm?: string | null
@@ -44,6 +49,7 @@ export type Database = {
           name?: string
           phone?: string | null
           privacy_accepted?: boolean
+          privacy_notice_version?: string | null
         }
         Relationships: []
       }
