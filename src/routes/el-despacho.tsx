@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo } from "@/lib/site";
+import { seo, personJsonLd, breadcrumbJsonLd } from "@/lib/site";
 import { ATTRIBUTES } from "@/lib/services";
-import { ContactBand, Numbered, PageHeader, Section } from "@/components/site/blocks";
+import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
+import despachoTrabajo from "@/assets/despacho-trabajo.jpg";
 
 export const Route = createFileRoute("/el-despacho")({
   head: () => seo({
@@ -15,7 +16,19 @@ export const Route = createFileRoute("/el-despacho")({
 function Page() {
   return (
     <>
+      <JsonLd data={personJsonLd} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Inicio", path: "/" }, { name: "El despacho", path: "/el-despacho" }])} />
       <PageHeader eyebrow="Mi forma de trabajar" title="La procura forma parte del funcionamiento diario del despacho." intro={<p>Una manera de trabajar construida desde dentro: primero en la gestión diaria de procedimientos, ahora como procurador al servicio de abogados y despachos.</p>} />
+      <figure className="container-site pb-4">
+        <img
+          src={despachoTrabajo}
+          alt="Detalle de un escritorio de trabajo jurídico: expedientes ordenados, pluma y gafas"
+          width={1200}
+          height={1408}
+          loading="lazy"
+          className="max-h-[32rem] w-full object-cover"
+        />
+      </figure>
       <Section label="Punto de partida">
         <div className="grid gap-12 md:grid-cols-12">
           <p className="font-serif text-3xl leading-snug md:col-span-6 md:text-4xl">Quien ha trabajado dentro de un despacho sabe qué ocurre cuando una notificación llega tarde o un asunto pierde seguimiento.</p>

@@ -1,14 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo, organizationJsonLd } from "@/lib/site";
+import { seo, organizationJsonLd, websiteJsonLd, SITE } from "@/lib/site";
 import { SERVICES, ATTRIBUTES } from "@/lib/services";
-import { ContactBand, JsonLd, Section } from "@/components/site/blocks";
+import { ContactBand, Faq, faqJsonLd, JsonLd, Section } from "@/components/site/blocks";
+import heroJuzgado from "@/assets/hero-juzgado.jpg";
+
+const FAQ = [
+  { q: "¿Qué hace un procurador en Valencia en un procedimiento judicial?", a: "Ostenta la representación procesal de la parte ante los juzgados y tribunales: presenta escritos, recibe y traslada notificaciones al abogado, atiende requerimientos y sigue el estado de las actuaciones." },
+  { q: "¿Es obligatorio intervenir con procurador?", a: "Depende del tipo de procedimiento y de su cuantía, conforme a la normativa procesal aplicable. En caso de duda, el abogado director del asunto determinará si es preceptiva su intervención." },
+  { q: "¿Colaboráis con despachos de fuera de Valencia?", a: "Sí. Despachos de otras provincias pueden encomendar asuntos que se tramiten en Valencia, con una interlocución directa y adaptada a su forma de trabajar." },
+  { q: "¿Cómo se inicia una colaboración?", a: "Mediante un primer contacto por teléfono, correo electrónico o formulario, en el que se valoran las necesidades del despacho, el tipo de asuntos y la forma de comunicación preferida." },
+  { q: "¿Podéis gestionar carteras con volumen de procedimientos?", a: "La experiencia previa en despachos con importante carga de procedimientos bancarios y ejecuciones permite organizar la gestión de carteras con criterios de control y seguimiento." },
+];
+
+const PASOS = [
+  { title: "Primer contacto", text: "Una conversación breve para conocer el despacho, el tipo de asuntos y las necesidades de comunicación." },
+  { title: "Acuerdo de trabajo", text: "Canales, interlocutores y forma de traslado de notificaciones, adaptados a la dinámica del despacho." },
+  { title: "Recepción de asuntos", text: "Documentación y apoderamientos necesarios para asumir la representación procesal." },
+  { title: "Seguimiento continuado", text: "Información ordenada sobre cada actuación, con un único interlocutor durante toda la tramitación." },
+];
 
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Mas Castellano Procurador | Procurador de los Tribunales en Valencia",
+      title: "Procurador en Valencia | Mas Castellano Procurador",
       description:
-        "La procura, desde dentro del procedimiento. Representación procesal y colaboración con despachos de abogados en Valencia, la Comunidad Valenciana y el ámbito nacional.",
+        "Procurador de los Tribunales en Valencia. Servicios de procura y colaboración procesal para abogados y despachos en Valencia, la Comunidad Valenciana y el ámbito nacional.",
       path: "/",
     }),
   component: Index,
@@ -18,27 +34,42 @@ function Index() {
   return (
     <>
       <JsonLd data={organizationJsonLd} />
+      <JsonLd data={websiteJsonLd} />
+      <JsonLd data={faqJsonLd(FAQ)} />
 
       {/* Hero */}
-      <section className="container-site pt-20 pb-24 md:pt-32 md:pb-36">
-        <p className="eyebrow">Mas Castellano Procurador</p>
-        <h1 className="mt-10 max-w-5xl text-[3rem] leading-[1] md:text-[6rem]">
-          La procura, desde dentro <em className="text-muted-foreground">del procedimiento.</em>
+      <section className="container-site pt-20 pb-24 md:pt-28 md:pb-32">
+        <p className="eyebrow">{SITE.tagline}</p>
+        <h1 className="mt-10 max-w-5xl text-[3rem] leading-[1] md:text-[5.5rem]">
+          Procurador de los Tribunales <em className="text-muted-foreground">en Valencia.</em>
         </h1>
         <div className="mt-14 grid gap-10 border-t border-rule pt-10 md:grid-cols-12">
           <p className="text-lg leading-relaxed md:col-span-6 md:text-xl">
-            Representación procesal y colaboración con despachos de abogados en Valencia, la Comunidad Valenciana y el ámbito nacional.
+            Servicios de procura y colaboración procesal para abogados y despachos. Representación procesal, seguimiento de procedimientos y coordinación de actuaciones en Valencia y la Comunidad Valenciana, con posibilidad de colaboración en otros territorios según las necesidades del asunto.
           </p>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-sm text-muted-foreground">Miguel Mas Castellano · Procurador de los Tribunales</p>
+            <p className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+              <a href={SITE.phoneHref} className="link-quiet">{SITE.phone}</a>
+              <a href={`mailto:${SITE.email}`} className="link-quiet">{SITE.email}</a>
+            </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
-              <Link to="/el-despacho" className="bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
-                Conocer mi forma de trabajar
+              <Link to="/contacto" className="bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
+                Contactar con el procurador
               </Link>
-              <Link to="/contacto" className="link-quiet text-sm">Contacto profesional →</Link>
+              <Link to="/procurador-para-abogados" className="link-quiet text-sm">Servicios para abogados →</Link>
             </div>
           </div>
         </div>
+        <figure className="mt-16">
+          <img
+            src={heroJuzgado}
+            alt="Interior de un palacio de justicia: columnas de piedra y luz natural"
+            width={1600}
+            height={1008}
+            className="h-auto w-full object-cover"
+          />
+        </figure>
       </section>
 
       {/* Diferenciación */}
@@ -77,6 +108,18 @@ function Index() {
         <Link to="/servicios-procurador" className="link-quiet mt-8 inline-block text-sm">Ver los servicios de procura en detalle →</Link>
       </Section>
 
+      <Section label="Colaboración" title="Cómo se inicia una colaboración.">
+        <ol className="grid gap-x-12 gap-y-12 md:grid-cols-2">
+          {PASOS.map((p, i) => (
+            <li key={p.title} className="border-t border-border pt-6">
+              <span className="font-serif text-sm text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="mt-3 text-2xl">{p.title}</h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">{p.text}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
       <Section label="Ámbito" title="Valencia como prioridad. Coordinación nacional.">
         <div className="grid gap-px border-y border-border bg-border md:grid-cols-2">
           <Link to="/procurador-comunidad-valenciana" className="bg-background py-10 md:pr-10">
@@ -100,6 +143,11 @@ function Index() {
           <p className="text-muted-foreground">Desde Mas Castellano Procurador, desarrollo una forma de trabajar basada en la organización, el seguimiento procesal y la comunicación directa con los profesionales con los que colaboro.</p>
           <p className="text-muted-foreground">Una manera de entender la procura desde la experiencia práctica y las necesidades reales del procedimiento.</p>
         </div>
+        <Link to="/el-despacho" className="link-quiet mt-10 inline-block text-sm">Conocer mi forma de trabajar →</Link>
+      </Section>
+
+      <Section label="Preguntas frecuentes" title="Dudas habituales de los despachos.">
+        <Faq items={FAQ} />
       </Section>
 
       <ContactBand />

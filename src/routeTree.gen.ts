@@ -16,6 +16,9 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as ElDespachoRouteImport } from './routes/el-despacho'
 import { Route as PoliticaCookiesRouteImport } from './routes/politica-cookies'
 import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privacidad'
+import { Route as ProcedimientosBancariosRouteImport } from './routes/procedimientos-bancarios'
+import { Route as ProcedimientosCivilesEjecucionesRouteImport } from './routes/procedimientos-civiles-ejecuciones'
+import { Route as ProcedimientosFamiliaRouteImport } from './routes/procedimientos-familia'
 import { Route as ProcuradorComunidadValencianaRouteImport } from './routes/procurador-comunidad-valenciana'
 import { Route as ProcuradorNacionalRouteImport } from './routes/procurador-nacional'
 import { Route as ProcuradorParaAbogadosRouteImport } from './routes/procurador-para-abogados'
@@ -57,6 +60,22 @@ const PoliticaCookiesRoute = PoliticaCookiesRouteImport.update({
 const PoliticaPrivacidadRoute = PoliticaPrivacidadRouteImport.update({
   id: '/politica-privacidad',
   path: '/politica-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcedimientosBancariosRoute = ProcedimientosBancariosRouteImport.update({
+  id: '/procedimientos-bancarios',
+  path: '/procedimientos-bancarios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcedimientosCivilesEjecucionesRoute =
+  ProcedimientosCivilesEjecucionesRouteImport.update({
+    id: '/procedimientos-civiles-ejecuciones',
+    path: '/procedimientos-civiles-ejecuciones',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProcedimientosFamiliaRoute = ProcedimientosFamiliaRouteImport.update({
+  id: '/procedimientos-familia',
+  path: '/procedimientos-familia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcuradorComunidadValencianaRoute =
@@ -104,6 +123,9 @@ export interface FileRoutesByFullPath {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
+  '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
+  '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -120,6 +142,9 @@ export interface FileRoutesByTo {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
+  '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
+  '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -137,6 +162,9 @@ export interface FileRoutesById {
   '/el-despacho': typeof ElDespachoRoute
   '/politica-cookies': typeof PoliticaCookiesRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/procedimientos-bancarios': typeof ProcedimientosBancariosRoute
+  '/procedimientos-civiles-ejecuciones': typeof ProcedimientosCivilesEjecucionesRoute
+  '/procedimientos-familia': typeof ProcedimientosFamiliaRoute
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
@@ -155,6 +183,9 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/procedimientos-bancarios'
+    | '/procedimientos-civiles-ejecuciones'
+    | '/procedimientos-familia'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -171,6 +202,9 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/procedimientos-bancarios'
+    | '/procedimientos-civiles-ejecuciones'
+    | '/procedimientos-familia'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -187,6 +221,9 @@ export interface FileRouteTypes {
     | '/el-despacho'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/procedimientos-bancarios'
+    | '/procedimientos-civiles-ejecuciones'
+    | '/procedimientos-familia'
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
@@ -204,6 +241,9 @@ export interface RootRouteChildren {
   ElDespachoRoute: typeof ElDespachoRoute
   PoliticaCookiesRoute: typeof PoliticaCookiesRoute
   PoliticaPrivacidadRoute: typeof PoliticaPrivacidadRoute
+  ProcedimientosBancariosRoute: typeof ProcedimientosBancariosRoute
+  ProcedimientosCivilesEjecucionesRoute: typeof ProcedimientosCivilesEjecucionesRoute
+  ProcedimientosFamiliaRoute: typeof ProcedimientosFamiliaRoute
   ProcuradorComunidadValencianaRoute: typeof ProcuradorComunidadValencianaRoute
   ProcuradorNacionalRoute: typeof ProcuradorNacionalRoute
   ProcuradorParaAbogadosRoute: typeof ProcuradorParaAbogadosRoute
@@ -262,6 +302,27 @@ declare module '@tanstack/react-router' {
       path: '/politica-privacidad'
       fullPath: '/politica-privacidad'
       preLoaderRoute: typeof PoliticaPrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedimientos-bancarios': {
+      id: '/procedimientos-bancarios'
+      path: '/procedimientos-bancarios'
+      fullPath: '/procedimientos-bancarios'
+      preLoaderRoute: typeof ProcedimientosBancariosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedimientos-civiles-ejecuciones': {
+      id: '/procedimientos-civiles-ejecuciones'
+      path: '/procedimientos-civiles-ejecuciones'
+      fullPath: '/procedimientos-civiles-ejecuciones'
+      preLoaderRoute: typeof ProcedimientosCivilesEjecucionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedimientos-familia': {
+      id: '/procedimientos-familia'
+      path: '/procedimientos-familia'
+      fullPath: '/procedimientos-familia'
+      preLoaderRoute: typeof ProcedimientosFamiliaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/procurador-comunidad-valenciana': {
@@ -324,6 +385,9 @@ const rootRouteChildren: RootRouteChildren = {
   ElDespachoRoute: ElDespachoRoute,
   PoliticaCookiesRoute: PoliticaCookiesRoute,
   PoliticaPrivacidadRoute: PoliticaPrivacidadRoute,
+  ProcedimientosBancariosRoute: ProcedimientosBancariosRoute,
+  ProcedimientosCivilesEjecucionesRoute: ProcedimientosCivilesEjecucionesRoute,
+  ProcedimientosFamiliaRoute: ProcedimientosFamiliaRoute,
   ProcuradorComunidadValencianaRoute: ProcuradorComunidadValencianaRoute,
   ProcuradorNacionalRoute: ProcuradorNacionalRoute,
   ProcuradorParaAbogadosRoute: ProcuradorParaAbogadosRoute,
