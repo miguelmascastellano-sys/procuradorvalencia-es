@@ -1,7 +1,7 @@
 // Long-form guide sections for each procedure page.
 export type Guide = { h: string; p: string[] }[];
 
-export const GUIDES: Record<string, Guide> = {
+export const GUIDES = {
   familia: [
     { h: "Juzgados de familia en Valencia", p: [
       "En Valencia capital los asuntos de familia se reparten entre juzgados de primera instancia especializados en esta materia. En el resto de la provincia, los procedimientos de familia los conocen los juzgados de primera instancia o de primera instancia e instrucción de cada partido judicial, según la organización de cada sede.",
@@ -66,4 +66,4 @@ export const GUIDES: Record<string, Guide> = {
       "Recibir las comunicaciones de la administración concursal y del juzgado, trasladarlas al abogado y cuidar los plazos de alegaciones son las funciones esenciales. Un procedimiento concursal genera muchas resoluciones, y su seguimiento ordenado es lo que permite al abogado centrarse en el fondo.",
     ] },
   ],
-};
+} satisfies Record<string, Guide>;
