@@ -40,10 +40,10 @@
 }
 
 :root {
-  --radius: 4px;
-  --bronze: oklch(0.57 0.067 72);
+  --radius: 0px;
+  --bronze: oklch(0.52 0.06 72);
   --overlay: oklch(0.18 0.025 255 / 0.55);
-  --background: oklch(0.985 0.004 90);
+  --background: oklch(0.982 0.009 90);
   --foreground: oklch(0.24 0.02 260);
   --card: oklch(0.975 0.004 90);
   --card-foreground: oklch(0.24 0.02 260);
@@ -84,10 +84,10 @@
 
 @utility container-site {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1.5rem;
-  @media (min-width: 768px) { padding-inline: 2.5rem; }
+  @media (min-width: 768px) { padding-inline: 4rem; }
 }
 
 @utility eyebrow {
@@ -123,4 +123,28 @@
 @layer base {
  p { text-wrap: pretty; }
  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+}
+
+/* Editorial compositions shared across all public pages. */
+@layer components {
+  .editorial-hero { min-height: 580px; position: relative; isolation: isolate; }
+  .editorial-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--ink) 0%, color-mix(in oklab, var(--ink) 88%, transparent) 35%, color-mix(in oklab, var(--ink) 20%, transparent) 75%); }
+  .editorial-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .editorial-kicker { display: flex; align-items: center; gap: 1rem; font-size: .7rem; text-transform: uppercase; }
+  .editorial-kicker::before { content: ""; width: 2.5rem; height: 1px; background: var(--bronze); flex-shrink: 0; }
+  .editorial-section { padding-block: 5.5rem; }
+  .editorial-section:nth-of-type(even) { background: var(--secondary); }
+  .editorial-intro { border-top: 1px solid var(--bronze); padding-top: 1.5rem; }
+  .editorial-service { display: grid; grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; padding-block: 2rem; border-top: 1px solid var(--border); }
+  .editorial-service:last-child { border-bottom: 1px solid var(--border); }
+  .editorial-photo { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; }
+  .legal-body h2 { border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  @media (max-width: 767px) {
+    .editorial-hero { min-height: auto; }
+    .editorial-hero-image { object-position: 60% center; }
+    .editorial-hero::after { background: color-mix(in oklab, var(--ink) 82%, transparent); }
+    .editorial-section { padding-block: 3.5rem; }
+    .editorial-service { grid-template-columns: 2rem minmax(0, 1fr); gap: 1rem; }
+    .editorial-service > p { grid-column: 2; }
+  }
 }
