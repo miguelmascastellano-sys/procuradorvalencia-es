@@ -2,7 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, breadcrumbJsonLd } from "@/lib/site";
 import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, PageHeader, Related, Section } from "@/components/site/blocks";
 
+import { GUIDES } from "@/lib/procedure-guides";
+
 const FAQ = [
+  { q: "¿Cuánto tarda un divorcio de mutuo acuerdo en Valencia?", a: "Depende de la carga de cada juzgado y de la fecha de ratificación; el procurador informa al abogado de cada señalamiento para anticipar los tiempos." },
   { q: "¿Es obligatorio procurador en un divorcio en Valencia?", a: "Sí, en los procedimientos de separación, divorcio y medidas ante los juzgados de familia se requiere procurador, también en los de mutuo acuerdo." },
   { q: "¿Un solo procurador puede representar a ambos cónyuges?", a: "En los procedimientos de mutuo acuerdo es posible que un mismo abogado y procurador actúen para ambas partes, conforme a la LEC." },
   { q: "¿Qué ocurre si no se paga la pensión fijada en sentencia?", a: "Se puede instar la ejecución de la resolución de familia ante el mismo juzgado; el procurador impulsa la ejecución y traslada cada resultado al abogado." },
@@ -36,6 +39,9 @@ function Page() {
           <p className="text-muted-foreground">El abogado recibe la información de forma ordenada y en tiempo útil, con un único interlocutor que conoce el estado de cada procedimiento.</p>
         </div>
         <Link to="/servicios-procurador" className="link-quiet mt-10 inline-block text-sm">Todos los servicios de procura →</Link>
+      </Section>
+      <Section label="Guía práctica" title="Cómo se tramita.">
+        <div className="max-w-3xl space-y-10">{GUIDES.familia.map((b) => (<div key={b.h}><h3 className="font-serif text-2xl">{b.h}</h3>{b.p.map((t) => <p key={t.slice(0, 30)} className="mt-4 text-lg leading-relaxed text-muted-foreground">{t}</p>)}</div>))}</div>
       </Section>
       <Section label="Preguntas frecuentes" title="Preguntas frecuentes."><Faq items={FAQ} /></Section>
       <Section label="Páginas relacionadas"><Related links={[
