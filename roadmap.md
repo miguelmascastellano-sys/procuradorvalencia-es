@@ -1,4 +1,6 @@
 # Renovación MMC Procuradores
+- [ ] Nueva revisión integral: composición editorial diferenciada en todas las páginas y contacto exclusivo por correo.
+- [ ] Retirar formulario y recepción web, actualizar privacidad, verificar correo, navegación y diseño móvil/tablet/escritorio.
 - [x] Segunda pasada editorial: nueva portada, navegación, interiores, servicios, presentación, contacto y pie.
 - [x] Verificar la composición y enlaces de las 21 páginas en escritorio y móvil; comprobar formulario y preferencias.
 - [x] Inspeccionar diseño, SEO, almacenamiento y terceros.
