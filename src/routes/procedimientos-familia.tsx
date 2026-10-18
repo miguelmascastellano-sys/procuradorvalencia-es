@@ -4,7 +4,7 @@ import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components
 
 export const Route = createFileRoute("/procedimientos-familia")({
   head: () => seo({
-    title: "Procedimientos de familia | Mas Castellano Procurador",
+    title: "Procedimientos de familia | MMC Procuradores",
     description: "Representación procesal en procedimientos de familia en Valencia: divorcios, modificaciones de medidas y ejecución de resoluciones, con diligencia y discreción.",
     path: "/procedimientos-familia",
   }),

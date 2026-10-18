@@ -4,7 +4,7 @@ import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components
 
 export const Route = createFileRoute("/procedimientos-bancarios")({
   head: () => seo({
-    title: "Procedimientos bancarios y reclamaciones | Mas Castellano Procurador",
+    title: "Procedimientos bancarios y reclamaciones | MMC Procuradores",
     description: "Gestión procesal de procedimientos bancarios y reclamaciones en Valencia, también en carteras con volumen: orden, registro de actuaciones y reporte adaptado al despacho.",
     path: "/procedimientos-bancarios",
   }),

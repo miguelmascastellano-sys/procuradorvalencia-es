@@ -3,7 +3,7 @@ import { seo, SITE } from "@/lib/site";
 import { LegalPage } from "@/components/site/LegalPage";
 
 export const Route = createFileRoute("/politica-privacidad")({
-  head: () => seo({ title: "Política de privacidad | Mas Castellano Procurador", description: "Información sobre el tratamiento de datos personales en el sitio web de Mas Castellano Procurador.", path: "/politica-privacidad" }),
+  head: () => seo({ title: "Política de privacidad | MMC Procuradores", description: "Información sobre el tratamiento de datos personales en el sitio web de MMC Procuradores.", path: "/politica-privacidad" }),
   component: () => (
     <LegalPage title="Política de privacidad">
       <h2>Responsable del tratamiento</h2>

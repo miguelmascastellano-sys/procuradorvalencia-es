@@ -4,7 +4,7 @@ import { ContactBand, Numbered, PageHeader, Section } from "@/components/site/bl
 
 export const Route = createFileRoute("/procurador-comunidad-valenciana")({
   head: () => seo({
-    title: "Procurador en la Comunidad Valenciana | Mas Castellano Procurador",
+    title: "Procurador en la Comunidad Valenciana | MMC Procuradores",
     description: "Coordinación de procedimientos y representación procesal en el ámbito de la Comunidad Valenciana para abogados y despachos.",
     path: "/procurador-comunidad-valenciana",
   }),
@@ -18,7 +18,7 @@ function Page() {
       <Section label="Ámbito autonómico" title="Una visión de conjunto de los asuntos del despacho.">
         <div className="grid gap-10 text-lg leading-relaxed md:grid-cols-2">
           <p>Muchos despachos tramitan asuntos repartidos entre distintos partidos judiciales de la Comunidad Valenciana. Gestionarlos con interlocutores dispersos complica el control de plazos y la comunicación interna.</p>
-          <p className="text-muted-foreground">Mas Castellano Procurador ofrece un punto de referencia para esos asuntos: representación procesal en los procedimientos encomendados y coordinación con procuradores colaboradores cuando así lo requiera el procedimiento.</p>
+          <p className="text-muted-foreground">MMC Procuradores ofrece un punto de referencia para esos asuntos: representación procesal en los procedimientos encomendados y coordinación con procuradores colaboradores cuando así lo requiera el procedimiento.</p>
         </div>
       </Section>
       <Section label="Cómo trabajamos" title="Criterios comunes en todo el territorio.">

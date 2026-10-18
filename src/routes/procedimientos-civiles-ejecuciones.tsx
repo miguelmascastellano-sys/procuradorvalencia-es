@@ -4,7 +4,7 @@ import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components
 
 export const Route = createFileRoute("/procedimientos-civiles-ejecuciones")({
   head: () => seo({
-    title: "Procedimientos civiles y ejecuciones | Mas Castellano Procurador",
+    title: "Procedimientos civiles y ejecuciones | MMC Procuradores",
     description: "Representación procesal en procedimientos civiles y ejecuciones en Valencia: declarativos, monitorios y ejecución de títulos, con seguimiento e impulso de las actuaciones.",
     path: "/procedimientos-civiles-ejecuciones",
   }),

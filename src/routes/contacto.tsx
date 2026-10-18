@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/site/ContactForm";
 
 export const Route = createFileRoute("/contacto")({
   head: () => seo({
-    title: "Contacto profesional | Mas Castellano Procurador",
-    description: "Contacta con Mas Castellano Procurador para valorar una colaboración o consultar la gestión de un procedimiento. Teléfono 644 20 61 06.",
+    title: "Contacto profesional | MMC Procuradores",
+    description: "Contacta con MMC Procuradores para valorar una colaboración o consultar la gestión de un procedimiento. Teléfono 644 20 61 06.",
     path: "/contacto",
   }),
   component: Page,
