@@ -1,25 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { seo, SITE } from "@/lib/site";
 import { LegalPage } from "@/components/site/LegalPage";
-
 export const Route = createFileRoute("/aviso-legal")({
-  head: () => seo({ title: "Aviso legal | MMC Procuradores", description: "Aviso legal e información del titular del sitio web de MMC Procuradores.", path: "/aviso-legal" }),
-  component: () => (
-    <LegalPage title="Aviso legal">
-      <h2>Titular del sitio web</h2>
-      <p>Este sitio web es titularidad de {SITE.professional}, {SITE.role}, que desarrolla su actividad bajo la denominación comercial {SITE.name}.</p>
-      <ul>
-        <li>Teléfono: {SITE.phone}</li>
-        <li>Correo electrónico: {SITE.email}</li>
-        <li>Dominio: mascastellanoprocuradores.com</li>
-      </ul>
-      <p>Los datos identificativos adicionales exigidos por la normativa de servicios de la sociedad de la información (NIF, domicilio profesional y colegio profesional de adscripción) se incorporarán a este aviso.</p>
-      <h2>Objeto</h2>
-      <p>El sitio tiene carácter informativo sobre la actividad profesional de procura. Su contenido no constituye asesoramiento jurídico ni sustituye la consulta a un profesional sobre un asunto concreto.</p>
-      <h2>Propiedad intelectual</h2>
-      <p>Los textos, diseño y elementos gráficos de este sitio pertenecen a su titular o se utilizan con autorización. Queda prohibida su reproducción sin autorización previa.</p>
-      <h2>Responsabilidad</h2>
-      <p>El titular procura que la información sea correcta y actual, sin garantizar la ausencia de errores. No se responsabiliza del uso que terceros hagan de la información publicada.</p>
-    </LegalPage>
-  ),
+  head: () => seo({ title: "Aviso legal | MMC Procuradores", description: "Identificación del titular, información profesional y condiciones de uso del sitio de MMC Procuradores.", path: "/aviso-legal" }),
+  component: () => <LegalPage title="Aviso legal">
+    <p>Información revisada el 18 de octubre de 2026.</p>
+    <h2>Identificación del titular</h2><p>El titular de este sitio web es {SITE.professional}, {SITE.role}, que desarrolla su actividad bajo la denominación comercial {SITE.name}. Esta denominación no identifica una sociedad mercantil.</p>
+    <ul><li>Teléfono: <a href={SITE.phoneHref}>{SITE.phone}</a>.</li><li>Correo: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li><li>Dominio profesional comunicado: mascastellanoprocuradores.com.</li></ul>
+    <h2>Información profesional pendiente</h2><p>Para completar la información exigida por el artículo 10 de la Ley 34/2002 (LSSI-CE), el titular debe facilitar su NIF, domicilio profesional, colegio profesional de adscripción y número de colegiado. También deben confirmarse los datos de titulación profesional y acceso a las normas profesionales aplicables que corresponda publicar. No se han sustituido por datos ficticios. Este aviso requiere esa información y revisión jurídica antes de considerarse completo.</p>
+    <h2>Actividad y condiciones de uso</h2><p>El sitio informa sobre servicios de representación procesal y colaboración con abogados y despachos, con especial atención a Valencia y la Comunidad Valenciana. La actuación en otros territorios se valora según el procedimiento y, cuando corresponda, mediante procuradores colaboradores.</p><p>La información general publicada no constituye asesoramiento sobre un asunto concreto. Enviar una consulta no implica la aceptación de un encargo, la asunción de representación procesal ni el compromiso de atender un plazo judicial. Todo encargo requiere confirmación expresa y la documentación y apoderamiento que procedan.</p><p>El usuario debe utilizar el sitio lícitamente y abstenerse de realizar envíos abusivos, introducir código malicioso o facilitar datos de terceros sin legitimación. El formulario inicial no está destinado a remitir documentos judiciales ni información confidencial innecesaria.</p>
+    <h2>Propiedad intelectual</h2><p>Los textos, diseño y elementos gráficos están protegidos por la normativa de propiedad intelectual y se utilizan por su titular o con la legitimación correspondiente. Su reproducción o explotación fuera de los usos legalmente permitidos requiere autorización del titular de los derechos. Las imágenes ilustrativas no acreditan una sede, instalaciones propias ni oficinas.</p>
+    <h2>Responsabilidad y enlaces</h2><p>El titular procurará mantener la información actualizada y corregir los errores conocidos. No se garantizan resultados judiciales. Las interrupciones o inexactitudes se valorarán conforme a la normativa aplicable, sin excluir responsabilidades que legalmente no puedan limitarse.</p><p>Los enlaces externos facilitan información adicional; sus contenidos y políticas pertenecen a sus respectivos responsables. Su inclusión no supone asumirlos como propios.</p>
+    <h2>Normativa aplicable</h2><p>El uso del sitio se rige por la legislación española y por las normas europeas aplicables. Cualquier controversia corresponderá a los órganos competentes conforme a las reglas legales aplicables, sin imponer una renuncia a derechos o fueros obligatorios.</p>
+  </LegalPage>,
 });

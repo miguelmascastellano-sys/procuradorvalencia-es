@@ -14,6 +14,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { CookiePreferences } from "@/components/site/CookiePreferences";
+import { Button } from "@/components/ui/button";
 
 function NotFoundComponent() {
   return (
@@ -38,7 +40,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
       <h1 className="text-4xl">No se ha podido cargar la página</h1>
       <p className="mt-4 text-muted-foreground">Inténtalo de nuevo en unos instantes.</p>
       <div className="mt-8 flex gap-6 text-sm">
-        <button onClick={() => { router.invalidate(); reset(); }} className="link-quiet">Reintentar</button>
+        <Button variant="outline" onClick={() => { router.invalidate(); reset(); }}>Reintentar</Button>
         <a href="/" className="link-quiet">Volver al inicio</a>
       </div>
     </div>
@@ -54,12 +56,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#fdfdfb" },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap",
-      },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
@@ -97,6 +93,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <CookiePreferences />
     </QueryClientProvider>
   );
 }

@@ -11,4 +11,9 @@
 
 - Site config/SEO helper lives in src/lib/site.ts (seo() per route gives canonical + OG); keep every route using it so metadata stays unique.
 - Contact form posts via createServerFn (src/lib/contact.functions.ts) into an insert-only table with honeypot + timing antispam; no public reads.
+- Contact validation is shared in a browser-safe schema module; rejected spam never returns a successful receipt, and new inquiries record the displayed privacy notice rather than generic consent.
+- Typography is self-hosted through Fontsource packages to avoid third-party font requests.
+- Cookie controls share a versioned local preference record and expose only actual installed optional services; platform-injected scripts require provider verification, not claims of application-side blocking.
+- Shared site blocks and semantic CSS tokens style the public content routes, keeping each route's own content and head metadata.
+- Canonical and Open Graph URLs target the current published origin until a custom domain is connected; the professional domain remains a separate identity fact.
 - public/sitemap.xml is static: add new public routes to it.

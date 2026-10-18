@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, personJsonLd, breadcrumbJsonLd } from "@/lib/site";
 import { ATTRIBUTES } from "@/lib/services";
 import { ContactBand, JsonLd, Numbered, PageHeader, Section } from "@/components/site/blocks";
-import despachoTrabajo from "@/assets/despacho-trabajo.jpg";
+import despachoTrabajo from "@/assets/despacho-trabajo.webp";
 
 export const Route = createFileRoute("/el-despacho")({
   head: () => seo({

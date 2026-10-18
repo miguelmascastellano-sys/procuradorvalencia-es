@@ -1,12 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { Button } from "@/components/ui/button";
 
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: ReactNode }) {
   return (
-    <section className="container-site pt-20 pb-16 md:pt-28 md:pb-20">
+    <section className="border-b border-border bg-secondary"><div className="container-site pt-16 pb-14 md:pt-24 md:pb-20">
       <p className="eyebrow">{eyebrow}</p>
       <h1 className="mt-6 max-w-4xl text-[2.6rem] leading-[1.05] md:text-[4.25rem]">{title}</h1>
       {intro && <div className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">{intro}</div>}
+    </div>
     </section>
   );
 }
@@ -14,7 +16,7 @@ export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: 
 /** Two-column editorial section: label on the left, content on the right. */
 export function Section({ label, title, children, id }: { label: string; title?: string; children: ReactNode; id?: string }) {
   return (
-    <section id={id} className="container-site border-t border-rule py-16 md:py-24">
+    <section id={id} className="container-site border-t border-border py-16 md:py-24">
       <div className="grid gap-8 md:grid-cols-12">
         <p className="eyebrow md:col-span-3 md:pt-3">{label}</p>
         <div className="md:col-span-9">
@@ -59,7 +61,7 @@ export function ContactBand({
   text = "Cada despacho tiene su dinámica de trabajo. Conocerla es el primer paso para valorar una colaboración procesal adecuada.",
 }: { title?: string; text?: string }) {
   return (
-    <section className="container-site border-t border-rule py-20 md:py-28">
+    <section className="bg-secondary"><div className="container-site py-16 md:py-24">
       <div className="grid gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-8">
           <h2 className="text-3xl leading-tight md:text-5xl">{title}</h2>
@@ -70,11 +72,9 @@ export function ContactBand({
           </p>
         </div>
         <div className="md:col-span-4 md:text-right">
-          <Link to="/contacto" className="inline-block bg-primary px-6 py-3 text-sm text-primary-foreground transition-opacity hover:opacity-90">
-            Contacto profesional
-          </Link>
+          <Button asChild size="lg"><Link to="/contacto">Solicitar colaboración</Link></Button>
         </div>
-      </div>
+      </div></div>
     </section>
   );
 }

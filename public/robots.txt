@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://mascastellanoprocuradores.com/sitemap.xml
+Sitemap: https://pixel-procurador-connect.lovable.app/sitemap.xml

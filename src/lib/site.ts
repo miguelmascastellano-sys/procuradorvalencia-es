@@ -5,7 +5,7 @@ export const SITE = {
   phone: "644 20 61 06",
   phoneHref: "tel:+34644206106",
   email: "mmc.procurador@outlook.es",
-  url: "https://mascastellanoprocuradores.com",
+  url: "https://pixel-procurador-connect.lovable.app",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
@@ -14,6 +14,7 @@ export const NAV = [
   { to: "/el-despacho", label: "El despacho" },
   { to: "/servicios-procurador", label: "Servicios" },
   { to: "/ambito-actuacion", label: "Ámbito de actuación" },
+  { to: "/articulos", label: "Artículos" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 
@@ -21,7 +22,7 @@ type SeoInput = { title: string; description: string; path: string; type?: "webs
 
 /** Per-route head(): unique title, description, canonical and Open Graph. */
 export function seo({ title, description, path, type = "website" }: SeoInput) {
-  const url = `${SITE.url}${path === "/" ? "" : path}`;
+  const url = `https://pixel-procurador-connect.lovable.app${path === "/" ? "" : path}`;
   return {
     meta: [
       { title },

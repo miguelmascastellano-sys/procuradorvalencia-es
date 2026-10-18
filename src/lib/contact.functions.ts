@@ -1,31 +1,12 @@
 import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
-import { z } from "zod";
-
-export const contactSchema = z.object({
-  name: z.string().trim().min(2, "Indica tu nombre.").max(120),
-  firm: z.string().trim().max(160).optional().default(""),
-  email: z.string().trim().email("Introduce un correo electrónico válido.").max(255),
-  phone: z
-    .string()
-    .trim()
-    .max(40)
-    .regex(/^[0-9+()\s.-]*$/, "El teléfono contiene caracteres no válidos.")
-    .optional()
-    .default(""),
-  message: z.string().trim().min(10, "El mensaje es demasiado breve.").max(4000),
-  privacy: z.literal(true, { errorMap: () => ({ message: "Debes aceptar la política de privacidad." }) }),
-  website: z.string().max(0).optional().default(""), // honeypot
-  elapsedMs: z.number().int().nonnegative(),
-});
-
-export type ContactInput = z.input<typeof contactSchema>;
+import { contactSchema, contactSpamError, PRIVACY_NOTICE_VERSION } from "@/lib/contact-schema";
 
 export const submitContact = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => contactSchema.parse(input))
   .handler(async ({ data }) => {
-    // Antispam: honeypot filled or form sent implausibly fast -> silently accept.
-    if (data.website || data.elapsedMs < 2500) return { ok: true as const };
+    const spamError = contactSpamError(data);
+    if (spamError) return { ok: false as const, error: spamError };
 
     const key = process.env["SUPABASE_PUBLISHABLE_KEY"]!;
     const client = createClient(process.env["SUPABASE_URL"]!, key, {
@@ -46,10 +27,12 @@ export const submitContact = createServerFn({ method: "POST" })
       email: data.email,
       phone: data.phone || null,
       message: data.message,
-      privacy_accepted: true,
+      privacy_accepted: false,
+      privacy_notice_version: PRIVACY_NOTICE_VERSION,
+      collaboration_type: data.collaborationType,
     });
     if (error) {
-      console.error("contact insert failed", error.message);
+      console.error("contact insert failed");
       return { ok: false as const, error: "No se ha podido enviar la consulta. Inténtalo de nuevo o escríbenos por correo." };
     }
     return { ok: true as const };
