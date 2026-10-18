@@ -73,7 +73,7 @@ function Page() {
             <h2 id="contacto-title" className="mt-6 text-4xl leading-[1.1] text-ink-foreground md:text-[3.25rem]">Hablemos de vuestra forma de trabajar.</h2>
           </div>
           <div className="md:col-span-4 md:col-start-9 md:self-end">
-            <p className="text-[1.0625rem] leading-[1.7] text-ink-foreground/85">Desde Valencia y la Comunidad Valenciana, con colaboración profesional en el ámbito nacional según cada procedimiento.</p>
+            <p className="text-[1.0625rem] leading-[1.7] text-ink-foreground/85">Desde Valencia, para la capital y la provincia, con colaboración profesional en el ámbito nacional según cada procedimiento.</p>
             <Button asChild variant="editorialInverse" className="mt-8"><a href={SITE.contactHref}>Contactar por correo electrónico<ArrowUpRight /></a></Button>
           </div>
           <div className="border-t border-ink-foreground/25 pt-8 md:col-span-12">

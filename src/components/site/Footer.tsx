@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 
 const AREAS = [
   { to: "/procurador-valencia", label: "Procurador en Valencia" },
-  { to: "/procurador-comunidad-valenciana", label: "Procurador en la Comunidad Valenciana" },
+  { to: "/procurador-provincia-valencia", label: "Procuradores en la provincia de Valencia" },
+  { to: "/precio-procurador-valencia", label: "Cuánto cobra un procurador" },
+  { to: "/subastas-judiciales-valencia", label: "Subastas judiciales en Valencia" },
   { to: "/procurador-para-abogados", label: "Procurador para abogados" },
-  { to: "/procurador-nacional", label: "Coordinación nacional" },
+  { to: "/procurador-valencia-despachos-otras-provincias", label: "Despachos de otras provincias" },
   { to: "/procedimientos-civiles-ejecuciones", label: "Procedimientos civiles y ejecuciones" },
   { to: "/procedimientos-familia", label: "Procedimientos de familia" },
   { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
@@ -21,8 +23,10 @@ export function Footer() {
       <div className="container-site grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
           <p className="text-xs uppercase text-ink-foreground/60">Representación y colaboración procesal</p>
-          <p className="mt-5 max-w-sm text-sm leading-relaxed opacity-75">Representación procesal y colaboración con abogados y despachos. Valencia, Comunidad Valenciana y coordinación en otros territorios.</p>
+          <p className="mt-5 max-w-sm text-sm leading-relaxed opacity-75">Representación procesal y colaboración con abogados y despachos. Valencia capital y provincia, con colaboración para despachos de otras provincias.</p>
           <div className="mt-8 space-y-1 text-sm">
+            <a href={SITE.phoneHref} className="link-quiet block w-fit">Tel. {SITE.phone}</a>
+            <a href={SITE.whatsappHref} className="link-quiet block w-fit">WhatsApp</a>
             <a href={SITE.contactHref} className="link-quiet block w-fit break-all">{SITE.email}</a>
           </div>
         </div>

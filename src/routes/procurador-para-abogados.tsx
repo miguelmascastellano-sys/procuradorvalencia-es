@@ -34,7 +34,7 @@ function Page() {
         <ul className="prose-site max-w-3xl">
           <li>Abogados que ejercen de forma independiente y necesitan un procurador de confianza en Valencia.</li>
           <li>Despachos con volumen de procedimientos civiles, bancarios o de ejecución.</li>
-          <li>Departamentos jurídicos de empresa con asuntos en la Comunidad Valenciana u otros territorios.</li>
+          <li>Departamentos jurídicos de empresa con asuntos en Valencia y su provincia.</li>
           <li>Firmas de otras provincias que tramitan asuntos ante juzgados de Valencia.</li>
         </ul>
         <Link to="/servicios-procurador" className="link-quiet mt-6 inline-block text-sm">Ver servicios →</Link>
