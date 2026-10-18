@@ -5,7 +5,7 @@ export const SITE = {
   phone: "644 20 61 06",
   phoneHref: "tel:+34644206106",
   email: "mmc.procurador@outlook.es",
-  url: "https://mascastellanoprocuradores.com",
+  url: "https://pixel-procurador-connect.lovable.app",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
