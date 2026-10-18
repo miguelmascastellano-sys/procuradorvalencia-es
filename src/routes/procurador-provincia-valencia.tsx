@@ -22,7 +22,7 @@ const PARTIDOS = [
 
 const FAQ = [
   { q: "¿Actuáis en todos los partidos judiciales de la provincia de Valencia?", a: "Se valora cada asunto según el partido judicial y el tipo de procedimiento. La actividad principal se concentra en Valencia capital y, para el resto de la provincia, se acuerda con el despacho la forma de actuación." },
-  { name: "", q: "¿La tramitación es presencial o telemática?", a: "La mayor parte de la presentación de escritos y la recepción de notificaciones se realiza de forma telemática a través de los sistemas de la Administración de Justicia. Algunas actuaciones requieren presencia física en el juzgado." },
+  { q: "¿La tramitación es presencial o telemática?", a: "La mayor parte de la presentación de escritos y la recepción de notificaciones se realiza de forma telemática a través de los sistemas de la Administración de Justicia. Algunas actuaciones requieren presencia física en el juzgado." },
   { q: "¿Cómo se encarga un asunto de un partido judicial de la provincia?", a: "Llamando o escribiendo por WhatsApp o correo con el partido judicial, el tipo de procedimiento y la fase en que se encuentra. Se confirma expresamente si se asume el encargo." },
 ];
 

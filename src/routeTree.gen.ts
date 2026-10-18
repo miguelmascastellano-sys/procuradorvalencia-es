@@ -23,6 +23,7 @@ import { Route as ProcedimientosSegundaOportunidadRouteImport } from './routes/p
 import { Route as ProcuradorComunidadValencianaRouteImport } from './routes/procurador-comunidad-valenciana'
 import { Route as ProcuradorNacionalRouteImport } from './routes/procurador-nacional'
 import { Route as ProcuradorParaAbogadosRouteImport } from './routes/procurador-para-abogados'
+import { Route as ProcuradorProvinciaValenciaRouteImport } from './routes/procurador-provincia-valencia'
 import { Route as ProcuradorValenciaRouteImport } from './routes/procurador-valencia'
 import { Route as ServiciosProcuradorRouteImport } from './routes/servicios-procurador'
 import { Route as ArticulosIndexRouteImport } from './routes/articulos.index'
@@ -101,6 +102,12 @@ const ProcuradorParaAbogadosRoute = ProcuradorParaAbogadosRouteImport.update({
   path: '/procurador-para-abogados',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcuradorProvinciaValenciaRoute =
+  ProcuradorProvinciaValenciaRouteImport.update({
+    id: '/procurador-provincia-valencia',
+    path: '/procurador-provincia-valencia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProcuradorValenciaRoute = ProcuradorValenciaRouteImport.update({
   id: '/procurador-valencia',
   path: '/procurador-valencia',
@@ -137,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
@@ -157,6 +165,7 @@ export interface FileRoutesByTo {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
@@ -178,6 +187,7 @@ export interface FileRoutesById {
   '/procurador-comunidad-valenciana': typeof ProcuradorComunidadValencianaRoute
   '/procurador-nacional': typeof ProcuradorNacionalRoute
   '/procurador-para-abogados': typeof ProcuradorParaAbogadosRoute
+  '/procurador-provincia-valencia': typeof ProcuradorProvinciaValenciaRoute
   '/procurador-valencia': typeof ProcuradorValenciaRoute
   '/servicios-procurador': typeof ServiciosProcuradorRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
@@ -200,6 +210,7 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
     | '/servicios-procurador'
     | '/articulos/$slug'
@@ -220,6 +231,7 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
     | '/servicios-procurador'
     | '/articulos/$slug'
@@ -240,6 +252,7 @@ export interface FileRouteTypes {
     | '/procurador-comunidad-valenciana'
     | '/procurador-nacional'
     | '/procurador-para-abogados'
+    | '/procurador-provincia-valencia'
     | '/procurador-valencia'
     | '/servicios-procurador'
     | '/articulos/$slug'
@@ -261,6 +274,7 @@ export interface RootRouteChildren {
   ProcuradorComunidadValencianaRoute: typeof ProcuradorComunidadValencianaRoute
   ProcuradorNacionalRoute: typeof ProcuradorNacionalRoute
   ProcuradorParaAbogadosRoute: typeof ProcuradorParaAbogadosRoute
+  ProcuradorProvinciaValenciaRoute: typeof ProcuradorProvinciaValenciaRoute
   ProcuradorValenciaRoute: typeof ProcuradorValenciaRoute
   ServiciosProcuradorRoute: typeof ServiciosProcuradorRoute
   ArticulosSlugRoute: typeof ArticulosSlugRoute
@@ -367,6 +381,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProcuradorParaAbogadosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/procurador-provincia-valencia': {
+      id: '/procurador-provincia-valencia'
+      path: '/procurador-provincia-valencia'
+      fullPath: '/procurador-provincia-valencia'
+      preLoaderRoute: typeof ProcuradorProvinciaValenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/procurador-valencia': {
       id: '/procurador-valencia'
       path: '/procurador-valencia'
@@ -413,6 +434,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProcuradorComunidadValencianaRoute: ProcuradorComunidadValencianaRoute,
   ProcuradorNacionalRoute: ProcuradorNacionalRoute,
   ProcuradorParaAbogadosRoute: ProcuradorParaAbogadosRoute,
+  ProcuradorProvinciaValenciaRoute: ProcuradorProvinciaValenciaRoute,
   ProcuradorValenciaRoute: ProcuradorValenciaRoute,
   ServiciosProcuradorRoute: ServiciosProcuradorRoute,
   ArticulosSlugRoute: ArticulosSlugRoute,
