@@ -2,9 +2,9 @@ export const SITE = {
   name: "MMC Procuradores",
   professional: "Miguel Mas Castellano",
   role: "Procurador de los Tribunales",
-  phone: "644 20 61 06",
-  phoneHref: "tel:+34644206106",
   email: "mmc.procurador@outlook.es",
+  contactSubject: "Colaboración profesional en procura",
+  contactHref: "mailto:mmc.procurador@outlook.es?subject=Colaboraci%C3%B3n%20profesional%20en%20procura",
   url: "https://pixel-procurador-connect.lovable.app",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
@@ -46,7 +46,6 @@ export const organizationJsonLd = {
   "@type": "LegalService",
   name: SITE.name,
   url: SITE.url,
-  telephone: "+34 644 20 61 06",
   email: SITE.email,
   areaServed: [
     { "@type": "City", name: "Valencia" },
@@ -71,7 +70,6 @@ export const personJsonLd = {
   name: SITE.professional,
   jobTitle: SITE.role,
   worksFor: { "@type": "LegalService", name: SITE.name, url: SITE.url },
-  telephone: "+34 644 20 61 06",
   email: SITE.email,
   knowsLanguage: ["es"],
 };

@@ -127,25 +127,62 @@
 
 /* Editorial compositions shared across all public pages. */
 @layer components {
-  .editorial-hero { min-height: 580px; position: relative; isolation: isolate; }
-  .editorial-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--ink) 0%, color-mix(in oklab, var(--ink) 88%, transparent) 35%, color-mix(in oklab, var(--ink) 20%, transparent) 75%); }
-  .editorial-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .site-header { border-top: 3px solid var(--bronze); }
+  .site-header nav a[aria-current="page"] { border-bottom: 1px solid var(--bronze); }
+  .editorial-hero { position: relative; isolation: isolate; }
+  .editorial-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in oklab, var(--ink) 48%, transparent); }
+  .editorial-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% center; z-index: -2; }
+  .hero-composition { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 1.75rem; padding-block: 3.5rem 2.5rem; }
+  .hero-brand { grid-column: 1 / 13; font-family: var(--font-serif); font-size: 2rem; }
+  .hero-title { grid-column: 1 / 10; font-size: 5.5rem; line-height: 1.02; }
+  .hero-detail { grid-column: 5 / 12; max-width: 46rem; border-left: 1px solid var(--bronze); padding-left: 2rem; }
+  .hero-signature { grid-column: 1 / 13; border-top: 1px solid color-mix(in oklab,var(--ink-foreground) 30%,transparent); padding-top: 1.5rem; font-size: 1.1rem; }
+  .page-masthead { border-bottom: 1px solid var(--border); background: var(--secondary); overflow: hidden; }
+  .masthead-layout { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 2rem; padding-block: 3.5rem 4.5rem; }
+  .masthead-label { grid-column: 1 / 13; }
+  .masthead-title { grid-column: 1 / 9; font-size: 4.5rem; line-height: 1.07; align-self: center; }
+  .masthead-photo { grid-column: 10 / 13; grid-row: 2 / 4; align-self: stretch; min-height: 20rem; }
+  .masthead-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 25% center; }
+  .masthead-intro { grid-column: 4 / 9; line-height: 1.75; border-top: 1px solid var(--bronze); padding-top: 1.5rem; }
+  .page-masthead-legal .masthead-title { grid-column: 4 / 13; font-size: 4rem; }
+  .page-masthead-legal .masthead-label { grid-column: 1 / 4; grid-row: 2; align-self: start; padding-top: .5rem; }
   .editorial-kicker { display: flex; align-items: center; gap: 1rem; font-size: .7rem; text-transform: uppercase; }
   .editorial-kicker::before { content: ""; width: 2.5rem; height: 1px; background: var(--bronze); flex-shrink: 0; }
-  .editorial-section { padding-block: 5.5rem; }
-  .editorial-section:nth-of-type(even) { background: var(--secondary); }
+  .editorial-section { padding-block: 5rem; border-bottom: 1px solid var(--border); }
+  .editorial-section > .container-site > .editorial-kicker { border-top: 1px solid var(--bronze); padding-top: 1.25rem; align-self: start; }
+  .editorial-section h2 { margin-bottom: 3rem; }
   .editorial-intro { border-top: 1px solid var(--bronze); padding-top: 1.5rem; }
-  .editorial-service { display: grid; grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; padding-block: 2rem; border-top: 1px solid var(--border); }
+  .editorial-service { display: grid; grid-template-columns: 2rem minmax(0, 1.1fr) minmax(0, 1fr); gap: 2rem; padding-block: 2.25rem; border-top: 1px solid var(--border); }
   .editorial-service:last-child { border-bottom: 1px solid var(--border); }
   .editorial-photo { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; }
   .legal-body h2 { border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  .contact-band { border-bottom: 1px solid color-mix(in oklab,var(--ink-foreground) 20%,transparent); }
+  .contact-address { font-size: 2.25rem; line-height: 1.3; }
+  .contact-band .contact-address { font-size: 3.25rem; }
+  .contact-band a[data-slot="button"], .contact-page a[data-slot="button"] { white-space: normal; height: auto; min-height: 3rem; text-align: left; }
+  @media (min-width: 768px) and (max-width: 1100px) {
+    .hero-title { font-size: 4.5rem; grid-column: 1 / 12; }
+    .hero-detail { grid-column: 4 / 13; }
+    .masthead-title { font-size: 3.5rem; }
+    .masthead-intro { grid-column: 2 / 9; }
+    .editorial-service { gap: 1rem; }
+  }
   @media (max-width: 767px) {
-    .editorial-hero { min-height: auto; }
-    .editorial-hero > .container-site { padding-block: 2rem; gap: 1rem; }
-    .editorial-hero h1 { font-size: 2.5rem; }
-    .editorial-hero-image { object-position: 60% center; }
-    .editorial-hero::after { background: color-mix(in oklab, var(--ink) 82%, transparent); }
-    .editorial-section { padding-block: 3.5rem; }
+    .hero-composition { grid-template-columns: minmax(0,1fr); padding-block: 2.5rem 2rem; gap: 1.75rem; }
+    .hero-brand,.hero-title,.hero-detail,.hero-signature { grid-column: 1; }
+    .hero-brand { font-size: 1.7rem; }
+    .hero-title { font-size: 3.15rem; }
+    .hero-detail { padding-left: 1.1rem; }
+    .hero-detail a { white-space: normal; min-height: 2.75rem; height: auto; text-align: left; }
+    .editorial-hero::after { background: color-mix(in oklab, var(--ink) 72%, transparent); }
+    .masthead-layout { grid-template-columns: minmax(0,1fr); gap: 1.5rem; padding-block: 2.5rem 3rem; }
+    .masthead-label,.masthead-title,.masthead-intro,.masthead-photo,.page-masthead-legal .masthead-title,.page-masthead-legal .masthead-label { grid-column: 1; grid-row: auto; }
+    .masthead-title,.page-masthead-legal .masthead-title { font-size: 2.75rem; }
+    .masthead-photo { min-height: 0; height: 10rem; }
+    .masthead-photo img { object-position: center 60%; }
+    .contact-address,.contact-band .contact-address { font-size: 1.3rem; overflow-wrap: anywhere; }
+    .editorial-section { padding-block: 3rem; }
+    .editorial-section h2 { margin-bottom: 2rem; }
     .editorial-service { grid-template-columns: 2rem minmax(0, 1fr); gap: 1rem; }
     .editorial-service > p { grid-column: 2; }
   }

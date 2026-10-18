@@ -6,7 +6,7 @@ const AREAS = [
   { to: "/procurador-valencia", label: "Procurador en Valencia" },
   { to: "/procurador-comunidad-valenciana", label: "Procurador en la Comunidad Valenciana" },
   { to: "/procurador-para-abogados", label: "Procurador para abogados" },
-  { to: "/procurador-nacional", label: "Procurador de ámbito nacional" },
+  { to: "/procurador-nacional", label: "Coordinación nacional" },
   { to: "/procedimientos-civiles-ejecuciones", label: "Procedimientos civiles y ejecuciones" },
   { to: "/procedimientos-familia", label: "Procedimientos de familia" },
   { to: "/procedimientos-bancarios", label: "Procedimientos bancarios" },
@@ -22,8 +22,7 @@ export function Footer() {
           <p className="text-xs uppercase text-ink-foreground/60">Representación y colaboración procesal</p>
           <p className="mt-5 max-w-sm text-sm leading-relaxed opacity-75">Representación procesal y colaboración con abogados y despachos. Valencia, Comunidad Valenciana y coordinación en otros territorios.</p>
           <div className="mt-8 space-y-1 text-sm">
-            <a href={SITE.phoneHref} className="link-quiet block w-fit">{SITE.phone}</a>
-            <a href={`mailto:${SITE.email}`} className="link-quiet block w-fit">{SITE.email}</a>
+            <a href={SITE.contactHref} className="link-quiet block w-fit break-all">{SITE.email}</a>
           </div>
         </div>
         <nav aria-label="Pie de página" className="md:col-span-3">

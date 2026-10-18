@@ -1,15 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { contactSchema, contactSpamError } from "@/lib/contact-schema";
+import { SITE } from "@/lib/site";
 import { COOKIE_KEY, COOKIE_LIFETIME_MS, COOKIE_VERSION, makeCookieChoice, readCookieChoice } from "@/lib/cookies";
-const inquiry = { name: "Prueba profesional", email: "prueba@example.org", collaborationType: "colaboracion-despacho", message: "Consulta para colaboración profesional.", elapsedMs: 3000 };
-describe("Contact privacy rules", () => {
-  it("does not require generic privacy consent", () => { expect(contactSchema.safeParse(inquiry).success).toBe(true); });
-  it("keeps firm optional", () => { expect(contactSchema.parse(inquiry).firm).toBe(""); });
-  it("keeps phone optional", () => { expect(contactSchema.parse(inquiry).phone).toBe(""); });
-  it("requires a collaboration type", () => { expect(contactSchema.safeParse({ ...inquiry, collaborationType: "" }).success).toBe(false); });
-  it("validates email", () => { expect(contactSchema.safeParse({ ...inquiry, email: "incorrecto" }).success).toBe(false); });
-  it("does not silently claim receipt for fast submissions", () => { expect(contactSpamError({ elapsedMs: 100 })).not.toBeNull(); });
-  it("does not silently claim receipt for a honeypot submission", () => { expect(contactSpamError({ elapsedMs: 3000, website: "spam" })).not.toBeNull(); });
+describe("Email-only contact", () => {
+  it("addresses only the specified professional mailbox", () => { expect(SITE.contactHref.split("?")[0]).toBe("mailto:mmc.procurador@outlook.es"); });
+  it("opens the requested collaboration subject", () => { expect(new URL(SITE.contactHref).searchParams.get("subject")).toBe("Colaboración profesional en procura"); });
+  it("does not expose a telephone contact channel", () => { expect(Object.keys(SITE)).not.toContain("phoneHref"); });
 });
 describe("Only real cookie categories", () => {
   it("acceptance cannot activate absent optional services", () => { expect(makeCookieChoice(1000)).toEqual({ version: COOKIE_VERSION, savedAt: 1000, necessary: true, preferences: false, analytics: false, advertising: false }); });

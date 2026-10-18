@@ -1,31 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { seo, SITE } from "@/lib/site";
-import { ContactForm } from "@/components/site/ContactForm";
+import { Button } from "@/components/ui/button";
+import architecture from "@/assets/arquitectura-contemporanea.jpg";
 
 export const Route = createFileRoute("/contacto")({
-  head: () => seo({
-    title: "Contacto profesional | MMC Procuradores",
-    description: "Contacta con MMC Procuradores para valorar una colaboración o consultar la gestión de un procedimiento. Teléfono 644 20 61 06.",
-    path: "/contacto",
-  }),
+  head: () => seo({ title: "Contacto por correo | MMC Procuradores", description: "Colaboración profesional con MMC Procuradores en Valencia y la Comunidad Valenciana. Escríbenos a mmc.procurador@outlook.es para valorar tu consulta.", path: "/contacto" }),
   component: Page,
 });
 
 function Page() {
-  return (
-    <section className="container-site grid gap-14 py-12 md:grid-cols-12 md:py-20">
-      <div className="md:col-span-5">
-        <p className="editorial-kicker text-bronze">Contacto profesional</p>
-        <h1 className="mt-6 text-[2.5rem] leading-[1.05] md:text-[4.2rem]">Hablemos de vuestra forma de trabajar.</h1>
-        <p className="mt-8 text-lg leading-relaxed text-muted-foreground">Cada despacho tiene su dinámica de trabajo. Conocerla es el primer paso para valorar una colaboración procesal adecuada.</p>
-        <dl className="mt-12 space-y-6 border-t border-rule pt-8">
-          <div><dt className="eyebrow">Teléfono</dt><dd className="mt-2 font-serif text-2xl"><a href={SITE.phoneHref} className="link-quiet">{SITE.phone}</a></dd></div>
-          <div><dt className="eyebrow">Correo electrónico</dt><dd className="mt-2 text-base break-words"><a href={`mailto:${SITE.email}`} className="link-quiet">{SITE.email}</a></dd></div>
-        </dl>
-      </div>
-      <div className="min-w-0 border-t border-bronze pt-8 md:col-span-6 md:col-start-7">
-        <ContactForm />
+  return <>
+    <section className="contact-page bg-ink text-ink-foreground">
+      <div className="container-site grid gap-8 py-14 md:grid-cols-12 md:py-20">
+        <p className="editorial-kicker text-ink-foreground/70 md:col-span-12">Contacto profesional · MMC Procuradores</p>
+        <h1 className="text-5xl leading-[1.05] text-ink-foreground md:col-span-9 md:text-7xl">Toda colaboración empieza por una conversación.</h1>
+        <p className="max-w-md leading-relaxed text-ink-foreground/75 md:col-span-5">Escríbenos para conocer las necesidades de tu despacho y valorar la representación procesal de tus asuntos.</p>
+        <div className="md:col-span-6 md:col-start-7 md:self-end">
+          <a href={SITE.contactHref} className="contact-address link-quiet block break-all font-serif">{SITE.email}</a>
+          <Button asChild variant="inverse" className="mt-7"><a href={SITE.contactHref}>Contactar por correo electrónico<ArrowUpRight /></a></Button>
+        </div>
       </div>
     </section>
-  );
+    <section className="container-site grid gap-10 py-14 md:grid-cols-12 md:py-20">
+      <figure className="md:col-span-5"><img src={architecture} alt="Patio de arquitectura contemporánea, imagen ilustrativa sin relación con una sede propia" width={1600} height={1008} loading="lazy" className="w-full aspect-[4/3] object-cover" /></figure>
+      <div className="md:col-span-5 md:col-start-8 md:self-center"><p className="editorial-kicker text-bronze">Antes de asumir un asunto</p><h2 className="mt-6 text-3xl leading-tight">Conocer el procedimiento. Acordar la forma de trabajar.</h2><p className="mt-5 leading-relaxed text-muted-foreground">Indica el ámbito territorial, el tipo de procedimiento y las necesidades de coordinación. No incluyas información confidencial ni datos de terceros innecesarios en esta primera comunicación.</p><p className="mt-4 text-sm leading-relaxed text-muted-foreground">El contacto inicial no implica la aceptación de un encargo ni la atención de un plazo judicial; es necesaria una confirmación expresa.</p></div>
+    </section>
+  </>;
 }

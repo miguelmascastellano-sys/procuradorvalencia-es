@@ -6,13 +6,13 @@ const FAQ = [
   { q: "¿Qué hace un procurador en Valencia en un procedimiento judicial?", a: "Ostenta la representación procesal de la parte ante los juzgados y tribunales: presenta escritos, recibe y traslada notificaciones al abogado, atiende requerimientos y sigue el estado de las actuaciones." },
   { q: "¿Es obligatorio intervenir con procurador?", a: "Depende del tipo de procedimiento y de su cuantía, conforme a la normativa procesal aplicable. En caso de duda, el abogado director del asunto determinará si es preceptiva su intervención." },
   { q: "¿Colaboráis con despachos de fuera de Valencia?", a: "Sí. Despachos de otras provincias pueden encomendar asuntos que se tramiten en Valencia, con una interlocución directa y adaptada a su forma de trabajar." },
-  { q: "¿Cómo se inicia una colaboración?", a: "Mediante un primer contacto por teléfono, correo electrónico o formulario, en el que se valoran las necesidades del despacho, el tipo de asuntos y la forma de comunicación preferida." },
+  { q: "¿Cómo se inicia una colaboración?", a: "Mediante un primer contacto por correo electrónico, en el que se valoran las necesidades del despacho, el tipo de asuntos y la forma de comunicación preferida." },
   { q: "¿Podéis gestionar carteras con volumen de procedimientos?", a: "La experiencia previa en despachos con importante carga de procedimientos bancarios y ejecuciones permite organizar la gestión de carteras con criterios de control y seguimiento." },
 ];
 
 export const Route = createFileRoute("/procurador-valencia")({
   head: () => seo({
-    title: "Procurador en Valencia | MMC Procuradores",
+    title: "Procurador en Valencia para despachos | MMC Procuradores",
     description: "Procurador de los Tribunales en Valencia: representación procesal, procedimientos civiles, ejecuciones y bancarios, y colaboración con despachos de abogados.",
     path: "/procurador-valencia",
   }),
