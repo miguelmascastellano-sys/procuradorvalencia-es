@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
     seo({
       title: "Procurador en Valencia | MMC Procuradores",
       description:
-        "Procurador de los Tribunales en Valencia. Servicios de procura y colaboración procesal para abogados y despachos en Valencia, la Comunidad Valenciana y el ámbito nacional.",
+        "Servicios de procura y colaboración procesal para abogados y despachos en Valencia, la Comunidad Valenciana y otros territorios según el ámbito real de actuación.",
       path: "/",
     }),
   component: Index,
@@ -41,7 +41,7 @@ function Index() {
       <section className="container-site pt-20 pb-24 md:pt-28 md:pb-32">
         <p className="eyebrow">{SITE.tagline}</p>
         <h1 className="mt-10 max-w-5xl text-[3rem] leading-[1] md:text-[5.5rem]">
-          Procurador de los Tribunales <em className="text-muted-foreground">en Valencia.</em>
+          Servicios de procura <em className="text-muted-foreground">en Valencia.</em>
         </h1>
         <div className="mt-14 grid gap-10 border-t border-rule pt-10 md:grid-cols-12">
           <p className="text-lg leading-relaxed md:col-span-6 md:text-xl">
