@@ -6,6 +6,7 @@ export const SITE = {
   phoneHref: "tel:+34644206106",
   email: "mmc.procurador@outlook.es",
   url: "https://mascastellanoprocuradores.com",
+  tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
 export const NAV = [
@@ -54,3 +55,36 @@ export const organizationJsonLd = {
   founder: { "@type": "Person", name: SITE.professional, jobTitle: SITE.role },
   knowsLanguage: ["es"],
 };
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  url: SITE.url,
+  inLanguage: "es",
+};
+
+export const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE.professional,
+  jobTitle: SITE.role,
+  worksFor: { "@type": "LegalService", name: SITE.name, url: SITE.url },
+  telephone: "+34 644 20 61 06",
+  email: SITE.email,
+  knowsLanguage: ["es"],
+};
+
+/** BreadcrumbList JSON-LD for a leaf page. */
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: `${SITE.url}${it.path === "/" ? "" : it.path}`,
+    })),
+  };
+}
