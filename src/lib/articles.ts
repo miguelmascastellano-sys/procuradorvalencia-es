@@ -38,7 +38,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "desahucio-impago-valencia",
     title: "Desahucio por impago en Valencia: plazos y papel del procurador",
-    description: "Desahucio por falta de pago en Valencia: requerimiento, plazo de diez días, enervación, juicio verbal, lanzamiento y la función del procurador en cada fase.",
+    description: "Desahucio por falta de pago en Valencia: requerimiento, plazo de diez días, enervación, juicio verbal, lanzamiento y función del procurador.",
     date: "2026-10-18",
     body: [
       { p: ["El desahucio por falta de pago de la renta se tramita como juicio verbal (art. 250.1.1.º LEC) ante el juzgado de primera instancia del lugar de la finca."] },

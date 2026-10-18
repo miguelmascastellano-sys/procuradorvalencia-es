@@ -13,7 +13,7 @@ export const Route = createFileRoute("/procedimientos-segunda-oportunidad")({
   head: () => {
     const h = seo({
       title: "Procurador para segunda oportunidad en Valencia | MMC Procuradores",
-      description: "Representación procesal en concursos de persona natural y exoneración del pasivo insatisfecho en Valencia, en coordinación con el abogado director del asunto.",
+      description: "Representación procesal en concursos de persona natural y exoneración del pasivo insatisfecho en Valencia, en coordinación con el abogado que dirige el asunto.",
       path: "/procedimientos-segunda-oportunidad",
     });
     return { ...h, scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(FAQ)) }] };

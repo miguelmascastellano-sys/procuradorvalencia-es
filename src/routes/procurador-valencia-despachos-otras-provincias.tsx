@@ -19,7 +19,7 @@ const FAQ = [
 ];
 
 export const Route = createFileRoute("/procurador-valencia-despachos-otras-provincias")({
-  head: () => seo({ title: "Procurador en Valencia para despachos de otras provincias", description: "Procurador en Valencia para abogados y despachos de otras provincias con asuntos en juzgados valencianos: notificaciones, escritos y seguimiento a distancia.", path: "/procurador-valencia-despachos-otras-provincias" }),
+  head: () => seo({ title: "Procurador en Valencia para despachos de otras provincias", description: "Procurador en Valencia para abogados y despachos de otras provincias con asuntos en juzgados valencianos: escritos, notificaciones y seguimiento.", path: "/procurador-valencia-despachos-otras-provincias" }),
   component: Page,
 });
 

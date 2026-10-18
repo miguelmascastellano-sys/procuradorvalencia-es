@@ -33,7 +33,7 @@ const FAQ = [
 ];
 
 export const Route = createFileRoute("/precio-procurador-valencia")({
-  head: () => seo({ title: "Cuánto cobra un procurador en Valencia | Aranceles", description: "Cuánto cobra un procurador en Valencia: cómo funciona el arancel, de qué depende el precio, quién paga si hay costas y cómo pedir presupuesto sin compromiso.", path: "/precio-procurador-valencia" }),
+  head: () => seo({ title: "Cuánto cobra un procurador en Valencia | Aranceles", description: "Cuánto cobra un procurador en Valencia: cómo funciona el arancel, de qué depende el precio, quién paga las costas y cómo pedir presupuesto.", path: "/precio-procurador-valencia" }),
   component: Page,
 });
 
