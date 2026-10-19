@@ -6,6 +6,7 @@ const AREAS = [
   { to: "/procurador-valencia", label: "Procurador en Valencia" },
   { to: "/procurador-provincia-valencia", label: "Procuradores en la provincia de Valencia" },
   { to: "/precio-procurador-valencia", label: "Cuánto cobra un procurador" },
+  { to: "/calculadora-aranceles", label: "Calculadora de aranceles" },
   { to: "/subastas-judiciales-valencia", label: "Subastas judiciales en Valencia" },
   { to: "/procurador-para-abogados", label: "Procurador para abogados" },
   { to: "/procurador-valencia-despachos-otras-provincias", label: "Despachos de otras provincias" },
