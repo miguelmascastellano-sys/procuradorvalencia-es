@@ -50,21 +50,31 @@ export function seo({ title, description, path, type = "website" }: SeoInput) {
   };
 }
 
-export const organizationJsonLd = {
+/**
+ * LegalService structured data for the home page. Rendered as a single
+ * <script type="application/ld+json"> in <head>; the description is passed in so
+ * it can never drift from the page's meta description.
+ */
+export const legalServiceJsonLd = (description: string) => ({
   "@context": "https://schema.org",
   "@type": "LegalService",
   name: SITE.name,
   url: SITE.url,
-  email: SITE.email,
   telephone: "+34644206106",
-  address: { "@type": "PostalAddress", streetAddress: "C/ Bolivia, 14", addressLocality: "Valencia", addressCountry: "ES" },
+  email: SITE.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "C/ Bolivia, 14",
+    addressLocality: "Valencia",
+    addressRegion: "Valencia",
+    addressCountry: "ES",
+  },
   areaServed: [
     { "@type": "City", name: "Valencia" },
     { "@type": "AdministrativeArea", name: "Provincia de Valencia" },
   ],
-  founder: { "@type": "Person", name: SITE.professional, jobTitle: SITE.role },
-  knowsLanguage: ["es"],
-};
+  description,
+});
 
 export const websiteJsonLd = {
   "@context": "https://schema.org",

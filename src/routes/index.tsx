@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo, organizationJsonLd, websiteJsonLd, SITE } from "@/lib/site";
+import { seo, legalServiceJsonLd, websiteJsonLd, SITE } from "@/lib/site";
 import { SERVICES, ATTRIBUTES } from "@/lib/services";
 import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, Related, Section } from "@/components/site/blocks";
 import architecture from "@/assets/editorial-arquitectura.jpg";
 import contemporary from "@/assets/arquitectura-contemporanea.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+
+const DESCRIPTION =
+  "Procurador en Valencia, capital y provincia. MMC Procuradores: procuradores en Valencia para abogados, despachos y particulares, con control de plazos.";
 
 const FAQ = [
   { q: "¿Cuánto cobra un procurador en Valencia?", a: "Los derechos del procurador se rigen por el arancel del Real Decreto 1373/2003 y dependen de la cuantía y del tipo de procedimiento, más IVA y suplidos. Se puede pedir presupuesto previo sin compromiso." },
@@ -30,19 +33,21 @@ const PASOS = [
 ];
 
 export const Route = createFileRoute("/")({
-  head: () =>
-    seo({
+  head: () => ({
+    ...seo({
       title: "Procurador en Valencia | MMC Procuradores",
-      description:
-        "Procurador en Valencia, capital y provincia. MMC Procuradores: procuradores en Valencia para abogados, despachos y particulares, con control de plazos.",
+      description: DESCRIPTION,
       path: "/",
     }),
+    // Un único JSON-LD en el <head>: la ficha del servicio jurídico.
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(legalServiceJsonLd(DESCRIPTION)) }],
+  }),
   component: Index,
 });
 
 function Index() {
   return <>
-    <JsonLd data={organizationJsonLd} /><JsonLd data={websiteJsonLd} /><JsonLd data={faqJsonLd(FAQ)} />
+    <JsonLd data={websiteJsonLd} /><JsonLd data={faqJsonLd(FAQ)} />
     <section className="editorial-hero bg-ink text-ink-foreground">
       <img src={architecture} alt="Columnas de piedra y escalinata de un edificio institucional" width={1920} height={1088} fetchPriority="high" className="editorial-hero-image" />
       <div className="container-site hero-composition">
