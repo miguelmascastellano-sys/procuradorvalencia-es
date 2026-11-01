@@ -15,7 +15,7 @@ export const Route = createFileRoute("/articulos/$slug")({
       return { ...metadata, meta: [...metadata.meta, { name: "robots", content: "noindex" }] };
     }
     const a = loaderData.article;
-    return seo({ title: `${a.title} | ${SITE.name}`, description: a.description, path: `/articulos/${params.slug}`, type: "article" });
+    return seo({ title: a.title.length + SITE.name.length + 3 <= 60 ? `${a.title} | ${SITE.name}` : a.title, description: a.description, path: `/articulos/${params.slug}`, type: "article" });
   },
   component: Page,
 });

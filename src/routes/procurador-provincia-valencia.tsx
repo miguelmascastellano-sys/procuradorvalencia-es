@@ -29,7 +29,7 @@ const FAQ = [
 const DESC = "Procuradores en la provincia de Valencia: actuación en los partidos judiciales de Gandía, Sagunto, Paterna, Alzira, Xàtiva, Torrent y más localidades.";
 
 export const Route = createFileRoute("/procurador-provincia-valencia")({
-  head: () => seo({ title: "Procuradores en la provincia de Valencia | Partidos judiciales", description: DESC, path: "/procurador-provincia-valencia" }),
+  head: () => seo({ title: "Procurador en la provincia de Valencia | Partidos judiciales", description: DESC, path: "/procurador-provincia-valencia" }),
   component: Page,
 });
 

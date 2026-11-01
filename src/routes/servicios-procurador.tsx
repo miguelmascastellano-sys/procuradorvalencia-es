@@ -6,7 +6,7 @@ import { ContactBand, PageHeader, Section } from "@/components/site/blocks";
 export const Route = createFileRoute("/servicios-procurador")({
   head: () => seo({
     title: "Servicios de procura | MMC Procuradores",
-    description: "Representación procesal, procedimientos civiles y ejecuciones, bancarios, de familia y colaboración con despachos de abogados en Valencia y otros territorios.",
+    description: "Representación procesal, procedimientos civiles y ejecuciones, bancarios, de familia y colaboración con despachos de abogados en Valencia.",
     path: "/servicios-procurador",
   }),
   component: Page,

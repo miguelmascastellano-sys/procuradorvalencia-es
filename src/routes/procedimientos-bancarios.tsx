@@ -14,7 +14,7 @@ const FAQ = [
 export const Route = createFileRoute("/procedimientos-bancarios")({
   head: () => {
     const h = seo({
-      title: "Procurador para procedimientos bancarios en Valencia | MMC Procuradores",
+      title: "Procurador para asuntos bancarios en Valencia | MMC",
       description: "Procurador para procedimientos bancarios en Valencia: cláusulas abusivas, ejecuciones hipotecarias y reclamaciones, en coordinación con el abogado.",
       path: "/procedimientos-bancarios",
     });
