@@ -11,8 +11,8 @@ import { ARTICLE_EXTENSIONS } from "./article-extensions";
 const BASE_ARTICLES: Article[] = [
   {
     slug: "procurador-ciudad-justicia-valencia",
-    title: "Procurador en la Ciudad de la Justicia de Valencia: cómo funciona",
-    description: "Cómo trabaja un procurador en la Ciudad de la Justicia de Valencia: presentación telemática, notificaciones, plazos y actuaciones presenciales en los juzgados.",
+    title: "Procurador en la Ciudad de la Justicia de Valencia",
+    description: "Cómo trabaja un procurador en la Ciudad de la Justicia de Valencia: presentación telemática, notificaciones, plazos y actuaciones presenciales.",
     date: "2026-10-18",
     body: [
       { p: ["La Ciudad de la Justicia concentra buena parte de los órganos judiciales de Valencia capital. Para el procurador es el entorno de trabajo diario, aunque gran parte de la actividad se realiza hoy de forma telemática."] },
@@ -25,7 +25,7 @@ const BASE_ARTICLES: Article[] = [
   {
     slug: "ejecucion-hipotecaria-valencia",
     title: "Ejecución hipotecaria en Valencia paso a paso",
-    description: "Fases de la ejecución hipotecaria en los juzgados de Valencia según la LEC: demanda, requerimiento, oposición, subasta electrónica, adjudicación y posesión.",
+    description: "Fases de la ejecución hipotecaria en Valencia según la LEC: demanda, requerimiento, oposición, subasta electrónica, adjudicación y posesión.",
     date: "2026-10-18",
     body: [
       { p: ["La ejecución hipotecaria sobre bienes inmuebles se regula en los artículos 681 a 698 de la Ley de Enjuiciamiento Civil. Se tramita ante el juzgado de primera instancia del lugar donde radica la finca."] },
@@ -39,7 +39,7 @@ const BASE_ARTICLES: Article[] = [
   },
   {
     slug: "desahucio-impago-valencia",
-    title: "Desahucio por impago en Valencia: plazos y papel del procurador",
+    title: "Desahucio por impago en Valencia: plazos y procurador",
     description: "Desahucio por falta de pago en Valencia: requerimiento, plazo de diez días, enervación, juicio verbal, lanzamiento y función del procurador.",
     date: "2026-10-18",
     body: [
@@ -54,7 +54,7 @@ const BASE_ARTICLES: Article[] = [
   },
   {
     slug: "funciones-del-procurador",
-    title: "Qué funciones desempeña un procurador en un procedimiento judicial",
+    title: "Funciones del procurador en un procedimiento judicial",
     description: "La representación procesal, la comunicación con el órgano judicial y el seguimiento de actuaciones: el papel del procurador explicado con claridad.",
     date: "2026-10-01",
     body: [
@@ -80,7 +80,7 @@ const BASE_ARTICLES: Article[] = [
   },
   {
     slug: "procurador-procedimientos-ejecucion",
-    title: "La intervención del procurador en los procedimientos de ejecución",
+    title: "El procurador en los procedimientos de ejecución",
     description: "Seguimiento, impulso y coordinación de actuaciones en la fase de ejecución, donde la diligencia procesal resulta especialmente relevante.",
     date: "2026-10-06",
     body: [
@@ -103,7 +103,7 @@ const BASE_ARTICLES: Article[] = [
   },
   {
     slug: "coordinar-procedimientos-distintos-territorios",
-    title: "Cómo coordinar procedimientos judiciales en distintos territorios",
+    title: "Coordinar procedimientos judiciales en varios territorios",
     description: "Claves para gestionar asuntos en varios partidos judiciales manteniendo un único interlocutor y criterios homogéneos.",
     date: "2026-10-13",
     body: [
