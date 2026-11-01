@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo, organizationJsonLd, websiteJsonLd, SITE } from "@/lib/site";
+import { seo, legalServiceJsonLd, websiteJsonLd, SITE } from "@/lib/site";
 import { SERVICES, ATTRIBUTES } from "@/lib/services";
 import { ContactBand, Faq, faqJsonLd, JsonLd, Numbered, Related, Section } from "@/components/site/blocks";
 import architecture from "@/assets/editorial-arquitectura.jpg";
