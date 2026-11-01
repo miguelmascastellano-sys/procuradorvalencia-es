@@ -39,7 +39,7 @@ const BASE_ARTICLES: Article[] = [
   },
   {
     slug: "desahucio-impago-valencia",
-    title: "Desahucio por impago en Valencia: plazos y papel del procurador",
+    title: "Desahucio por impago en Valencia: plazos y procurador",
     description: "Desahucio por falta de pago en Valencia: requerimiento, plazo de diez días, enervación, juicio verbal, lanzamiento y función del procurador.",
     date: "2026-10-18",
     body: [
