@@ -29,7 +29,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
   ],
   "ejecucion-hipotecaria-valencia": [
     { h: "Requisitos del título", p: [
-      "El procedimiento especial de ejecución sobre bienes hipotecados se regula en los artículos 681 a 698 LEC. Para utilizarlo, la escritura de constitución de hipoteca debe contener el precio en que los interesados tasan la finca para que sirva de tipo en la subasta y un domicilio del deudor a efectos de requerimientos y notificaciones (art. 682 LEC). Si esos requisitos no se cumplen, el acreedor tendrá que acudir a la ejecución ordinaria o a otro cauce.",
+      "El [procedimiento especial de ejecución sobre bienes hipotecados](/procedimientos-bancarios) se regula en los artículos 681 a 698 LEC. Para utilizarlo, la escritura de constitución de hipoteca debe contener el precio en que los interesados tasan la finca para que sirva de tipo en la subasta y un domicilio del deudor a efectos de requerimientos y notificaciones (art. 682 LEC). Si esos requisitos no se cumplen, el acreedor tendrá que acudir a la [ejecución ordinaria](/procedimientos-civiles-ejecuciones) o a otro cauce.",
       "La demanda se presenta ante el juzgado de primera instancia del lugar donde radique la finca (art. 684 LEC). Cuando el inmueble está en Valencia o en su provincia, la competencia corresponde al partido judicial donde se encuentre, lo que determina el juzgado ante el que debe actuar el procurador.",
     ] },
     { h: "Vencimiento anticipado", p: [
@@ -73,7 +73,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
     ] },
     { h: "Lanzamiento y ejecución de las rentas", p: [
       "El lanzamiento lo practica la comisión judicial en la fecha fijada. El procurador coordina con el abogado y el propietario la asistencia, la entrega de llaves y la documentación del estado del inmueble.",
-      "La condena al pago de rentas se ejecuta conforme a las reglas generales de la ejecución dineraria, con investigación de bienes y embargo cuando resulte necesario. El procurador impulsa esas actuaciones y traslada cada resultado.",
+      "La condena al pago de rentas se ejecuta conforme a las reglas generales de la [ejecución dineraria](/procedimientos-civiles-ejecuciones), con investigación de bienes y embargo cuando resulte necesario. El procurador impulsa esas actuaciones y traslada cada resultado.",
     ] },
     { h: "Papel del procurador", list: [
       "Presentación de la demanda y del contrato, con la documentación de la deuda.",
@@ -109,7 +109,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Esta distinción facilita la colaboración: el abogado se concentra en el fondo y el procurador garantiza que cada escrito se presenta en forma y en plazo y que cada resolución llega a tiempo.",
     ] },
     { h: "Honorarios", p: [
-      "Los derechos del procurador se rigen por el arancel aprobado por el Real Decreto 1373/2003, con un límite de 75.000 euros por asunto, proceso o instancia. Cuando hay condena en costas, los derechos arancelarios del procurador forman parte de ellas (art. 241 LEC), salvo en los casos en que su intervención no sea preceptiva.",
+      "Los derechos del procurador se rigen por el [arancel aprobado por el Real Decreto 1373/2003](/precio-procurador-valencia), que establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. Cuando hay [condena en costas](/calculadora-aranceles), los derechos arancelarios del procurador forman parte de ellas (art. 241 LEC), salvo en los casos en que su intervención no sea preceptiva.",
     ] },
     { h: "Cese de la representación", p: [
       "El procurador cesa en su representación por revocación del poder, renuncia voluntaria, separación del abogado, fallecimiento del poderdante o del propio procurador, o por terminación del asunto (art. 30 LEC). En caso de renuncia, debe comunicarse al tribunal y al poderdante, y el procurador sigue obligado durante el plazo de diez días mientras se designa a otro.",
@@ -143,7 +143,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Señalamientos que coinciden, requerimientos que exigen respuesta inmediata o resoluciones inesperadas forman parte del día a día. Lo importante es que el abogado tenga un interlocutor localizable que conozca el asunto y pueda actuar sin intermediarios.",
     ] },
     { h: "Despachos que trabajan desde otras provincias", p: [
-      "Para un despacho con sede fuera de Valencia, el procurador local es también su presencia física en los juzgados: consultas en la oficina judicial, recogida de documentación o asistencia a actuaciones presenciales. Una colaboración bien organizada hace que la distancia no se note en la tramitación.",
+      "Para un [despacho con sede fuera de Valencia](/procurador-valencia-despachos-otras-provincias), el procurador local es también su presencia física en los juzgados: consultas en la oficina judicial, recogida de documentación o asistencia a actuaciones presenciales. Una colaboración bien organizada hace que la distancia no se note en la tramitación.",
     ] },
     { h: "Errores frecuentes que se evitan con buena coordinación", p: [
       "Algunos problemas se repiten cuando la comunicación entre abogado y procurador no está bien organizada: notificaciones que llegan a una dirección que nadie revisa, escritos enviados en el último minuto sin la documentación completa, poderes que no se aportan con el primer escrito o señalamientos que se comunican sin indicar el lugar y la hora.",
@@ -151,7 +151,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Cuando el procurador conoce el asunto y el abogado sabe que puede contar con él, la colaboración se vuelve fluida: cada uno se ocupa de lo suyo y el cliente percibe un servicio coordinado. Esa es la base del trabajo diario con despachos en Valencia capital y en los partidos judiciales de la provincia.",
     ] },
     { h: "Conclusión", p: [
-      "La colaboración entre abogado y procurador funciona mejor cuando se trata como una relación estable y no como un encargo aislado. Conocer las preferencias de cada despacho, sus plazos internos de revisión y la forma en que organiza sus asuntos permite adaptar los traslados y anticipar necesidades. Con el tiempo, esa confianza se traduce en menos correos, menos llamadas para aclarar dudas y más tiempo para lo importante: el fondo de cada asunto y la atención al cliente. Es el tipo de colaboración que buscamos con cada despacho que confía en nosotros sus asuntos en Valencia.",
+      "La [colaboración entre abogado y procurador](/procurador-para-abogados) funciona mejor cuando se trata como una relación estable y no como un encargo aislado. Conocer las preferencias de cada despacho, sus plazos internos de revisión y la forma en que organiza sus asuntos permite adaptar los traslados y anticipar necesidades. Con el tiempo, esa confianza se traduce en menos correos, menos llamadas para aclarar dudas y más tiempo para lo importante: el fondo de cada asunto y la atención al cliente. Es el tipo de colaboración que buscamos con cada despacho que confía en nosotros sus asuntos en Valencia.",
     ] },
     { p: ["Información general sobre la práctica profesional; no constituye asesoramiento jurídico."] },
   ],
@@ -182,7 +182,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
     { h: "Errores habituales en las ejecuciones", p: [
       "Una ejecución puede alargarse innecesariamente por motivos que poco tienen que ver con el fondo: peticiones de averiguación patrimonial que no se reiteran, oficios que no se retiran o no se diligencian, embargos acordados que no llegan a comunicarse a la entidad correspondiente o resoluciones de las que nadie toma nota durante semanas.",
       "El seguimiento activo del procurador evita estas paradas. Revisar periódicamente el estado del procedimiento, solicitar nuevas medidas cuando las anteriores resultan negativas y trasladar al abogado información útil para decidir el siguiente paso son tareas sencillas, pero decisivas en el resultado.",
-      "También es importante tener en cuenta los plazos de caducidad y prescripción, y la tasación de costas e intereses al final de la ejecución, para que el ejecutante recupere todo lo que le corresponde. Una liquidación bien preparada y una tasación de costas presentada a tiempo marcan la diferencia en el importe final.",
+      "También es importante tener en cuenta los plazos de caducidad y prescripción, y la tasación de costas e intereses al final de la ejecución, para que el ejecutante recupere todo lo que le corresponde. Una liquidación bien preparada y una [tasación de costas](/calculadora-aranceles) presentada a tiempo marcan la diferencia en el importe final.",
       "En Valencia capital y en los partidos judiciales de la provincia, la experiencia en la gestión de oficios y mandamientos ante cada juzgado permite anticipar los tiempos y avisar al abogado cuando una actuación se retrasa más de lo razonable.",
     ] },
     { h: "Conclusión", p: [
@@ -202,11 +202,11 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Experiencia en el tipo de procedimiento: ejecuciones, familia, subastas o asuntos bancarios.",
     ] },
     { h: "El precio", p: [
-      "Los derechos del procurador se fijan conforme al arancel del Real Decreto 1373/2003, que establece cantidades en función del tipo de procedimiento, de la cuantía y de la actuación concreta, con un límite de 75.000 euros por asunto, proceso o instancia. La normativa permite una variación pactada sobre el arancel, por lo que es razonable pedir un presupuesto antes de encargar el asunto.",
+      "Los derechos del procurador se fijan conforme al [arancel del Real Decreto 1373/2003](/precio-procurador-valencia), que establece cantidades en función del tipo de procedimiento, de la cuantía y de la actuación concreta, y establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. La normativa permite una variación pactada sobre el arancel, por lo que es razonable pedir un presupuesto antes de encargar el asunto.",
       "Desconfíe de comparaciones basadas solo en una cifra: un presupuesto claro debe distinguir derechos arancelarios, IVA y gastos de terceros, como certificaciones registrales o publicaciones.",
     ] },
     { h: "Conocimiento del partido judicial", p: [
-      "Cada partido judicial tiene su organización y sus tiempos. En la provincia de Valencia conviven la Ciudad de la Justicia de la capital con partidos como Gandía, Sagunto, Torrent, Alzira o Xàtiva. Un procurador con actividad en ellos sabe cómo funcionan sus servicios comunes y puede anticipar incidencias.",
+      "Cada partido judicial tiene su organización y sus tiempos. En la provincia de Valencia conviven la [Ciudad de la Justicia de la capital](/procurador-valencia) con partidos como Gandía, Sagunto, Torrent, Alzira o Xàtiva. Un procurador con actividad en ellos sabe cómo funcionan sus servicios comunes y puede anticipar incidencias.",
     ] },
     { h: "Comunicación con el abogado", p: [
       "La relación del procurador es, ante todo, con el abogado. Pregunte cómo se trasladan las notificaciones, en qué plazo, por qué canal y quién responde ante una urgencia. Las respuestas a estas preguntas dicen más que cualquier presentación comercial.",
@@ -215,7 +215,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "No en todos los procedimientos es obligatorio el procurador. El artículo 23.2 LEC recoge excepciones como los juicios verbales de cuantía no superior a 2.000 euros o la petición inicial del monitorio. Aun así, si después hay oposición o el asunto se complica, su intervención puede volverse preceptiva, y conviene tenerlo previsto.",
     ] },
     { h: "Cómo empezar", p: [
-      "Basta con indicar el tipo de procedimiento, el partido judicial y la fase en que se encuentra. Con esa información se puede confirmar la disponibilidad, orientar sobre el arancel y acordar la forma de otorgar el poder.",
+      "Basta con indicar el tipo de procedimiento, el partido judicial y la fase en que se encuentra. Con esa información se puede confirmar la disponibilidad, [orientar sobre el arancel](/calculadora-aranceles) y acordar la forma de otorgar el poder.",
     ] },
     { h: "Preguntas para hacer antes de encargar un asunto", p: [
       "Antes de confiar un procedimiento a un procurador, el abogado puede plantear algunas preguntas sencillas que permiten valorar su forma de trabajar. ¿En qué plazo se trasladan las notificaciones recibidas? ¿Se indica el plazo que abre cada resolución? ¿Quién atiende cuando surge una urgencia en vacaciones o fuera del horario habitual? ¿Cómo se comunican las provisiones de fondos y los gastos de terceros?",
@@ -256,11 +256,11 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
     { h: "Un ejemplo práctico", p: [
       "Imaginemos un despacho de Madrid que dirige una reclamación contra un deudor con domicilio en la provincia de Valencia y un inmueble en otro partido judicial. La demanda se presenta en Valencia, pero el embargo del inmueble y algunas diligencias pueden requerir actuaciones en otras sedes, e incluso exhortos a órganos de fuera de la provincia.",
       "Con un interlocutor en Valencia, el despacho envía la demanda, recibe cada notificación con el mismo formato y sabe en todo momento quién está actuando en cada sede. Si es necesario un procurador en otro partido judicial, la coordinación se realiza desde Valencia, sin que el abogado tenga que buscar y gestionar varios profesionales por su cuenta.",
-      "Este modelo resulta especialmente útil en ejecuciones, en procedimientos con varios demandados domiciliados en lugares distintos y en asuntos bancarios repetitivos. La información llega ordenada y el despacho mantiene el control del asunto, aunque la tramitación se reparta entre territorios.",
+      "Este modelo resulta especialmente útil en ejecuciones, en procedimientos con varios demandados domiciliados en lugares distintos y en [asuntos bancarios](/procedimientos-bancarios) repetitivos. La información llega ordenada y el despacho mantiene el control del asunto, aunque la tramitación se reparta entre territorios.",
       "La clave es definir desde el inicio el reparto de actuaciones, el canal de comunicación y el formato de los traslados. Con esas bases, la distancia geográfica deja de ser un problema y el despacho puede concentrarse en la dirección técnica del asunto.",
     ] },
     { h: "Conclusión", p: [
-      "Para los despachos que trabajan desde fuera de Valencia, contar con un procurador en la ciudad aporta además conocimiento del terreno: cómo funcionan los servicios comunes, qué tiempos maneja cada juzgado y cómo se gestionan las actuaciones presenciales. Esa información, transmitida al abogado de forma ordenada, ayuda a planificar el asunto y a explicar al cliente qué cabe esperar. Y cuando un procedimiento exige actuar en otros partidos judiciales, la coordinación con procuradores colaboradores se organiza desde Valencia para que el despacho siga teniendo un único interlocutor y una misma forma de recibir la información durante todo el procedimiento.",
+      "Para los [despachos que trabajan desde fuera de Valencia](/procurador-valencia-despachos-otras-provincias), contar con un procurador en la ciudad aporta además conocimiento del terreno: cómo funcionan los servicios comunes, qué tiempos maneja cada juzgado y cómo se gestionan las actuaciones presenciales. Esa información, transmitida al abogado de forma ordenada, ayuda a planificar el asunto y a explicar al cliente qué cabe esperar. Y cuando un procedimiento exige actuar en otros partidos judiciales, la coordinación con procuradores colaboradores se organiza desde Valencia para que el despacho siga teniendo un único interlocutor y una misma forma de recibir la información durante todo el procedimiento.",
     ] },
     { p: ["Contenido informativo; no constituye asesoramiento jurídico."] },
   ],

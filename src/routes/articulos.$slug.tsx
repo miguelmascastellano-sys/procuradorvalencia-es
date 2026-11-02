@@ -20,6 +20,14 @@ export const Route = createFileRoute("/articulos/$slug")({
   component: Page,
 });
 
+/** Renders inline "[texto](/ruta)" markers as real internal <a href> links. */
+function withLinks(text: string) {
+  return text.split(/(\[[^\]]+\]\(\/[^)]*\))/g).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\((\/[^)]*)\)$/);
+    return m ? <a key={i} href={m[2]} className="underline underline-offset-4">{m[1]}</a> : part;
+  });
+}
+
 function Page() {
   const { article: a } = Route.useLoaderData();
   return (
@@ -37,8 +45,8 @@ function Page() {
             {a.body.map((b, i) => (
               <div key={i}>
                 {b.h && <h2>{b.h}</h2>}
-                {b.p?.map((p) => <p key={p}>{p}</p>)}
-                {b.list && <ul>{b.list.map((l) => <li key={l}>{l}</li>)}</ul>}
+                {b.p?.map((p) => <p key={p}>{withLinks(p)}</p>)}
+                {b.list && <ul>{b.list.map((l) => <li key={l}>{withLinks(l)}</li>)}</ul>}
               </div>
             ))}
           </div>
