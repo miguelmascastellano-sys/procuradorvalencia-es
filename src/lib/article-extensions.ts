@@ -191,10 +191,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
     { p: ["Contenido informativo; cada ejecución debe ser valorada por el abogado que dirige el asunto."] },
   ],
   "como-elegir-procurador": [
-    { h: "Por qué la elección importa", p: [
-      "El procurador recibe las notificaciones en nombre de la parte (art. 28 LEC) y presenta los escritos que el abogado prepara. Un retraso en el traslado o un error en la presentación puede hacer perder un plazo. Por eso, más allá del precio, conviene valorar cómo trabaja el procurador.",
-    ] },
-    { h: "Criterios prácticos", list: [
+    { h: "Criterios a considerar", list: [
       "Actuación habitual ante los juzgados del partido judicial donde se tramita el asunto.",
       "Rapidez y método en el traslado de notificaciones.",
       "Un interlocutor directo, localizable y que conozca el asunto.",
@@ -209,7 +206,9 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Cada partido judicial tiene su organización y sus tiempos. En la provincia de Valencia conviven la [Ciudad de la Justicia de la capital](/procurador-valencia) con partidos como Gandía, Sagunto, Torrent, Alzira o Xàtiva. Un procurador con actividad en ellos sabe cómo funcionan sus servicios comunes y puede anticipar incidencias.",
     ] },
     { h: "Comunicación con el abogado", p: [
-      "La relación del procurador es, ante todo, con el abogado. Pregunte cómo se trasladan las notificaciones, en qué plazo, por qué canal y quién responde ante una urgencia. Las respuestas a estas preguntas dicen más que cualquier presentación comercial.",
+      "La relación del procurador es, ante todo, con el abogado.",
+      "Antes de confiar un procedimiento a un procurador, el abogado puede plantear algunas preguntas sencillas que permiten valorar su forma de trabajar. ¿En qué plazo se trasladan las notificaciones recibidas? ¿Se indica el plazo que abre cada resolución? ¿Quién atiende cuando surge una urgencia en vacaciones o fuera del horario habitual? ¿Cómo se comunican las provisiones de fondos y los gastos de terceros?",
+      "Las respuestas a estas preguntas dicen más que cualquier presentación comercial.",
     ] },
     { h: "Cuándo no es necesario", p: [
       "No en todos los procedimientos es obligatorio el procurador. El artículo 23.2 LEC recoge excepciones como los juicios verbales de cuantía no superior a 2.000 euros o la petición inicial del monitorio. Aun así, si después hay oposición o el asunto se complica, su intervención puede volverse preceptiva, y conviene tenerlo previsto.",
@@ -217,9 +216,8 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
     { h: "Cómo empezar", p: [
       "Basta con indicar el tipo de procedimiento, el partido judicial y la fase en que se encuentra. Con esa información se puede confirmar la disponibilidad, [orientar sobre el arancel](/calculadora-aranceles) y acordar la forma de otorgar el poder.",
     ] },
-    { h: "Preguntas para hacer antes de encargar un asunto", p: [
-      "Antes de confiar un procedimiento a un procurador, el abogado puede plantear algunas preguntas sencillas que permiten valorar su forma de trabajar. ¿En qué plazo se trasladan las notificaciones recibidas? ¿Se indica el plazo que abre cada resolución? ¿Quién atiende cuando surge una urgencia en vacaciones o fuera del horario habitual? ¿Cómo se comunican las provisiones de fondos y los gastos de terceros?",
-      "También conviene saber si el procurador actúa habitualmente en el partido judicial concreto y si tiene experiencia en el tipo de procedimiento. No es lo mismo un monitorio que una ejecución hipotecaria con subasta, ni un divorcio de mutuo acuerdo que un concurso de persona natural.",
+    { h: "Cuestiones prácticas", p: [
+      "No es lo mismo un monitorio que una ejecución hipotecaria con subasta, ni un divorcio de mutuo acuerdo que un concurso de persona natural.",
       "Por último, es útil preguntar por el formato de los traslados. Un despacho con muchos asuntos agradece que cada comunicación incluya su referencia interna, el juzgado, el número de procedimiento, la fecha de notificación y la resolución adjunta. Ese pequeño detalle ahorra tiempo cada día y reduce el riesgo de errores al registrar los plazos.",
       "En Valencia, donde conviven la Ciudad de la Justicia de la capital y numerosos partidos judiciales en la provincia, estas cuestiones prácticas pesan tanto como el arancel. Un procurador que responde con claridad a ellas ofrece una base sólida para una colaboración duradera con el despacho. Y si el asunto exige actuar fuera de la provincia, conviene preguntar también cómo se organiza la coordinación con procuradores colaboradores, para que el despacho mantenga un único interlocutor y un mismo formato de información.",
     ] },
