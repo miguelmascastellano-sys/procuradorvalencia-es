@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import { Route } from "@/routes/index";
 
-const head = Route.head!({} as never) as {
+const head = Route.options.head!({} as never) as {
   meta: { [k: string]: string | undefined }[];
   scripts?: { type?: string; children?: string }[];
 };
