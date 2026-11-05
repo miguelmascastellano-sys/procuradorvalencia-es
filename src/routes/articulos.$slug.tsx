@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { seo, SITE } from "@/lib/site";
-import { getArticle } from "@/lib/articles";
+import { ARTICLES, getArticle } from "@/lib/articles";
 import { ContactBand, JsonLd, PageHeader } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/articulos/$slug")({
@@ -52,7 +52,30 @@ function Page() {
           </div>
         </div>
       </article>
+      <RelatedArticles currentSlug={a.slug} />
       <ContactBand />
     </>
+  );
+}
+
+/** "Seguir leyendo": enlaces internos a otros artículos (3 siguientes en el listado, de forma cíclica). */
+function RelatedArticles({ currentSlug }: { currentSlug: string }) {
+  const i = ARTICLES.findIndex((x) => x.slug === currentSlug);
+  const related = [1, 2, 3].map((n) => ARTICLES[(i + n) % ARTICLES.length]).filter((x) => x.slug !== currentSlug);
+  if (related.length === 0) return null;
+  return (
+    <section className="container-site border-t border-border py-12 md:py-16" aria-labelledby="seguir-leyendo">
+      <h2 id="seguir-leyendo" className="editorial-kicker text-bronze">Seguir leyendo</h2>
+      <ul className="mt-6 grid gap-8 md:grid-cols-3">
+        {related.map((r) => (
+          <li key={r.slug}>
+            <Link to="/articulos/$slug" params={{ slug: r.slug }} className="group block">
+              <h3 className="text-xl leading-snug group-hover:underline group-hover:underline-offset-4">{r.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{r.description}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
