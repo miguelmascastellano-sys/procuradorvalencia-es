@@ -4,7 +4,7 @@ import { ContactBand, Faq, faqJsonLd, JsonLd, PageHeader, Prose, Related, Sectio
 
 const BLOCKS = [
   { h: "El arancel de los procuradores", p: [
-    "Los derechos económicos del procurador no se fijan libremente como los honorarios de otros profesionales. Están regulados por el arancel aprobado por el Real Decreto 1373/2003, de 7 de noviembre, que establece las cantidades que corresponden por cada actuación en los distintos tipos de procedimiento.",
+    "Los derechos económicos del procurador no se fijan libremente como los honorarios de otros profesionales. Están regulados por el arancel aprobado por el Real Decreto 434/2024, de 30 de abril, que sustituyó al arancel anterior de 2003 y que establece las cantidades que corresponden por cada actuación en los distintos tipos de procedimiento.",
     "El arancel es de aplicación en todo el territorio nacional, de modo que un procurador en Valencia aplica las mismas reglas que uno de cualquier otra ciudad. La normativa permite que las partes pacten una variación sobre las cantidades resultantes, dentro de los límites legales, y establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas.",
     "A las cantidades del arancel se suma el IVA y, en su caso, los suplidos: gastos que el procurador adelanta por cuenta del cliente, como tasas, publicaciones de edictos o certificaciones registrales.",
   ] },
@@ -27,7 +27,7 @@ const BLOCKS = [
 ];
 
 const FAQ = [
-  { q: "¿Cuánto cobra un procurador en Valencia?", a: "Lo que establece el arancel del Real Decreto 1373/2003, aplicado según la cuantía y el tipo de procedimiento, más IVA y suplidos. Es igual en Valencia que en el resto de España. Se puede pedir un presupuesto previo sin compromiso." },
+  { q: "¿Cuánto cobra un procurador en Valencia?", a: "Lo que establece el arancel del Real Decreto 434/2024, aplicado según la cuantía y el tipo de procedimiento, más IVA y suplidos. Es igual en Valencia que en el resto de España. Se puede pedir un presupuesto previo sin compromiso." },
   { q: "¿Hay procuradores baratos en Valencia?", a: "Al estar regulado por arancel, las diferencias de precio entre procuradores son limitadas, aunque la norma permite pactar variaciones dentro de los márgenes legales. Más que buscar el precio más bajo, conviene valorar la diligencia en notificaciones y plazos." },
   { q: "¿Los honorarios del procurador entran en costas?", a: "Sí. Según el artículo 241 de la LEC, los derechos del procurador forman parte de las costas. Si la parte contraria es condenada en costas, deberá reembolsarlos tras la tasación." },
 ];

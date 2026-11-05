@@ -11,7 +11,7 @@ const DESCRIPTION =
   "Procurador en Valencia, capital y provincia. MMC Procuradores: procuradores en Valencia para abogados, despachos y particulares, con control de plazos.";
 
 const FAQ = [
-  { q: "¿Cuánto cobra un procurador en Valencia?", a: "Los derechos del procurador se rigen por el arancel del Real Decreto 1373/2003 y dependen de la cuantía y del tipo de procedimiento, más IVA y suplidos. Se puede pedir presupuesto previo sin compromiso." },
+  { q: "¿Cuánto cobra un procurador en Valencia?", a: "Los derechos del procurador se rigen por el arancel del Real Decreto 434/2024 y dependen de la cuantía y del tipo de procedimiento, más IVA y suplidos. Se puede pedir presupuesto previo sin compromiso." },
   { q: "¿Es obligatorio ir con procurador?", a: "En la mayoría de procedimientos civiles sí. El artículo 23 de la LEC prevé excepciones, como los juicios verbales de cuantía no superior a 2.000 euros o la petición inicial del monitorio." },
   { q: "¿Cómo encontrar un procurador en Valencia?", a: "Conviene buscar un procurador que conozca los juzgados de Valencia, traslade las notificaciones con rapidez y se adapte a la forma de trabajar del abogado. Puedes llamar o escribir por WhatsApp para valorar tu asunto." },
   { q: "¿Atienden en la Ciudad de la Justicia de Valencia?", a: "Sí. La Ciudad de la Justicia es el entorno de trabajo diario, de forma telemática y presencial cuando la actuación lo requiere." },

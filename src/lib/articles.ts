@@ -74,6 +74,7 @@ const BASE_ARTICLES: Article[] = [
     description: "Comunicación, organización, capacidad de coordinación y adaptación al sistema de trabajo: criterios para elegir un procurador colaborador.",
     date: "2026-10-09",
     body: [
+      { p: ["Elegir procurador es elegir un colaborador con el que se compartirá el día a día de los procedimientos. Más allá de la proximidad, conviene valorar cómo trabaja."] },
     ],
   },
   {

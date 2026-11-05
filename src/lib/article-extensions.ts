@@ -109,7 +109,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Esta distinción facilita la colaboración: el abogado se concentra en el fondo y el procurador garantiza que cada escrito se presenta en forma y en plazo y que cada resolución llega a tiempo.",
     ] },
     { h: "Honorarios", p: [
-      "Los derechos del procurador se rigen por el [arancel aprobado por el Real Decreto 1373/2003](/precio-procurador-valencia), que establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. Cuando hay [condena en costas](/calculadora-aranceles), los derechos arancelarios del procurador forman parte de ellas (art. 241 LEC), salvo en los casos en que su intervención no sea preceptiva.",
+      "Los derechos del procurador se rigen por el [arancel aprobado por el Real Decreto 434/2024, de 30 de abril](/precio-procurador-valencia), que establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. Cuando hay [condena en costas](/calculadora-aranceles), los derechos arancelarios del procurador forman parte de ellas (art. 241 LEC), salvo en los casos en que su intervención no sea preceptiva.",
     ] },
     { h: "Cese de la representación", p: [
       "El procurador cesa en su representación por revocación del poder, renuncia voluntaria, separación del abogado, fallecimiento del poderdante o del propio procurador, o por terminación del asunto (art. 30 LEC). En caso de renuncia, debe comunicarse al tribunal y al poderdante, y el procurador sigue obligado durante el plazo de diez días mientras se designa a otro.",
@@ -199,7 +199,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Experiencia en el tipo de procedimiento: ejecuciones, familia, subastas o asuntos bancarios.",
     ] },
     { h: "El precio", p: [
-      "Los derechos del procurador se fijan conforme al [arancel del Real Decreto 1373/2003](/precio-procurador-valencia), que establece cantidades en función del tipo de procedimiento, de la cuantía y de la actuación concreta, y establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. La normativa permite una variación pactada sobre el arancel, por lo que es razonable pedir un presupuesto antes de encargar el asunto.",
+      "Los derechos del procurador se fijan conforme al [arancel del Real Decreto 434/2024](/precio-procurador-valencia), que establece cantidades en función del tipo de procedimiento, de la cuantía y de la actuación concreta, y establece además un límite máximo global de 75.000 euros por los derechos devengados por un mismo procurador en un mismo asunto, salvo excepciones autorizadas. El arancel fija precios máximos y la normativa permite pactar el precio sin superarlos, por lo que es razonable pedir un presupuesto antes de encargar el asunto.",
       "Desconfíe de comparaciones basadas solo en una cifra: un presupuesto claro debe distinguir derechos arancelarios, IVA y gastos de terceros, como certificaciones registrales o publicaciones.",
     ] },
     { h: "Conocimiento del partido judicial", p: [
@@ -217,7 +217,7 @@ export const ARTICLE_EXTENSIONS: Record<string, Block[]> = {
       "Basta con indicar el tipo de procedimiento, el partido judicial y la fase en que se encuentra. Con esa información se puede confirmar la disponibilidad, [orientar sobre el arancel](/calculadora-aranceles) y acordar la forma de otorgar el poder.",
     ] },
     { h: "Cuestiones prácticas", p: [
-      "No es lo mismo un monitorio que una ejecución hipotecaria con subasta, ni un divorcio de mutuo acuerdo que un concurso de persona natural.",
+      "También conviene saber si el procurador actúa habitualmente en el partido judicial concreto y si tiene experiencia en el tipo de procedimiento. No es lo mismo un monitorio que una ejecución hipotecaria con subasta, ni un divorcio de mutuo acuerdo que un concurso de persona natural.",
       "Por último, es útil preguntar por el formato de los traslados. Un despacho con muchos asuntos agradece que cada comunicación incluya su referencia interna, el juzgado, el número de procedimiento, la fecha de notificación y la resolución adjunta. Ese pequeño detalle ahorra tiempo cada día y reduce el riesgo de errores al registrar los plazos.",
       "En Valencia, donde conviven la Ciudad de la Justicia de la capital y numerosos partidos judiciales en la provincia, estas cuestiones prácticas pesan tanto como el arancel. Un procurador que responde con claridad a ellas ofrece una base sólida para una colaboración duradera con el despacho. Y si el asunto exige actuar fuera de la provincia, conviene preguntar también cómo se organiza la coordinación con procuradores colaboradores, para que el despacho mantenga un único interlocutor y un mismo formato de información.",
     ] },
