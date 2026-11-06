@@ -14,6 +14,7 @@ export const SITE = {
   address: "C/ Bolivia, 14, Valencia",
   college: "Ilustre Colegio de Procuradores de Valencia (ICOPAL)",
   collegeNumber: "660",
+  nif: "53942760D",
   tagline: "La Justicia no espera. Nosotros tampoco.",
 } as const;
 
