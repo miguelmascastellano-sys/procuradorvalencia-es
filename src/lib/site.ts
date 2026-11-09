@@ -12,7 +12,7 @@ export const SITE = {
   phoneHref: "tel:+34644206106",
   whatsappHref: "https://wa.me/34644206106",
   address: "C/ Bolivia, 14, Valencia",
-  college: "Ilustre Colegio de Procuradores de Valencia (ICOPAL)",
+  college: "Ilustre Colegio de Procuradores de Alicante (ICOPAL)",
   collegeNumber: "660",
   nif: "53942760D",
   tagline: "La Justicia no espera. Nosotros tampoco.",

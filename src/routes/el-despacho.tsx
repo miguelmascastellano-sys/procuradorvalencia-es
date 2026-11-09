@@ -9,7 +9,7 @@ import despachoTrabajo from "@/assets/arquitectura-contemporanea.jpg";
 export const Route = createFileRoute("/el-despacho")({
   head: () => seo({
     title: "El despacho | MMC Procuradores",
-    description: "MMC Procuradores: una firma de procura orientada a la colaboración con abogados y despachos, desde Valencia y con proyección nacional.",
+    description: "MMC Procuradores: procurador en Valencia capital y alrededores, al servicio de abogados y despachos de la Comunidad Valenciana y de toda España.",
     path: "/el-despacho",
   }),
   component: Page,
