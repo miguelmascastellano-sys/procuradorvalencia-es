@@ -32,6 +32,15 @@ const PASOS = [
   { title: "Seguimiento continuado", text: "Información ordenada sobre cada actuación, con un único interlocutor durante toda la tramitación." },
 ];
 
+const PROBLEMAS = [
+  { problema: "Tengo un asunto en Valencia y no puedo desplazarme cada vez que hace falta.", respuesta: "Nos ocupamos de la representación ante los juzgados de Valencia capital, la Audiencia Provincial y los partidos judiciales de la provincia." },
+  { problema: "Necesito que alguien presente un escrito y me diga que ya está hecho.", respuesta: "Presentamos los escritos a través de los sistemas telemáticos de la Administración de Justicia y te informamos." },
+  { problema: "Me llega una resolución y quiero saber qué plazo corre.", respuesta: "Trasladamos cada resolución el mismo día y te avisamos de los plazos." },
+  { problema: "Quiero saber en qué punto está mi procedimiento sin tener que preguntarlo.", respuesta: "Hacemos el seguimiento de cada asunto y mantenemos una interlocución directa contigo mientras dura." },
+  { problema: "Tengo una ejecución o una subasta en Valencia y no puedo controlarla desde fuera.", respuesta: "Atendemos ejecuciones, asuntos bancarios y subastas judiciales." },
+  { problema: "Quiero saber cuánto me va a costar antes de empezar.", respuesta: "Los derechos del procurador se rigen por arancel, y antes de asumir el encargo puedes pedir un presupuesto orientativo." },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     ...seo({
@@ -53,7 +62,7 @@ function Index() {
       <div className="container-site hero-composition">
         <p className="hero-brand text-ink-foreground">MMC Procuradores</p>
         <h1 className="hero-title text-ink-foreground">Procurador en Valencia, capital y provincia</h1>
-        <p className="font-serif text-2xl italic text-ink-foreground/85 md:col-span-12">Servicios de procura. Criterio de despacho.</p>
+        <p className="font-serif text-2xl italic text-ink-foreground/85 md:col-span-12">Tu asunto en Valencia, sin que tengas que estar allí.</p>
         <div className="hero-detail">
           <p className="max-w-lg text-base leading-relaxed text-ink-foreground/85">Para abogados, despachos y departamentos jurídicos. Representación procesal y seguimiento de actuaciones en <strong className="font-medium text-ink-foreground">Valencia capital y provincia.</strong></p>
           <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-foreground/75">Colaboración profesional a nivel nacional, según el procedimiento y el ámbito de actuación, mediante procuradores colaboradores.</p>
@@ -62,6 +71,10 @@ function Index() {
         <p className="hero-signature font-serif italic text-ink-foreground/70">{SITE.tagline}</p>
       </div>
     </section>
+
+    <Section label="Si te suena" title="Lo que suele preocupar a un abogado con un asunto en Valencia.">
+      <ul>{PROBLEMAS.map((x,i) => <li key={x.problema} className="editorial-service"><span className="font-serif text-xl text-bronze">{String(i+1).padStart(2,"0")}</span><h3 className="font-serif text-2xl italic leading-tight md:text-3xl">{x.problema}</h3><p className="leading-relaxed text-muted-foreground">{x.respuesta}</p></li>)}</ul>
+    </Section>
 
     <section className="container-site grid gap-8 py-16 md:grid-cols-12 md:py-24">
       <p className="editorial-kicker text-bronze md:col-span-3 md:items-start md:pt-3">Una forma de trabajar</p>
